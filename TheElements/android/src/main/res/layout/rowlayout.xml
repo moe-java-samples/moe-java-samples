@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:baselineAligned="false"
+    android:weightSum="1.0"
+    android:gravity="center_vertical">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="0dp"
+            android:src="@mipmap/ic_launcher"/>
+
+        <TextView
+            android:id="@+id/symbol"
+            android:gravity="bottom|right"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_alignLeft="@+id/icon"
+            android:layout_alignTop="@+id/icon"
+            android:layout_alignRight="@+id/icon"
+            android:layout_alignBottom="@+id/icon"
+            android:text="Nm"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:layout_margin="2dp" />
+
+        <TextView
+            android:id="@+id/atomicNumber"
+            android:gravity="bottom|top"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_alignLeft="@+id/icon"
+            android:layout_alignTop="@+id/icon"
+            android:layout_alignRight="@+id/icon"
+            android:layout_alignBottom="@+id/icon"
+            android:text="##"
+            android:textColor="#FFFF00"
+            android:textSize="12sp"
+            android:layout_margin="2dp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:textSize="30sp"
+        android:layout_weight="1.0"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:src="@mipmap/arrow"/>
+
+</LinearLayout> 

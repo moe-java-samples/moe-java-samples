@@ -1,0 +1,3 @@
+include ':ios'
+include ':android'
+include ':common'

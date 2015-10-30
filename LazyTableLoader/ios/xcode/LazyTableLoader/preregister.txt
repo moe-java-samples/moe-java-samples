@@ -1,0 +1,2 @@
+com/intel/inde/moe/samples/lazytableloader/ios/Main
+com/intel/inde/moe/samples/lazytableloader/ios/RootViewController

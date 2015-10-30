@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.sdklib.widgets.iOSNavigationController xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent" xmlns:xrt="http://schemas.android.com/apk/res/android" android:orientation="vertical" xrt:segue_type="relationship"  xrt:initialViewController="true" xrt:segue_destination="sample_design.ixml"><com.android.sdklib.widgets.base_elements.iOSNavigationBarContainer xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" android:id="MOE_navigationControllerBar"><com.android.sdklib.widgets.iOSUnEditableNavigationBar android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/XOSNavigationBar" android:layout_weight="1"/></com.android.sdklib.widgets.base_elements.iOSNavigationBarContainer>
+
+</com.android.sdklib.widgets.iOSNavigationController>

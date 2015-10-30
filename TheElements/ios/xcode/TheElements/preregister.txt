@@ -1,0 +1,4 @@
+com/intel/inde/moe/samples/elements/ios/AtomicElementTableViewCell
+com/intel/inde/moe/samples/elements/ios/AtomicElementTileView
+com/intel/inde/moe/samples/elements/ios/AtomicElementViewController
+com/intel/inde/moe/samples/elements/ios/ElementsTableViewController

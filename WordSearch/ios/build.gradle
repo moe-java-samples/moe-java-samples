@@ -1,0 +1,21 @@
+buildscript {
+    repositories {
+        mavenCentral()
+
+        maven {
+            url uri(System.getenv("INTEL_MULTI_OS_ENGINE_HOME") + "/gradle")
+        }
+    }
+    dependencies {
+        classpath 'org.intel.gradle:xRTGradlePlugin:1.0'
+    }
+}
+
+apply plugin: 'xrt'
+
+dependencies {
+    compile fileTree(dir: 'lib', include: '*.jar')
+}
+
+xrt {
+}

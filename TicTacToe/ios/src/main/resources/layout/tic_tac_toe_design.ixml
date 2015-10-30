@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.sdklib.widgets.iOSViewController xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xrt="http://schemas.android.com/apk/res/android"
+             android:orientation="vertical"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent" xrt:viewController="com.intel.ios.ui.TicTacToeViewController" xrt:initialViewController="true">
+
+<com.android.sdklib.widgets.base_elements.iOSBaseLinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+
+            android:layout_weight="1" android:layout_gravity="center_horizontal">
+          <com.android.sdklib.widgets.iOSButton
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="New game"
+                style="@style/XOSButton"
+              android:id="@+id/com.android.sdklib.widgets.iOSButton" xrt:iboutlet="newGameButton" xrt:ibaction="touchUpInside-BtnPressedCancel_newGameButton:"/></com.android.sdklib.widgets.base_elements.iOSBaseLinearLayout><com.android.sdklib.widgets.base_elements.iOSBaseLinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" android:layout_gravity="center_horizontal">
+          <com.android.sdklib.widgets.iOSTextView
+                style="@style/XOSLabel"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/com.android.sdklib.widgets.iOSTextView" android:textAlignment="center" android:layout_marginLeft="10dp" android:layout_marginTop="10dp" xrt:iboutlet="statusText"/></com.android.sdklib.widgets.base_elements.iOSBaseLinearLayout><com.android.sdklib.widgets.base_elements.iOSBaseLinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" android:layout_gravity="center_horizontal">
+          <com.android.sdklib.widgets.iOSButton
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+                style="@style/XOSButton"
+              android:id="@+id/com.android.sdklib.widgets.iOSButton" android:layout_weight="1" android:background="#ffb0d6ff" xrt:ibaction="touchUpInside-BtnPressedCancel_gameButton0:" xrt:iboutlet="gameButton0"/><com.android.sdklib.widgets.iOSButton
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+                style="@style/XOSButton"
+              android:id="@+id/com.android.sdklib.widgets.iOSButton" android:layout_weight="1" android:background="#ffb0d6ff" xrt:iboutlet="gameButton1" xrt:ibaction="touchUpInside-BtnPressedCancel_gameButton1:"/><com.android.sdklib.widgets.iOSButton
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+                style="@style/XOSButton"
+              android:id="@+id/com.android.sdklib.widgets.iOSButton" android:layout_weight="1" android:background="#ffb0d6ff" xrt:ibaction="touchUpInside-BtnPressedCancel_gameButton2:" xrt:iboutlet="gameButton2"/></com.android.sdklib.widgets.base_elements.iOSBaseLinearLayout><com.android.sdklib.widgets.base_elements.iOSBaseLinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" android:layout_gravity="center_horizontal">
+          <com.android.sdklib.widgets.iOSButton
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+                style="@style/XOSButton"
+              android:id="@+id/com.android.sdklib.widgets.iOSButton" android:layout_weight="1" android:background="#ffb0d6ff" xrt:ibaction="touchUpInside-BtnPressedCancel_gameButton3:" xrt:iboutlet="gameButton3"/><com.android.sdklib.widgets.iOSButton
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+                style="@style/XOSButton"
+              android:id="@+id/com.android.sdklib.widgets.iOSButton" android:layout_weight="1" android:background="#ffb0d6ff" xrt:ibaction="touchUpInside-BtnPressedCancel_gameButton4:" xrt:iboutlet="gameButton4"/><com.android.sdklib.widgets.iOSButton
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+                style="@style/XOSButton"
+              android:id="@+id/com.android.sdklib.widgets.iOSButton" android:layout_weight="1" android:background="#ffb0d6ff" xrt:iboutlet="gameButton5" xrt:ibaction="touchUpInside-BtnPressedCancel_gameButton5:"/></com.android.sdklib.widgets.base_elements.iOSBaseLinearLayout><com.android.sdklib.widgets.base_elements.iOSBaseLinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" android:layout_gravity="center_horizontal">
+          <com.android.sdklib.widgets.iOSButton
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+                style="@style/XOSButton"
+              android:id="@+id/com.android.sdklib.widgets.iOSButton" android:layout_weight="1" android:background="#ffb0d6ff" xrt:ibaction="touchUpInside-BtnPressedCancel_gameButton6:" xrt:iboutlet="gameButton6"/><com.android.sdklib.widgets.iOSButton
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+                style="@style/XOSButton"
+              android:id="@+id/com.android.sdklib.widgets.iOSButton" android:layout_weight="1" android:background="#ffb0d6ff" xrt:iboutlet="gameButton7" xrt:ibaction="touchUpInside-BtnPressedCancel_gameButton7:"/><com.android.sdklib.widgets.iOSButton
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+                style="@style/XOSButton"
+              android:id="@+id/com.android.sdklib.widgets.iOSButton" android:layout_weight="1" android:background="#ffb0d6ff" xrt:ibaction="touchUpInside-BtnPressedCancel_gameButton8:" xrt:iboutlet="gameButton8"/></com.android.sdklib.widgets.base_elements.iOSBaseLinearLayout></com.android.sdklib.widgets.iOSViewController>

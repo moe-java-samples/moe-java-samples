@@ -1,0 +1,350 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5F1ED33B39395B84BF54D250 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CF2DAF3CEA7925C13880A366 /* main.cpp */; };
+		B2DEF489DAE1CE848BC3A5D0 /* ../src/main/resources/MainUI.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 992311F16F9A6062D0D07D3E /* ../src/main/resources/MainUI.storyboard */; };
+		CE772BCD32A4B97676BD50B8 /* MOE.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04CECB7EAF68095BE13EB972 /* MOE.framework */; };
+		CECD664D1B57F3D100563993 /* intel_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = CECD664B1B57F3D100563993 /* intel_logo.png */; };
+		CECD664E1B57F3D100563993 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CECD664C1B57F3D100563993 /* LaunchScreen.xib */; };
+		CECD66531B57F5DC00563993 /* preregister.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7727026C562347BE02AC9C0D /* preregister.txt */; };
+		E286DC352135437D4752B7BD /* MOE.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 04CECB7EAF68095BE13EB972 /* MOE.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		174C02A715747A1760D55659 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E286DC352135437D4752B7BD /* MOE.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		04CECB7EAF68095BE13EB972 /* MOE.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MOE.framework; sourceTree = XRT_FRAMEWORK_PATH; };
+		2AF2B46BD2520004778622AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		462BC445997BB4221E13A692 /* KeyboardAccessory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = KeyboardAccessory.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7650CB607E4E5E4FBE193E6A /* build.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = build.xcconfig; sourceTree = "<group>"; };
+		7727026C562347BE02AC9C0D /* preregister.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = preregister.txt; sourceTree = "<group>"; };
+		992311F16F9A6062D0D07D3E /* ../src/main/resources/MainUI.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ../src/main/resources/MainUI.storyboard; sourceTree = "<group>"; };
+		CECD664B1B57F3D100563993 /* intel_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = intel_logo.png; path = ../src/main/resources/intel_logo.png; sourceTree = "<group>"; };
+		CECD664C1B57F3D100563993 /* LaunchScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = LaunchScreen.xib; path = ../src/main/resources/LaunchScreen.xib; sourceTree = "<group>"; };
+		CF2DAF3CEA7925C13880A366 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		947ECF15289FAEDA00D14604 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE772BCD32A4B97676BD50B8 /* MOE.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		133BB36A312E2C028A0CABB9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CECD664B1B57F3D100563993 /* intel_logo.png */,
+				CECD664C1B57F3D100563993 /* LaunchScreen.xib */,
+				462BC445997BB4221E13A692 /* KeyboardAccessory.app */,
+				992311F16F9A6062D0D07D3E /* ../src/main/resources/MainUI.storyboard */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		28042DFB6E2F051EAC1E61B7 = {
+			isa = PBXGroup;
+			children = (
+				4887B52610F07B376F95C25A /* KeyboardAccessory */,
+				B982A922968B4352BC85DAF5 /* Frameworks */,
+				133BB36A312E2C028A0CABB9 /* Resources */,
+			);
+			sourceTree = "<group>";
+		};
+		4887B52610F07B376F95C25A /* KeyboardAccessory */ = {
+			isa = PBXGroup;
+			children = (
+				B1FECA4CEB2E3E83D4ABDC02 /* Supporting Files */,
+			);
+			path = KeyboardAccessory;
+			sourceTree = "<group>";
+		};
+		B1FECA4CEB2E3E83D4ABDC02 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7650CB607E4E5E4FBE193E6A /* build.xcconfig */,
+				CF2DAF3CEA7925C13880A366 /* main.cpp */,
+				2AF2B46BD2520004778622AC /* Info.plist */,
+				7727026C562347BE02AC9C0D /* preregister.txt */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B982A922968B4352BC85DAF5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				04CECB7EAF68095BE13EB972 /* MOE.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4007FA423975B40E3BB11D74 /* KeyboardAccessory */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D9804E378F0447172F2A9F6D /* Build configuration list for PBXNativeTarget "KeyboardAccessory" */;
+			buildPhases = (
+				F7432D50082392912F8C8DFB /* Compile Java Sources */,
+				947ECF15289FAEDA00D14604 /* Frameworks */,
+				A740D0CF5E42BD41B4E4CCB6 /* Resources */,
+				FB63F39596062B51B1B7D49D /* Sources */,
+				174C02A715747A1760D55659 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			name = KeyboardAccessory;
+			productName = KeyboardAccessory;
+			productReference = 462BC445997BB4221E13A692 /* KeyboardAccessory.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		757EA5411B6E4A2370CAD2EC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = intel;
+			};
+			buildConfigurationList = 8B490EC3612294978C8A0880 /* Build configuration list for PBXProject "KeyboardAccessory" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 28042DFB6E2F051EAC1E61B7;
+			productRefGroup = 133BB36A312E2C028A0CABB9 /* Resources */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4007FA423975B40E3BB11D74 /* KeyboardAccessory */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A740D0CF5E42BD41B4E4CCB6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CECD66531B57F5DC00563993 /* preregister.txt in Resources */,
+				CECD664D1B57F3D100563993 /* intel_logo.png in Resources */,
+				CECD664E1B57F3D100563993 /* LaunchScreen.xib in Resources */,
+				B2DEF489DAE1CE848BC3A5D0 /* ../src/main/resources/MainUI.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F7432D50082392912F8C8DFB /* Compile Java Sources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Compile Java Sources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "cd ../\n\nexport JAVA_HOME=$(/usr/libexec/java_home -v 1.8)\njava -version\n\nfunction gradlePath {\n\tCD=\"$PWD\"\n\twhile [ \"$CD\" != \"\" ]; do\n\t\tif [ -x \"$CD/gradlew\" ]; then\n\t\t\tGRADLE_PATH=$CD/gradlew\n\t\t\treturn 0\n\t\tfi\n\t\tCD=\"${CD%/*}\"\n\tdone\n\n\tGRADLE_PATH=$(which 'gradle')\n\n\tif [ \"$GRADLE_PATH\" = \"\" ]; then\n\t\tGRADLE_PATH=/usr/local/bin/gradle\n\tfi\n}\ngradlePath\n\nif [ \"$XRT_SKIP_DEX\" == \"Yes\" ]; then\n\techo \"Compiling ART only...\"\n\t\"$GRADLE_PATH\" --daemon buildArtOat -Pxrt.archs=${arch}\n\texit\nfi\n\n\"$GRADLE_PATH\" --daemon compileJava proguard buildPreregister buildRetro buildDex buildArtOat -Pxrt.archs=\"${ARCHS}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FB63F39596062B51B1B7D49D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F1ED33B39395B84BF54D250 /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		4B8BAA90010DB03F9FB67463 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7650CB607E4E5E4FBE193E6A /* build.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEAD_CODE_STRIPPING = NO;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = KeyboardAccessory/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "${XRT_OTHER_LDFLAGS}";
+				PRODUCT_NAME = KeyboardAccessory;
+				STRIP_STYLE = "non-global";
+				VALID_ARCHS = "armv7 arm64 i386 x86_64";
+			};
+			name = Release;
+		};
+		4ED52CCE8D2001A0279D993A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7650CB607E4E5E4FBE193E6A /* build.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"${XRT_FRAMEWORK_PATH}",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) ${XRT_FRAMEWORK_PATH}";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				SDKROOT = iphoneos;
+				SYMROOT = ../build/xcode;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7E10D2B7F5E2238F73EE7F24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7650CB607E4E5E4FBE193E6A /* build.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEAD_CODE_STRIPPING = NO;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = KeyboardAccessory/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "${XRT_OTHER_LDFLAGS}";
+				PRODUCT_NAME = KeyboardAccessory;
+				STRIP_STYLE = "non-global";
+				VALID_ARCHS = "armv7 arm64 i386 x86_64";
+			};
+			name = Debug;
+		};
+		F9CC06E8C7D9F0D57237D578 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7650CB607E4E5E4FBE193E6A /* build.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"${XRT_FRAMEWORK_PATH}",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) ${XRT_FRAMEWORK_PATH}";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				SDKROOT = iphoneos;
+				SYMROOT = ../build/xcode;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8B490EC3612294978C8A0880 /* Build configuration list for PBXProject "KeyboardAccessory" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4ED52CCE8D2001A0279D993A /* Debug */,
+				F9CC06E8C7D9F0D57237D578 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D9804E378F0447172F2A9F6D /* Build configuration list for PBXNativeTarget "KeyboardAccessory" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E10D2B7F5E2238F73EE7F24 /* Debug */,
+				4B8BAA90010DB03F9FB67463 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 757EA5411B6E4A2370CAD2EC /* Project object */;
+}

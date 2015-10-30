@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="f8d88067-2440-4cb9-aaaf-fcfc71637e74">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--Game Controller-->
+        <scene sceneID="5d5f3efa-5acc-453c-9896-5d36f798c35b">
+            <objects>
+                <viewController storyboardIdentifier="gameView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="72ec8fff-7a1b-4ea3-aa4c-d67e178af15e" customClass="GameController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0020d9c4-449c-45ea-ab60-51959d727c81"/>
+                        <viewControllerLayoutGuide type="bottom" id="d4caffde-a0f8-4cca-be61-ef598014c102"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1158d1b7-81c7-45e7-a442-0ad6d16e5aa8">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="6b2fa2b1-60f0-443b-9505-c5a3e7d78111"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="42bf820a-f6e3-44eb-8928-3150ab75f0b2" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="181.33333333333334" y="395.70666666666665"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8b0ba45a-17d3-460d-95a5-2f311215de10">
+            <objects>
+                <navigationController id="f8d88067-2440-4cb9-aaaf-fcfc71637e74" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="72458fed-3dc4-4a78-9e1f-1fb80486b3e3">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="d290a864-aa10-4a42-b88a-3e59a69a7635" kind="relationship" relationship="rootViewController" id="de3b54c2-f348-42fb-9a8d-a07c948d0f55"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="78bd5fad-af25-4073-bf49-ea686bd08ae0" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="181.33333333333334" y="395.70666666666665"/>
+        </scene>
+        <!--App View Controller-->
+        <scene sceneID="f6c1d718-67a4-4f5d-9e97-95671ebd3cf1">
+            <objects>
+                <viewController id="d290a864-aa10-4a42-b88a-3e59a69a7635" customClass="AppViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2d8b00ed-7fdb-4808-8498-8df314d79829"/>
+                        <viewControllerLayoutGuide type="bottom" id="8861c088-8481-4b35-9658-e0914d67e727"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="158ee7f6-9944-4111-a4e8-e1a919b3daa0">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" contentMode="scaleToFill" text="Choose Mode" lineBreakMode="tailTruncation" id="2839a62d-bcb7-4928-8fac-2c4c01329cc9">
+                                <rect key="frame" x="229" y="115" width="142" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="5e181a2d-42f2-4169-a2aa-c206aa815716"/>
+                                    <constraint firstAttribute="width" constant="142" id="bc54d631-a978-488f-bbb0-020c50c1a2f7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <color key="textColor" red="0.0" green="0.015686274509803921" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d3dd3cd4-b1d3-483a-83a6-4207e3895b33">
+                                <rect key="frame" x="0.0" y="150" width="113" height="90"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="0a263ce9-2390-4c68-941b-b90d08f538e2"/>
+                                    <constraint firstAttribute="width" constant="113" id="7ded71fa-b855-441e-9851-504d2cbc7f0c"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="416e7707-5e8b-4007-a9c2-302cf10a52d3">
+                                <rect key="frame" x="0.0" y="245" width="600" height="71"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="71" id="2c6dee33-c065-4ed1-88ab-588b28d80490"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="One player">
+                                    <color key="titleColor" red="0.0" green="0.015686274509803921" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="BtnOnePlayerPressed:" destination="d290a864-aa10-4a42-b88a-3e59a69a7635" eventType="touchUpInside" id="7fd3a277-12e7-480f-a236-3328ded88082"/>
+                                    <segue destination="72ec8fff-7a1b-4ea3-aa4c-d67e178af15e" kind="show" id="71e3bacb-1585-451b-aa94-5e0f05edfcd6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4f27498d-caf3-440a-9ead-fdc91d427eec">
+                                <rect key="frame" x="0.0" y="321" width="600" height="58"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="58" id="e21539da-5ade-4965-a8f5-bd8752651926"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="AIPlayer">
+                                    <color key="titleColor" red="0.0" green="0.015686274509803921" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnAIPressed:" destination="d290a864-aa10-4a42-b88a-3e59a69a7635" eventType="touchUpInside" id="9cdbf257-ec2a-4b90-baef-cd6eee1bde4b"/>
+                                    <segue destination="72ec8fff-7a1b-4ea3-aa4c-d67e178af15e" kind="show" id="ada1a329-afd5-4a13-8b06-2834331763f8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="d3dd3cd4-b1d3-483a-83a6-4207e3895b33" firstAttribute="bottom" secondItem="416e7707-5e8b-4007-a9c2-302cf10a52d3" secondAttribute="top" priority="950" constant="-5" id="00061db2-2506-4c95-93aa-0bc3c7c45494"/>
+                            <constraint firstAttribute="trailing" secondItem="416e7707-5e8b-4007-a9c2-302cf10a52d3" secondAttribute="trailing" priority="900" id="02ef9dc9-e569-4861-8ba2-d4a01acdaf76"/>
+                            <constraint firstItem="2839a62d-bcb7-4928-8fac-2c4c01329cc9" firstAttribute="centerX" secondItem="158ee7f6-9944-4111-a4e8-e1a919b3daa0" secondAttribute="centerX" id="197d372e-d990-487c-ab75-e3471ec5be28"/>
+                            <constraint firstAttribute="bottom" secondItem="4f27498d-caf3-440a-9ead-fdc91d427eec" secondAttribute="bottom" priority="900" id="4a7dd85e-93b7-4793-8f92-375a3c7e176a"/>
+                            <constraint firstItem="d3dd3cd4-b1d3-483a-83a6-4207e3895b33" firstAttribute="leading" secondItem="158ee7f6-9944-4111-a4e8-e1a919b3daa0" secondAttribute="leading" id="57105343-6298-4ec7-8e50-4fe33f8a4e9c"/>
+                            <constraint firstItem="416e7707-5e8b-4007-a9c2-302cf10a52d3" firstAttribute="leading" secondItem="158ee7f6-9944-4111-a4e8-e1a919b3daa0" secondAttribute="leading" priority="950" id="5cfce7e9-d1c3-4a54-be39-ed577aebcd56"/>
+                            <constraint firstItem="4f27498d-caf3-440a-9ead-fdc91d427eec" firstAttribute="leading" secondItem="158ee7f6-9944-4111-a4e8-e1a919b3daa0" secondAttribute="leading" priority="950" id="5fe87220-4c54-4af4-b375-8116d1f94b1d"/>
+                            <constraint firstItem="2839a62d-bcb7-4928-8fac-2c4c01329cc9" firstAttribute="bottom" secondItem="d3dd3cd4-b1d3-483a-83a6-4207e3895b33" secondAttribute="top" priority="950" id="62699f68-59ea-4131-bcd2-dc456c775d64"/>
+                            <constraint firstAttribute="trailing" secondItem="4f27498d-caf3-440a-9ead-fdc91d427eec" secondAttribute="trailing" priority="900" id="7fb50db6-3484-4125-91c9-8b1ddcdea750"/>
+                            <constraint firstItem="416e7707-5e8b-4007-a9c2-302cf10a52d3" firstAttribute="bottom" secondItem="4f27498d-caf3-440a-9ead-fdc91d427eec" secondAttribute="top" priority="950" constant="-5" id="9a533297-c91a-4c87-81ca-7679f75f7b97"/>
+                            <constraint firstItem="2839a62d-bcb7-4928-8fac-2c4c01329cc9" firstAttribute="top" secondItem="158ee7f6-9944-4111-a4e8-e1a919b3daa0" secondAttribute="top" priority="950" constant="115" id="a27f54da-4f00-459a-b4e9-cf732b0ff82d"/>
+                            <constraint firstItem="416e7707-5e8b-4007-a9c2-302cf10a52d3" firstAttribute="width" secondItem="4f27498d-caf3-440a-9ead-fdc91d427eec" secondAttribute="width" priority="500" id="a7655560-7957-43e3-91c9-8f9654f293ed"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="e2c65ad2-6b2e-4212-b854-84cc52e17162"/>
+                    <connections>
+                        <outlet property="AIPlayer" destination="4f27498d-caf3-440a-9ead-fdc91d427eec" id="b1558b47-bf94-4d07-8d4b-a8f3d90364d0"/>
+                        <outlet property="OnePlayer" destination="416e7707-5e8b-4007-a9c2-302cf10a52d3" id="ba7c9455-8259-423f-961e-129e50e597d6"/>
+                        <outlet property="logoButton" destination="d3dd3cd4-b1d3-483a-83a6-4207e3895b33" id="80012dd9-5deb-4f9e-baae-0a66566a4d7a"/>
+                        <segue destination="72ec8fff-7a1b-4ea3-aa4c-d67e178af15e" kind="show" id="98d3fc50-553a-4cc8-ae9b-06273b18ca40"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="012076dc-f0ec-4c22-aa17-185873f9c19c" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="181.33333333333334" y="395.70666666666665"/>
+        </scene>
+    </scenes>
+</document>

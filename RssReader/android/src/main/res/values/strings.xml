@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">RssReader</string>
+
+    <string name="action_bookmarks">Bookmarks</string>
+</resources>

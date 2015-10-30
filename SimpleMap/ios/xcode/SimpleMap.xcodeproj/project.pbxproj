@@ -1,0 +1,346 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		16AEC48F06700AD0BDE3BE64 /* MOE.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 438773404557E889ED6E35DE /* MOE.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3E7B747329303B8F66C21BFA /* MOE.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 438773404557E889ED6E35DE /* MOE.framework */; };
+		41EACE76D499026EE13DD472 /* preregister.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3013BD09CDB795D73A5296AC /* preregister.txt */; };
+		4ED8E51E7E58E8F83C84FF70 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E5F0E2801E2C7CF0B74B0CEC /* main.cpp */; };
+		CE9D01421B94421A00DE07F6 /* intel_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = CE9D01401B94421A00DE07F6 /* intel_logo.png */; };
+		CE9D01431B94421A00DE07F6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE9D01411B94421A00DE07F6 /* LaunchScreen.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8A273F85B165857391150C19 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				16AEC48F06700AD0BDE3BE64 /* MOE.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		22336B89D6C95460FFAFC82D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3013BD09CDB795D73A5296AC /* preregister.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = preregister.txt; sourceTree = "<group>"; };
+		438773404557E889ED6E35DE /* MOE.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MOE.framework; sourceTree = XRT_FRAMEWORK_PATH; };
+		98F7DA21D3B141DBDC14C68A /* build.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = build.xcconfig; sourceTree = "<group>"; };
+		A6208DD2EA6EF4237814AF30 /* SimpleMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = SimpleMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE9D01401B94421A00DE07F6 /* intel_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = intel_logo.png; path = ../src/main/resources/intel_logo.png; sourceTree = "<group>"; };
+		CE9D01411B94421A00DE07F6 /* LaunchScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = LaunchScreen.xib; path = ../src/main/resources/LaunchScreen.xib; sourceTree = "<group>"; };
+		E5F0E2801E2C7CF0B74B0CEC /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		178D49ED499901B1AE8D7729 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E7B747329303B8F66C21BFA /* MOE.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		184B41F710FE2A9A7F3505CF /* SimpleMap */ = {
+			isa = PBXGroup;
+			children = (
+				5F2C9BA8DCD4AD133524A3EA /* Supporting Files */,
+			);
+			path = SimpleMap;
+			sourceTree = "<group>";
+		};
+		4E7DD7F601FEBBD4A83909B7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CE9D01401B94421A00DE07F6 /* intel_logo.png */,
+				CE9D01411B94421A00DE07F6 /* LaunchScreen.xib */,
+				A6208DD2EA6EF4237814AF30 /* SimpleMap.app */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		5F2C9BA8DCD4AD133524A3EA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				98F7DA21D3B141DBDC14C68A /* build.xcconfig */,
+				E5F0E2801E2C7CF0B74B0CEC /* main.cpp */,
+				22336B89D6C95460FFAFC82D /* Info.plist */,
+				3013BD09CDB795D73A5296AC /* preregister.txt */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		97584346A3CB85D533351BD8 = {
+			isa = PBXGroup;
+			children = (
+				184B41F710FE2A9A7F3505CF /* SimpleMap */,
+				A9B12FBAC6F6BE27C28ED94D /* Frameworks */,
+				4E7DD7F601FEBBD4A83909B7 /* Resources */,
+			);
+			sourceTree = "<group>";
+		};
+		A9B12FBAC6F6BE27C28ED94D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				438773404557E889ED6E35DE /* MOE.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CF84B3932D2EAAE91D1C0BA8 /* SimpleMap */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 315C6B06076757576B806148 /* Build configuration list for PBXNativeTarget "SimpleMap" */;
+			buildPhases = (
+				270317FDFDD369B3FCE88A17 /* Compile Java Sources */,
+				178D49ED499901B1AE8D7729 /* Frameworks */,
+				2731DE20986CF13CFCA763B8 /* Resources */,
+				8D0A76BB363480749BF82E05 /* Sources */,
+				8A273F85B165857391150C19 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			name = SimpleMap;
+			productName = SimpleMap;
+			productReference = A6208DD2EA6EF4237814AF30 /* SimpleMap.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8DFA049BB233BC7E089AD9E1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = intel;
+			};
+			buildConfigurationList = 6BC81592F95D0FA4F8FE53ED /* Build configuration list for PBXProject "SimpleMap" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 97584346A3CB85D533351BD8;
+			productRefGroup = 4E7DD7F601FEBBD4A83909B7 /* Resources */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CF84B3932D2EAAE91D1C0BA8 /* SimpleMap */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2731DE20986CF13CFCA763B8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE9D01421B94421A00DE07F6 /* intel_logo.png in Resources */,
+				CE9D01431B94421A00DE07F6 /* LaunchScreen.xib in Resources */,
+				41EACE76D499026EE13DD472 /* preregister.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		270317FDFDD369B3FCE88A17 /* Compile Java Sources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Compile Java Sources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "cd ../\n\nexport JAVA_HOME=$(/usr/libexec/java_home -v 1.8)\njava -version\n\nfunction gradlePath {\n\tCD=\"$PWD\"\n\twhile [ \"$CD\" != \"\" ]; do\n\t\tif [ -x \"$CD/gradlew\" ]; then\n\t\t\tGRADLE_PATH=$CD/gradlew\n\t\t\treturn 0\n\t\tfi\n\t\tCD=\"${CD%/*}\"\n\tdone\n\n\tGRADLE_PATH=$(which 'gradle')\n\n\tif [ \"$GRADLE_PATH\" = \"\" ]; then\n\t\tGRADLE_PATH=/usr/local/bin/gradle\n\tfi\n}\ngradlePath\n\nif [ \"$XRT_SKIP_DEX\" == \"Yes\" ]; then\n\techo \"Compiling ART only...\"\n\t\"$GRADLE_PATH\" --daemon buildArtOat -Pxrt.archs=${arch}\n\texit\nfi\n\n\"$GRADLE_PATH\" --daemon compileJava proguard buildRetro buildDex buildArtOat buildPreregister -Pxrt.archs=\"${ARCHS}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D0A76BB363480749BF82E05 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4ED8E51E7E58E8F83C84FF70 /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1F30903053A6D09FE57A31DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98F7DA21D3B141DBDC14C68A /* build.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEAD_CODE_STRIPPING = NO;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = SimpleMap/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "${XRT_OTHER_LDFLAGS}";
+				PRODUCT_NAME = SimpleMap;
+				STRIP_STYLE = "non-global";
+				VALID_ARCHS = "armv7 arm64 i386";
+			};
+			name = Release;
+		};
+		7686B73AF8FCB6353A28B47A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98F7DA21D3B141DBDC14C68A /* build.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"${XRT_FRAMEWORK_PATH}",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) ${XRT_FRAMEWORK_PATH}";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				SDKROOT = iphoneos;
+				SYMROOT = ../build/xcode;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9E8D10BC0107FBC3C48DA7BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98F7DA21D3B141DBDC14C68A /* build.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"${XRT_FRAMEWORK_PATH}",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) ${XRT_FRAMEWORK_PATH}";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				SDKROOT = iphoneos;
+				SYMROOT = ../build/xcode;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C932619ABFBFA53D63728DAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98F7DA21D3B141DBDC14C68A /* build.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEAD_CODE_STRIPPING = NO;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = SimpleMap/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "${XRT_OTHER_LDFLAGS}";
+				PRODUCT_NAME = SimpleMap;
+				STRIP_STYLE = "non-global";
+				VALID_ARCHS = "armv7 arm64 i386";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		315C6B06076757576B806148 /* Build configuration list for PBXNativeTarget "SimpleMap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C932619ABFBFA53D63728DAB /* Debug */,
+				1F30903053A6D09FE57A31DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6BC81592F95D0FA4F8FE53ED /* Build configuration list for PBXProject "SimpleMap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7686B73AF8FCB6353A28B47A /* Debug */,
+				9E8D10BC0107FBC3C48DA7BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8DFA049BB233BC7E089AD9E1 /* Project object */;
+}

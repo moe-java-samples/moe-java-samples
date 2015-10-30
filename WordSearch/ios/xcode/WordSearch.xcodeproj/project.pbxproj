@@ -1,0 +1,338 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3AA03EB8BB663658FF805598 /* MOE.framework */ = {isa = PBXBuildFile; fileRef = D3B41B1084A3E6983CDF7D70 /* MOE.framework */; };
+		5564A010F5BBFF65ED8EED52 /* MOE.framework */ = {isa = PBXBuildFile; fileRef = D3B41B1084A3E6983CDF7D70 /* MOE.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		625CB46F2FE7816FDAB0CBF0 /* preregister.txt */ = {isa = PBXBuildFile; fileRef = 602F092CE587BABAF6C85035 /* preregister.txt */; };
+		CBD8820430108BA874D70837 /* main.cpp */ = {isa = PBXBuildFile; fileRef = 22A8EF70FEAB0C71FECBB426 /* main.cpp */; };
+		E6F4402B1B85C89E009D0167 /* US.dic */ = {isa = PBXBuildFile; fileRef = E6F4402A1B85C89E009D0167 /* US.dic */; };
+		FBC072F28C84C15494D72FEA /* LaunchScreen.xib */ = {isa = PBXBuildFile; fileRef = 35A2477A3E5A1A857948C23A /* LaunchScreen.xib */; };
+		CD20FE3C6EE053937983DABC /* intel_logo.png */ = {isa = PBXBuildFile; fileRef = 2ECD1C60262E3FF7F84094CD /* intel_logo.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3D032E9D08B59B0E2C207C93 = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				5564A010F5BBFF65ED8EED52,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		22A8EF70FEAB0C71FECBB426 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		3C7616A38347D33DAC8B2B68 /* build.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = build.xcconfig; sourceTree = "<group>"; };
+		602F092CE587BABAF6C85035 /* preregister.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = preregister.txt; sourceTree = "<group>"; };
+		921B295059538390A7F83092 /* WordSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = WordSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6AAA559743C724BF9F4AD6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3B41B1084A3E6983CDF7D70 /* MOE.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MOE.framework; sourceTree = XRT_FRAMEWORK_PATH; };
+		E6F4402A1B85C89E009D0167 /* US.dic */ = {isa = PBXFileReference; lastKnownFileType = text; name = US.dic; path = ../src/main/resources/US.dic; sourceTree = "<group>"; };
+		35A2477A3E5A1A857948C23A /* LaunchScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = LaunchScreen.xib; path = ../src/main/resources/LaunchScreen.xib; sourceTree = "<group>"; };
+		2ECD1C60262E3FF7F84094CD /* intel_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = intel_logo.png; path = ../src/main/resources/intel_logo.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		32603C9599C928F94F2F4905 = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AA03EB8BB663658FF805598,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0448F1590BFACFE1C1456CBA = {
+			isa = PBXGroup;
+			children = (
+				3C7616A38347D33DAC8B2B68 /* build.xcconfig */,
+				22A8EF70FEAB0C71FECBB426 /* main.cpp */,
+				B6AAA559743C724BF9F4AD6A /* Info.plist */,
+				602F092CE587BABAF6C85035 /* preregister.txt */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		393E1D19BDCDC4FE48405734 = {
+			isa = PBXGroup;
+			children = (
+				0448F1590BFACFE1C1456CBA /* "Supporting Files" */,
+			);
+			path = WordSearch;
+			sourceTree = "<group>";
+		};
+		57BCB39F5B8FB80EEE0CF4FD = {
+			isa = PBXGroup;
+			children = (
+				393E1D19BDCDC4FE48405734 /* WordSearch */,
+				9C0789213BCAFF359D5F3B0C /* Frameworks */,
+				8BC91895419681C3C1B2BD41 /* Resources */,
+			);
+			sourceTree = "<group>";
+		};
+		8BC91895419681C3C1B2BD41 = {
+			isa = PBXGroup;
+			children = (
+				E6F4402A1B85C89E009D0167 /* US.dic */,
+				921B295059538390A7F83092 /* WordSearch.app */,
+				35A2477A3E5A1A857948C23A /* LaunchScreen.xib */,
+				2ECD1C60262E3FF7F84094CD /* intel_logo.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		9C0789213BCAFF359D5F3B0C = {
+			isa = PBXGroup;
+			children = (
+				D3B41B1084A3E6983CDF7D70 /* MOE.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7B63B6D14CE78732C18E1307 = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D5E6B14F796CDF023AA4A17C;
+			buildPhases = (
+				9784CD720EC349B48BDEB200,
+				32603C9599C928F94F2F4905,
+				68F71B10FCEF1B5187DE3511,
+				D5815D74DE995F3EAB4C2036,
+				3D032E9D08B59B0E2C207C93,
+			);
+			buildRules = (
+			);
+			name = WordSearch;
+			productName = WordSearch;
+			productReference = 921B295059538390A7F83092;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F34892D446C4FD742FD63CC6 = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = intel;
+			};
+			buildConfigurationList = 520B72A35202ACA6B2C9BE8B;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 57BCB39F5B8FB80EEE0CF4FD;
+			productRefGroup = 8BC91895419681C3C1B2BD41;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7B63B6D14CE78732C18E1307,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		68F71B10FCEF1B5187DE3511 = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6F4402B1B85C89E009D0167,
+				625CB46F2FE7816FDAB0CBF0,
+				FBC072F28C84C15494D72FEA,
+				CD20FE3C6EE053937983DABC,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9784CD720EC349B48BDEB200 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Compile Java Sources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "cd ../\n\nexport JAVA_HOME=$(/usr/libexec/java_home -v 1.8)\njava -version\n\nfunction gradlePath {\n\tCD=\"$PWD\"\n\twhile [ \"$CD\" != \"\" ]; do\n\t\tif [ -x \"$CD/gradlew\" ]; then\n\t\t\tGRADLE_PATH=$CD/gradlew\n\t\t\treturn 0\n\t\tfi\n\t\tCD=\"${CD%/*}\"\n\tdone\n\n\tGRADLE_PATH=$(which 'gradle')\n\n\tif [ \"$GRADLE_PATH\" = \"\" ]; then\n\t\tGRADLE_PATH=/usr/local/bin/gradle\n\tfi\n}\ngradlePath\n\nif [ \"$XRT_SKIP_DEX\" == \"Yes\" ]; then\n\techo \"Compiling ART only...\"\n\t\"$GRADLE_PATH\" --daemon buildArtOat -Pxrt.archs=${arch}\n\texit\nfi\n\n\"$GRADLE_PATH\" --daemon compileJava proguard buildRetro buildDex buildArtOat buildPreregister -Pxrt.archs=\"${ARCHS}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D5815D74DE995F3EAB4C2036 = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBD8820430108BA874D70837,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		12F80CE2141D201D342D6561 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C7616A38347D33DAC8B2B68;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = ("$(inherited)","${XRT_FRAMEWORK_PATH}",);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("DEBUG=1","$(inherited)",);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) ${XRT_FRAMEWORK_PATH}";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				SDKROOT = iphoneos;
+				SYMROOT = ../build/xcode;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3D6D207DBF575FBFE6B9C065 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C7616A38347D33DAC8B2B68;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = ("$(inherited)","${XRT_FRAMEWORK_PATH}",);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("DEBUG=1","$(inherited)",);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) ${XRT_FRAMEWORK_PATH}";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				SDKROOT = iphoneos;
+				SYMROOT = ../build/xcode;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6FE1898D46AFFEF70ED16F6A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C7616A38347D33DAC8B2B68;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEAD_CODE_STRIPPING = NO;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = WordSearch/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "${XRT_OTHER_LDFLAGS}";
+				PRODUCT_NAME = WordSearch;
+				STRIP_STYLE = "non-global";
+				VALID_ARCHS = "armv7 arm64 i386";
+			};
+			name = Release;
+		};
+		A31B3AD0E72D01D7DB3A8639 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C7616A38347D33DAC8B2B68;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEAD_CODE_STRIPPING = NO;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = WordSearch/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "${XRT_OTHER_LDFLAGS}";
+				PRODUCT_NAME = WordSearch;
+				STRIP_STYLE = "non-global";
+				VALID_ARCHS = "armv7 arm64 i386";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		520B72A35202ACA6B2C9BE8B = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D6D207DBF575FBFE6B9C065,
+				12F80CE2141D201D342D6561,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D5E6B14F796CDF023AA4A17C = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A31B3AD0E72D01D7DB3A8639,
+				6FE1898D46AFFEF70ED16F6A,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F34892D446C4FD742FD63CC6;
+}

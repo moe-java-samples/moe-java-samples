@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="blue">#0A2269</color>
+    <color name="dark_blue">#081438</color>
+    <color name="red">#BF1111</color>
+    <color name="maroon">#6E0404</color>
+    <color name="green">#277303</color>
+    <color name="dark_green">#173808</color>
+    <color name="silver">#CCCCCC</color>
+    <color name="dark_grey">#D0d0d0</color>
+    <color name="bright_green">#00CC33</color>
+    <color name="ios_blue">#0033FF</color>
+    <color name="ios_black">#000000</color>
+    <color name="ios_gray">#787878</color>
+    <color name="text_violet">#ff8888ff</color>
+</resources>
