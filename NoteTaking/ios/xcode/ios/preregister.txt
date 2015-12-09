@@ -1,0 +1,3 @@
+com/intel/ios/Main
+com/intel/ios/ui/DetailViewController
+com/intel/ios/ui/MasterViewController
