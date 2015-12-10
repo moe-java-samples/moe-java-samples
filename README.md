@@ -45,6 +45,7 @@ The following samples are available for the Intel Multi-OS Engine:
 - **FlipView** is an application that illustrates the following techniques: subclassing UIView, reacting to taps in views, open a URL to an external web site using Safari, flipping view content from front to back
 - **KeyboardAccessory** shows how to use a keyboard accessory and how to use the keyboard-will-show and keyboard-will-hide notifications to animate resizing a view that is obscured by the keyboard
 - **LazyTableLoader** demonstrates a multi-stage approach to loading and displaying a UITableView
+- **NoteTaking** shows how to make persistent storage with file system
 - **OpenGLBox** demonstrates 3D graphics programming using OpenGL
 - **Planets** demonstrates working with UI Kit graphics
 - **RssReader** demonstrates use of HTTP and HTTPS using Java* API
