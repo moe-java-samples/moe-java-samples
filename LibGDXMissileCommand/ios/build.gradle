@@ -1,0 +1,51 @@
+buildscript {
+    repositories {
+        mavenCentral()
+
+        maven {
+            url uri(System.getenv("INTEL_MULTI_OS_ENGINE_HOME") + "/gradle")
+        }
+    }
+    dependencies {
+        classpath 'org.intel.gradle:xRTGradlePlugin:1.0'
+    }
+}
+
+apply plugin: 'xrt'
+
+configurations { natives }
+
+// Extracts native libs (*.a) from the native-ios.jar and places them
+// under build/libs/ios/.
+task copyNatives << {
+    file("xcode/native/ios/").mkdirs();
+    configurations.natives.files.each { jar ->
+        def outputDir = null
+        if (jar.name.endsWith("natives-ios.jar")) outputDir = file("xcode/native/ios")
+        if (outputDir != null) {
+            FileCollection fileCollection = zipTree(jar)
+            for (File libFile : fileCollection) {
+                if (libFile.getAbsolutePath().endsWith(".a") && !libFile.getAbsolutePath().contains("/tvos/")) {
+                    copy {
+                        from libFile.getAbsolutePath()
+                        into outputDir
+                    }
+                }
+            }
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'lib', include: '*.jar')
+
+    compile project(":common")
+
+    compile "com.badlogicgames.gdx:gdx-backend-moe:$gdxVersion"
+    natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-ios"
+}
+
+xrt {
+}
+
+buildApp.dependsOn copyNatives

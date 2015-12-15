@@ -1,0 +1,38 @@
+import groovy.json.JsonSlurper
+
+buildscript {
+
+    ant.get(src: 'http://libgdx.badlogicgames.com/libgdx-site/service/getVersions?release=false', dest: 'versions.json')
+    def versionFile = file('versions.json')
+    def json
+    if (versionFile.exists()) {
+        json = new JsonSlurper().parseText(versionFile.text)
+    } else throw new GradleException("Unable to retrieve latest versions, please check your internet connection")
+
+    ext {
+        gdxVersion = json.libgdxSnapshot
+        roboVMVersion = json.robovmVersion
+        roboVMGradleVersion = json.robovmPluginVersion
+        androidToolsVersion = json.androidBuildtoolsVersion
+        androidSDKVersion = json.androidSDKVersion
+        androidGradleToolsVersion = json.androidGradleToolVersion
+        gwtVersion = json.gwtVersion
+        gwtGradleVersion = json.gwtPluginVersion
+    }
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:1.3.0'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        mavenLocal()
+    }
+}
