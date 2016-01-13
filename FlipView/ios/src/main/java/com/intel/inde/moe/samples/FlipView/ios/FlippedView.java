@@ -100,7 +100,7 @@ public class FlippedView extends FrontView {
     public void jumpToWikipedia(NSObject sender) {
         // Create the string that points to the correct Wikipedia page
         if (!UIApplication.sharedApplication().openURL(NSURL.URLWithString(Strings.linkToWiki))) {
-            // There was an error trying to open the URL. for the moment we'll simply ignore it.
+            System.out.println("Cannot open url: " + Strings.linkToWiki);
         }
     }
 

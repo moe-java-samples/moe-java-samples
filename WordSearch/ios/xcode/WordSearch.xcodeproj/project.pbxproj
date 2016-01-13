@@ -7,23 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3AA03EB8BB663658FF805598 /* MOE.framework */ = {isa = PBXBuildFile; fileRef = D3B41B1084A3E6983CDF7D70 /* MOE.framework */; };
-		5564A010F5BBFF65ED8EED52 /* MOE.framework */ = {isa = PBXBuildFile; fileRef = D3B41B1084A3E6983CDF7D70 /* MOE.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		625CB46F2FE7816FDAB0CBF0 /* preregister.txt */ = {isa = PBXBuildFile; fileRef = 602F092CE587BABAF6C85035 /* preregister.txt */; };
-		CBD8820430108BA874D70837 /* main.cpp */ = {isa = PBXBuildFile; fileRef = 22A8EF70FEAB0C71FECBB426 /* main.cpp */; };
-		E6F4402B1B85C89E009D0167 /* US.dic */ = {isa = PBXBuildFile; fileRef = E6F4402A1B85C89E009D0167 /* US.dic */; };
-		FBC072F28C84C15494D72FEA /* LaunchScreen.xib */ = {isa = PBXBuildFile; fileRef = 35A2477A3E5A1A857948C23A /* LaunchScreen.xib */; };
-		CD20FE3C6EE053937983DABC /* intel_logo.png */ = {isa = PBXBuildFile; fileRef = 2ECD1C60262E3FF7F84094CD /* intel_logo.png */; };
+		05B97ABF1BC4F6C300F7713D /* precopy.txt in Resources */ = {isa = PBXBuildFile; fileRef = 05B97ABE1BC4F6C300F7713D /* precopy.txt */; };
+		4C83DFEE14ED5EFF58750B72 /* MOE.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B7CFE33192479FA25F5CF763 /* MOE.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CE12508D1BE7508100EE957C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE12508C1BE7508100EE957C /* main.cpp */; };
+		CEFD762B1BFFB1AD004B66F3 /* application.jar in Resources */ = {isa = PBXBuildFile; fileRef = CEFD762A1BFFB1AD004B66F3 /* application.jar */; };
+		D241468BC37AC21CC30E4617 /* MOE.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7CFE33192479FA25F5CF763 /* MOE.framework */; };
+		E1FC3316B6A51DD307A75C6B /* preregister.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3EA7675175F5F88D6DAEEFC8 /* preregister.txt */; };
+		E64DA4BC1BE394B100ED4810 /* US.dic in Resources */ = {isa = PBXBuildFile; fileRef = E64DA4BB1BE394B100ED4810 /* US.dic */; };
+		E65DE1A61BB288C30042C6E1 /* intel_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = E65DE1A41BB288C30042C6E1 /* intel_logo.png */; };
+		E65DE1A71BB288C30042C6E1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E65DE1A51BB288C30042C6E1 /* LaunchScreen.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		3D032E9D08B59B0E2C207C93 = {
+		27A444C7E5DC22CA1AE513B7 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				5564A010F5BBFF65ED8EED52,
+				4C83DFEE14ED5EFF58750B72 /* MOE.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -31,105 +33,114 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		22A8EF70FEAB0C71FECBB426 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		3C7616A38347D33DAC8B2B68 /* build.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = build.xcconfig; sourceTree = "<group>"; };
-		602F092CE587BABAF6C85035 /* preregister.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = preregister.txt; sourceTree = "<group>"; };
-		921B295059538390A7F83092 /* WordSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = WordSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B6AAA559743C724BF9F4AD6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D3B41B1084A3E6983CDF7D70 /* MOE.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MOE.framework; sourceTree = XRT_FRAMEWORK_PATH; };
-		E6F4402A1B85C89E009D0167 /* US.dic */ = {isa = PBXFileReference; lastKnownFileType = text; name = US.dic; path = ../src/main/resources/US.dic; sourceTree = "<group>"; };
-		35A2477A3E5A1A857948C23A /* LaunchScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = LaunchScreen.xib; path = ../src/main/resources/LaunchScreen.xib; sourceTree = "<group>"; };
-		2ECD1C60262E3FF7F84094CD /* intel_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = intel_logo.png; path = ../src/main/resources/intel_logo.png; sourceTree = "<group>"; };
+		0366CB524541A7BD2BE73E8D /* build.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = build.xcconfig; sourceTree = "<group>"; };
+		05B97ABE1BC4F6C300F7713D /* precopy.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = precopy.txt; sourceTree = "<group>"; };
+		05D6EF891BE0A845001EC12E /* custom.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = custom.xcconfig; sourceTree = "<group>"; };
+		3EA7675175F5F88D6DAEEFC8 /* preregister.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = preregister.txt; sourceTree = "<group>"; };
+		5A88B4FAFCEE1E474D14999D /* WordSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = WordSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7CFE33192479FA25F5CF763 /* MOE.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MOE.framework; sourceTree = XRT_FRAMEWORK_PATH; };
+		C54D2A26C77EEC518917571A /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = WordSearch/main.cpp; sourceTree = "<group>"; };
+		CE12508C1BE7508100EE957C /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = WordSearch/main.cpp; sourceTree = "<group>"; };
+		CEFD762A1BFFB1AD004B66F3 /* application.jar */ = {isa = PBXFileReference; lastKnownFileType = archive.jar; name = application.jar; path = ../build/application.jar; sourceTree = "<group>"; };
+		E64DA4BB1BE394B100ED4810 /* US.dic */ = {isa = PBXFileReference; lastKnownFileType = text; name = US.dic; path = ../src/main/resources/US.dic; sourceTree = "<group>"; };
+		E65DE1A41BB288C30042C6E1 /* intel_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = intel_logo.png; path = ../src/main/resources/intel_logo.png; sourceTree = "<group>"; };
+		E65DE1A51BB288C30042C6E1 /* LaunchScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = LaunchScreen.xib; path = ../src/main/resources/LaunchScreen.xib; sourceTree = "<group>"; };
+		EEDA81A2E94F194BC4B3E70A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		32603C9599C928F94F2F4905 = {
+		9A19FEFC207ED5CA29209700 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3AA03EB8BB663658FF805598,
+				D241468BC37AC21CC30E4617 /* MOE.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0448F1590BFACFE1C1456CBA = {
+		B46C7E3DCAAF5EC1D806EDDA = {
 			isa = PBXGroup;
 			children = (
-				3C7616A38347D33DAC8B2B68 /* build.xcconfig */,
-				22A8EF70FEAB0C71FECBB426 /* main.cpp */,
-				B6AAA559743C724BF9F4AD6A /* Info.plist */,
-				602F092CE587BABAF6C85035 /* preregister.txt */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		393E1D19BDCDC4FE48405734 = {
-			isa = PBXGroup;
-			children = (
-				0448F1590BFACFE1C1456CBA /* "Supporting Files" */,
-			);
-			path = WordSearch;
-			sourceTree = "<group>";
-		};
-		57BCB39F5B8FB80EEE0CF4FD = {
-			isa = PBXGroup;
-			children = (
-				393E1D19BDCDC4FE48405734 /* WordSearch */,
-				9C0789213BCAFF359D5F3B0C /* Frameworks */,
-				8BC91895419681C3C1B2BD41 /* Resources */,
+				CE12508C1BE7508100EE957C /* main.cpp */,
+				FBDC58D56B04305DFC935A11 /* WordSearch */,
+				E32CCEDF2F93127426C9F78A /* Frameworks */,
+				F0718A336B371F840C384249 /* Resources */,
 			);
 			sourceTree = "<group>";
 		};
-		8BC91895419681C3C1B2BD41 = {
+		E32CCEDF2F93127426C9F78A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E6F4402A1B85C89E009D0167 /* US.dic */,
-				921B295059538390A7F83092 /* WordSearch.app */,
-				35A2477A3E5A1A857948C23A /* LaunchScreen.xib */,
-				2ECD1C60262E3FF7F84094CD /* intel_logo.png */,
+				B7CFE33192479FA25F5CF763 /* MOE.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F0718A336B371F840C384249 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CEFD762A1BFFB1AD004B66F3 /* application.jar */,
+				E64DA4BB1BE394B100ED4810 /* US.dic */,
+				E65DE1A41BB288C30042C6E1 /* intel_logo.png */,
+				E65DE1A51BB288C30042C6E1 /* LaunchScreen.xib */,
+				5A88B4FAFCEE1E474D14999D /* WordSearch.app */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
 		};
-		9C0789213BCAFF359D5F3B0C = {
+		F3540FADD0036F133D71686D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				D3B41B1084A3E6983CDF7D70 /* MOE.framework */,
+				05D6EF891BE0A845001EC12E /* custom.xcconfig */,
+				0366CB524541A7BD2BE73E8D /* build.xcconfig */,
+				EEDA81A2E94F194BC4B3E70A /* Info.plist */,
+				3EA7675175F5F88D6DAEEFC8 /* preregister.txt */,
+				05B97ABE1BC4F6C300F7713D /* precopy.txt */,
+				C54D2A26C77EEC518917571A /* main.cpp */,
 			);
-			name = Frameworks;
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FBDC58D56B04305DFC935A11 /* WordSearch */ = {
+			isa = PBXGroup;
+			children = (
+				F3540FADD0036F133D71686D /* Supporting Files */,
+			);
+			path = WordSearch;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7B63B6D14CE78732C18E1307 = {
+		7C4011C076B8323EB9820E9E /* WordSearch */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D5E6B14F796CDF023AA4A17C;
+			buildConfigurationList = 42B9A61A2D168A5C2DE28952 /* Build configuration list for PBXNativeTarget "WordSearch" */;
 			buildPhases = (
-				9784CD720EC349B48BDEB200,
-				32603C9599C928F94F2F4905,
-				68F71B10FCEF1B5187DE3511,
-				D5815D74DE995F3EAB4C2036,
-				3D032E9D08B59B0E2C207C93,
+				49AA605530A7D95E17B0A3EB /* Compile Java Sources */,
+				9A19FEFC207ED5CA29209700 /* Frameworks */,
+				0FA3E795563E4769546F7F64 /* Resources */,
+				241BB904724D247D2A5A2842 /* Sources */,
+				27A444C7E5DC22CA1AE513B7 /* Embed Frameworks */,
+				05B97ABD1BC4F68D00F7713D /* Custom Copy Script */,
 			);
 			buildRules = (
 			);
 			name = WordSearch;
 			productName = WordSearch;
-			productReference = 921B295059538390A7F83092;
+			productReference = 5A88B4FAFCEE1E474D14999D /* WordSearch.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		F34892D446C4FD742FD63CC6 = {
+		42A49B8ECB7BADB74CF03A8C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				ORGANIZATIONNAME = intel;
 			};
-			buildConfigurationList = 520B72A35202ACA6B2C9BE8B;
+			buildConfigurationList = 79EDF3FDAA88E13B08C91F41 /* Build configuration list for PBXProject "WordSearch" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -137,32 +148,49 @@
 				en,
 				Base,
 			);
-			mainGroup = 57BCB39F5B8FB80EEE0CF4FD;
-			productRefGroup = 8BC91895419681C3C1B2BD41;
+			mainGroup = B46C7E3DCAAF5EC1D806EDDA;
+			productRefGroup = F0718A336B371F840C384249 /* Resources */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7B63B6D14CE78732C18E1307,
+				7C4011C076B8323EB9820E9E /* WordSearch */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		68F71B10FCEF1B5187DE3511 = {
+		0FA3E795563E4769546F7F64 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E6F4402B1B85C89E009D0167,
-				625CB46F2FE7816FDAB0CBF0,
-				FBC072F28C84C15494D72FEA,
-				CD20FE3C6EE053937983DABC,
+				CEFD762B1BFFB1AD004B66F3 /* application.jar in Resources */,
+				E64DA4BC1BE394B100ED4810 /* US.dic in Resources */,
+				E65DE1A71BB288C30042C6E1 /* LaunchScreen.xib in Resources */,
+				E65DE1A61BB288C30042C6E1 /* intel_logo.png in Resources */,
+				E1FC3316B6A51DD307A75C6B /* preregister.txt in Resources */,
+				05B97ABF1BC4F6C300F7713D /* precopy.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		9784CD720EC349B48BDEB200 = {
+		05B97ABD1BC4F68D00F7713D /* Custom Copy Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Custom Copy Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "FILE=\"${SRCROOT}/${PROJECT_NAME}/precopy.txt\"\nwhile read line; do\nstringarray=($line)\ncp -r ${stringarray[0]} ${stringarray[1]}\ndone < $FILE";
+			showEnvVarsInLog = 0;
+		};
+		49AA605530A7D95E17B0A3EB /* Compile Java Sources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -174,26 +202,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/bash;
-			shellScript = "cd ../\n\nexport JAVA_HOME=$(/usr/libexec/java_home -v 1.8)\njava -version\n\nfunction gradlePath {\n\tCD=\"$PWD\"\n\twhile [ \"$CD\" != \"\" ]; do\n\t\tif [ -x \"$CD/gradlew\" ]; then\n\t\t\tGRADLE_PATH=$CD/gradlew\n\t\t\treturn 0\n\t\tfi\n\t\tCD=\"${CD%/*}\"\n\tdone\n\n\tGRADLE_PATH=$(which 'gradle')\n\n\tif [ \"$GRADLE_PATH\" = \"\" ]; then\n\t\tGRADLE_PATH=/usr/local/bin/gradle\n\tfi\n}\ngradlePath\n\nif [ \"$XRT_SKIP_DEX\" == \"Yes\" ]; then\n\techo \"Compiling ART only...\"\n\t\"$GRADLE_PATH\" --daemon buildArtOat -Pxrt.archs=${arch}\n\texit\nfi\n\n\"$GRADLE_PATH\" --daemon compileJava proguard buildRetro buildDex buildArtOat buildPreregister -Pxrt.archs=\"${ARCHS}\"\n";
+			shellScript = "cd ../\n\nexport JAVA_HOME=$(/usr/libexec/java_home -v 1.8)\njava -version\n\nfunction gradlePath {\n\tCD=\"$PWD\"\n\twhile [ \"$CD\" != \"\" ]; do\n\t\tif [ -x \"$CD/gradlew\" ]; then\n\t\t\tGRADLE_PATH=$CD/gradlew\n\t\t\treturn 0\n\t\tfi\n\t\tCD=\"${CD%/*}\"\n\tdone\n\n\tGRADLE_PATH=$(which 'gradle')\n\n\tif [ \"$GRADLE_PATH\" = \"\" ]; then\n\t\tGRADLE_PATH=/usr/local/bin/gradle\n\tfi\n}\ngradlePath\n\nif [ \"$XRT_SKIP_DEX\" == \"Yes\" ]; then\n\techo \"Compiling ART only...\"\n\t\"$GRADLE_PATH\" --daemon buildArtOat -Pxrt.archs=${arch}\n\texit\nfi\n\n\"$GRADLE_PATH\" --daemon compileJava proguard resPack buildRetro buildDex buildArtOat buildPreregister buildPrecopy -Pxrt.archs=\"${ARCHS}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		D5815D74DE995F3EAB4C2036 = {
+		241BB904724D247D2A5A2842 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CBD8820430108BA874D70837,
+				CE12508D1BE7508100EE957C /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		12F80CE2141D201D342D6561 /* Release */ = {
+		6A07993CD295A38C1EAA9362 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3C7616A38347D33DAC8B2B68;
+			baseConfigurationReference = 0366CB524541A7BD2BE73E8D /* build.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -212,11 +240,17 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = ("$(inherited)","${XRT_FRAMEWORK_PATH}",);
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"${XRT_FRAMEWORK_PATH}",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("DEBUG=1","$(inherited)",);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -232,11 +266,51 @@
 				SYMROOT = ../build/xcode;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
+			name = Debug;
+		};
+		7531C01B87C30D5DC697A625 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0366CB524541A7BD2BE73E8D /* build.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEAD_CODE_STRIPPING = NO;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = WordSearch/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"${XRT_CUSTOM_OTHER_LDFLAGS}",
+					"${XRT_OTHER_LDFLAGS}",
+				);
+				PRODUCT_NAME = WordSearch;
+				STRIP_STYLE = "non-global";
+				VALID_ARCHS = "armv7 arm64 i386 x86_64";
+			};
+			name = Debug;
+		};
+		9526BA012B90097437EFCD2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0366CB524541A7BD2BE73E8D /* build.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEAD_CODE_STRIPPING = NO;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = WordSearch/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"${XRT_CUSTOM_OTHER_LDFLAGS}",
+					"${XRT_OTHER_LDFLAGS}",
+				);
+				PRODUCT_NAME = WordSearch;
+				STRIP_STYLE = "non-global";
+				VALID_ARCHS = "armv7 arm64 i386 x86_64";
+			};
 			name = Release;
 		};
-		3D6D207DBF575FBFE6B9C065 /* Debug */ = {
+		BF81763622111F71A9ADF200 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3C7616A38347D33DAC8B2B68;
+			baseConfigurationReference = 0366CB524541A7BD2BE73E8D /* build.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -255,11 +329,17 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = ("$(inherited)","${XRT_FRAMEWORK_PATH}",);
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"${XRT_FRAMEWORK_PATH}",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("DEBUG=1","$(inherited)",);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -275,64 +355,30 @@
 				SYMROOT = ../build/xcode;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
-			name = Debug;
-		};
-		6FE1898D46AFFEF70ED16F6A /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3C7616A38347D33DAC8B2B68;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEAD_CODE_STRIPPING = NO;
-				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = WordSearch/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = "${XRT_OTHER_LDFLAGS}";
-				PRODUCT_NAME = WordSearch;
-				STRIP_STYLE = "non-global";
-				VALID_ARCHS = "armv7 arm64 i386";
-			};
 			name = Release;
-		};
-		A31B3AD0E72D01D7DB3A8639 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3C7616A38347D33DAC8B2B68;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEAD_CODE_STRIPPING = NO;
-				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = WordSearch/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = "${XRT_OTHER_LDFLAGS}";
-				PRODUCT_NAME = WordSearch;
-				STRIP_STYLE = "non-global";
-				VALID_ARCHS = "armv7 arm64 i386";
-			};
-			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		520B72A35202ACA6B2C9BE8B = {
+		42B9A61A2D168A5C2DE28952 /* Build configuration list for PBXNativeTarget "WordSearch" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3D6D207DBF575FBFE6B9C065,
-				12F80CE2141D201D342D6561,
+				7531C01B87C30D5DC697A625 /* Debug */,
+				9526BA012B90097437EFCD2E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D5E6B14F796CDF023AA4A17C = {
+		79EDF3FDAA88E13B08C91F41 /* Build configuration list for PBXProject "WordSearch" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A31B3AD0E72D01D7DB3A8639,
-				6FE1898D46AFFEF70ED16F6A,
+				6A07993CD295A38C1EAA9362 /* Debug */,
+				BF81763622111F71A9ADF200 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = F34892D446C4FD742FD63CC6;
+	rootObject = 42A49B8ECB7BADB74CF03A8C /* Project object */;
 }

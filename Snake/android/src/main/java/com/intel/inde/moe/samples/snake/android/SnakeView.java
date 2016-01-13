@@ -100,12 +100,12 @@ public class SnakeView extends SurfaceView {
         super.onDraw(canvas);
 System.out.println("On draw called");
         if (snake == null) return;
-        eTileTypes[][] grid = snake.GetTileGrid();
-        for (int x = 0; x < snake.GetXTileCount(); x += 1) {
-            for (int y = 0; y < snake.GetYTileCount(); y += 1) {
+        eTileTypes[][] grid = snake.getTileGrid();
+        for (int x = 0; x < snake.getXTileCount(); x += 1) {
+            for (int y = 0; y < snake.getYTileCount(); y += 1) {
                 if (grid[x][y] != eTileTypes.NULL_STAR) {
-                    canvas.drawBitmap(createTile(grid[x][y]), snake.GetXOffset() + x * snake.GetTileSize(),
-                            snake.GetYOffset() + y * snake.GetTileSize(), mPaint);
+                    canvas.drawBitmap(createTile(grid[x][y]), snake.getXOffset() + x * snake.getTileSize(),
+                            snake.getYOffset() + y * snake.getTileSize(), mPaint);
                 }
             }
         }
@@ -167,11 +167,11 @@ System.out.println("On draw called");
     @Override
     protected void onSizeChanged(int w, int h, int oldw, int oldh) {
         if (snake == null) return;
-        snake.SetXTileCount((int) Math.floor(w / snake.GetTileSize()));
-        snake.SetYTileCount((int) Math.floor(h / snake.GetTileSize()));
+        snake.setXTileCount((int) Math.floor(w / snake.getTileSize()));
+        snake.setYTileCount((int) Math.floor(h / snake.getTileSize()));
 
-        snake.SetXOffset(((w - (snake.GetTileSize() * snake.GetXTileCount())) / 2));
-        snake.SetYOffset(((h - (snake.GetTileSize() * snake.GetYTileCount())) / 2));
+        snake.setXOffset(((w - (snake.getTileSize() * snake.getXTileCount())) / 2));
+        snake.setYOffset(((h - (snake.getTileSize() * snake.getYTileCount())) / 2));
 
         snake.clearAllTiles();
     }
@@ -197,9 +197,9 @@ System.out.println("On draw called");
 
         BitmapDrawable tile = new BitmapDrawable(getResources(), img);
 
-        Bitmap bitmap = Bitmap.createBitmap(snake.GetTileSize(), snake.GetTileSize(), Bitmap.Config.ARGB_8888);
+        Bitmap bitmap = Bitmap.createBitmap(snake.getTileSize(), snake.getTileSize(), Bitmap.Config.ARGB_8888);
         Canvas canvas = new Canvas(bitmap);
-        tile.setBounds(0, 0, snake.GetTileSize(), snake.GetTileSize());
+        tile.setBounds(0, 0, snake.getTileSize(), snake.getTileSize());
         tile.draw(canvas);
 
         return bitmap;

@@ -34,6 +34,8 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 import java.io.BufferedInputStream;
+import java.io.IOException;
+import java.io.InputStream;
 import java.net.URL;
 import java.util.ArrayList;
 
@@ -43,23 +45,51 @@ import javax.xml.parsers.DocumentBuilderFactory;
 public class RSSFeed {
 
 	private ArrayList<RSSFeedItem> items = new ArrayList<RSSFeedItem>();
+	private String lastErrorMessage = "";
+
+	public String getLastErrorMessage() {
+		return lastErrorMessage;
+	}
 
 	public ArrayList<RSSFeedItem> getItems() {
 		return items;
 	}
 
-	public RSSFeed(String string) throws Exception {
-		URL url = new URL(string);
-		BufferedInputStream in = new BufferedInputStream(url.openStream());
-		DocumentBuilderFactory builderf = DocumentBuilderFactory
-				.newInstance();
-		DocumentBuilder builder = builderf.newDocumentBuilder();
-		Document doc = builder.parse(in);
+	public RSSFeed(String string) {
+		InputStream inputStream = null;
+		BufferedInputStream in = null;
+		try {
+			URL url = new URL(string);
+			inputStream = url.openStream();
+			in = new BufferedInputStream(inputStream);
+			DocumentBuilderFactory builderf = DocumentBuilderFactory
+					.newInstance();
+			DocumentBuilder builder = builderf.newDocumentBuilder();
+			Document doc = builder.parse(in);
 
-		NodeList list = doc.getChildNodes();
-		for (int i = 0; i < list.getLength(); ++i) {
-			if (list.item(i).getNodeName().equals("rss")) {
-				handleRSSNode(list.item(i));
+
+			NodeList list = doc.getChildNodes();
+			for (int i = 0; i < list.getLength(); ++i) {
+				if (list.item(i).getNodeName().equals("rss")) {
+					handleRSSNode(list.item(i));
+				}
+			}
+		} catch (Exception e) {
+			lastErrorMessage += e.getLocalizedMessage();
+		} finally {
+			if (inputStream != null) {
+				try {
+					inputStream.close();
+				} catch (IOException e) {
+					lastErrorMessage += e.getLocalizedMessage();
+				}
+			}
+			if (in != null) {
+				try {
+					in.close();
+				} catch (IOException e) {
+					lastErrorMessage += e.getLocalizedMessage();
+				}
 			}
 		}
 	}

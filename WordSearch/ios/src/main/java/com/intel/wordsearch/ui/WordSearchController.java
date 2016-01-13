@@ -1,3 +1,32 @@
+// Copyright (c) 2015, Intel Corporation
+// All rights reserved.
+//
+// Redistribution and use in source and binary forms, with or without
+// modification, are permitted provided that the following conditions are
+// met:
+//
+// 1. Redistributions of source code must retain the above copyright
+// notice, this list of conditions and the following disclaimer.
+// 2. Redistributions in binary form must reproduce the above
+// copyright notice, this list of conditions and the following disclaimer
+// in the documentation and/or other materials provided with the
+// distribution.
+// 3. Neither the name of the copyright holder nor the names of its
+// contributors may be used to endorse or promote products derived from
+// this software without specific prior written permission.
+//
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+// HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
 package com.intel.wordsearch.ui;
 
 import com.intel.inde.moe.natj.general.Pointer;
@@ -245,10 +274,10 @@ public class WordSearchController extends UIViewController implements
 	}
 
 	public void filter(boolean root) {
-		if (root || !OPTIMIZED_FILTERING) {
+//		if (root || !OPTIMIZED_FILTERING) {
 			filtered.clear();
 			filtered.addAll(data);
-		}
+//		}
 
 		for (int i = 0; i < filtered.size(); ++i) {
 			filtered.set(i,
@@ -297,14 +326,15 @@ public class WordSearchController extends UIViewController implements
 	}
 
 	@Override
-	public UITableViewCell tableViewCellForRowAtIndexPath(
-			UITableView tableView, NSIndexPath indexPath) {
+	public UITableViewCell tableViewCellForRowAtIndexPath(UITableView tableView, NSIndexPath indexPath) {
 		UITableViewCell cell = (UITableViewCell) tableView
 				.dequeueReusableCellWithIdentifierForIndexPath(CELL_IDENTIFIER,
 						indexPath);
 
-		String text = getFilteredForSection(indexPath.section()).get(
-				(int)indexPath.row());
+		PrefixedWords sectionWords = getFilteredForSection(indexPath.section());
+		if (sectionWords == null)
+			return null;
+		String text = sectionWords.get((int) indexPath.row());
 		cell.textLabel().setText(text);
 
 		return cell;
@@ -312,13 +342,19 @@ public class WordSearchController extends UIViewController implements
 
 	@Override
 	public long tableViewNumberOfRowsInSection(UITableView tableView, long section) {
-		return getFilteredForSection(section).size();
+		PrefixedWords sectionWords = getFilteredForSection(section);
+		if (sectionWords == null)
+			return 0;
+		return sectionWords.size();
 	}
 
 	@Override
 	public String tableViewTitleForHeaderInSection(UITableView tableView,
 			long section) {
-		return getFilteredForSection(section).prefix.toUpperCase();
+		PrefixedWords sectionWords = getFilteredForSection(section);
+		if (sectionWords == null)
+			return null;
+		return sectionWords.prefix.toUpperCase();
 	}
 
 	@Override

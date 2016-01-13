@@ -98,6 +98,7 @@ public class AtomicElementFlippedView extends AtomicElementView {
         // Create the string that points to the correct Wikipedia page for the element name
         String wikiPageString = "http://en.wikipedia.org/wiki/" + element.getName();
         if (!UIApplication.sharedApplication().openURL(NSURL.URLWithString(wikiPageString))) {
+            System.out.println("Cannot open: " + wikiPageString);
             // There was an error trying to open the URL. for the moment we'll simply ignore it.
         }
     }

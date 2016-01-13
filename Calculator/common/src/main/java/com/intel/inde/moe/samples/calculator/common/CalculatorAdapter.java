@@ -58,14 +58,14 @@ public class CalculatorAdapter {
 	public String sendNewSymbol (String symbol)
 	{
 		final double digit = isDigit(symbol);
-		if (digit != -1.){
-			if (a == 0.) {// to avoid making
+		if (Double.compare(digit, -1.) != 0){
+			if (Double.compare(a, 0) == 0) {// to avoid making
 							// calculations like
 							// 0+2
 				type = CalcOpsTypes.NONE;
 			}
 			
-			if (type != CalcOpsTypes.NONE && b == 0. && isFirst) // to avoid adding extra
+			if (type != CalcOpsTypes.NONE && Double.compare(b, 0) == 0 && isFirst) // to avoid adding extra
 							// digits after choice
 							// of operation
 			{
@@ -74,7 +74,7 @@ public class CalculatorAdapter {
 			}
 			if (isFractPart) {
 				if (fractPart == 0) {
-					if (digit != 0) {
+					if ((int) digit != 0) {
 						fractPart += (int) digit;
 					} else {
 						numberOfNulls += 1;
@@ -97,7 +97,12 @@ public class CalculatorAdapter {
 					for (int i = 0; i < numberOfNulls; i++) {
 						fractStr += "0";
 					}
+					boolean aLessZero = false;
+					if (a < 0)
+						aLessZero = true;
 					a = Double.parseDouble((int) a + fractStr + fractPart);
+					if (a > 0 && aLessZero)
+						a = -a;
 				}
 				showStr = String.valueOf(a);
 				if (fractPart == 0 && isFractPart) {
@@ -107,7 +112,7 @@ public class CalculatorAdapter {
 				}
 				if (fractPart != 0) {
 					long fractNulls = 0;
-					while (fractPart % Math.pow(10, fractNulls + 1) == 0) {
+					while (fractPart % (long) Math.pow(10, fractNulls + 1) == 0) {
 						showStr += "0";
 						fractNulls++;
 					}
@@ -132,7 +137,7 @@ public class CalculatorAdapter {
 
 				if (fractPart != 0) {
 					long fractNulls = 0;
-					while (fractPart % Math.pow(10, fractNulls + 1) == 0) {
+					while (fractPart % (long) Math.pow(10, fractNulls + 1) == 0) {
 						showStr += "0";
 						fractNulls++;
 					}
@@ -143,12 +148,12 @@ public class CalculatorAdapter {
 		else{
 			final CalcOpsTypes opType = isCalcOperation(symbol);
 			if (opType != CalcOpsTypes.NONE){
-				if (a != 0.) {
-					if (b != 0.) {
+				if (Double.compare(a, 0) != 0) {
+					if (Double.compare(b, 0) != 0) {
 						calculateAndPrepare(opType);
 					} else {
 						type = opType;
-						showStr = String.valueOf(a) + opToString(type);
+						showStr = String.valueOf(a) + opToString(type) + "0";
 						fractPart = 0;
 						isFractPart = false;
 					}
@@ -156,12 +161,12 @@ public class CalculatorAdapter {
 			}
 			else
 			{
-				if (symbol ==  "="){//everything all right
+				if (symbol.equals("=")){//everything all right
 					if (!isFirst){
 						calculateAndPrepare(CalcOpsTypes.NONE);
 					}
 				}
-				else if (symbol == "C"){//everything all right
+				else if (symbol.equals("C")){//everything all right
 					fractPart = 0;
 					a = 0.;
 					b = 0.;
@@ -170,8 +175,25 @@ public class CalculatorAdapter {
 					isFirst = true;
 					showStr = "0";
 				}
-				else if (symbol == "."){
+				else if (symbol.equals(".")) {
+					if (!isFractPart)
+						showStr += ".";
 					isFractPart = true;
+				} else if (symbol.equals("INVERT") && isFirst){
+					a = -a;
+					showStr = String.valueOf(a);
+					if (fractPart == 0 && isFractPart) {
+						for (int i = 1; i < numberOfNulls; i++) {
+							showStr += "0";
+						}
+					}
+					if (fractPart != 0) {
+						long fractNulls = 0;
+						while (fractPart % (long) Math.pow(10, fractNulls + 1) == 0) {
+							showStr += "0";
+							fractNulls++;
+						}
+					}
 				}
 				
 			}
@@ -195,16 +217,16 @@ public class CalculatorAdapter {
 	public CalcOpsTypes isCalcOperation (String ss)
 	{
 		CalcOpsTypes myType = CalcOpsTypes.NONE;
-		if (ss == "+"){
+		if (ss.equals("+")){
 			myType = CalcOpsTypes.SUM;
 		}
-		else if (ss == "-"){
+		else if (ss.equals("-")){
 			myType = CalcOpsTypes.DIFF;
 		}
-		else if (ss == "*"){
+		else if (ss.equals("*")){
 			myType = CalcOpsTypes.MULT;
 		}
-		else if (ss == "/"){
+		else if (ss.equals("/")){
 			myType = CalcOpsTypes.DIVIDE;
 		}
 		
@@ -228,13 +250,12 @@ public class CalculatorAdapter {
 		case SUM:
 			ss = "+";
 			break;
-		
 		}
 		return ss;
 	}
 
 	private void calculateAndPrepare(CalcOpsTypes afterOperation){
-		double result = CalcOperations.Calculate(a, b, type);
+		double result = CalcOperations.calculate(a, b, type);
 		try{
 			result = new BigDecimal(result).setScale(4, RoundingMode.HALF_UP).doubleValue();
 			showStr = String.valueOf(result);
@@ -264,11 +285,10 @@ public class CalculatorAdapter {
 		}
 
 		a = result;
-		result = 0.;
 		b = 0.;
 		numberOfNulls = 0;
 		isFirst = true;
-		fractPart = (int) ((a - (int) a) * Math.pow(10, String.valueOf(a)
+		fractPart = (int) (Math.abs(a - (int) a) * Math.pow(10, String.valueOf(Math.abs(a))
 				.length() - 2));
 		type = afterOperation;
 	}

@@ -31,7 +31,7 @@ import org.xml.sax.ext.DefaultHandler2;
  * @author fbeachler
  * 
  */
-public class PListXMLHandler extends DefaultHandler2 {
+public class  PListXMLHandler extends DefaultHandler2 {
 
 	public static final String TAG = "PListXMLHandler";
 
@@ -178,7 +178,8 @@ public class PListXMLHandler extends DefaultHandler2 {
 				try {
 					PListObject objToAdd = pList.buildObject(localName, tempVal
 							.getBuilder().toString());
-					pList.stackObject(objToAdd, key);
+					if (objToAdd != null)
+						pList.stackObject(objToAdd, key);
 				} catch (Exception e) {
 					throw new SAXException(e);
 				}
@@ -227,7 +228,8 @@ public class PListXMLHandler extends DefaultHandler2 {
 			try {
 				PListObject objToAdd = pList.buildObject(localName, tempVal
 						.getBuilder().toString());
-				pList.stackObject(objToAdd, key);
+				if (objToAdd != null)
+					pList.stackObject(objToAdd, key);
 			} catch (Exception e) {
 				throw new SAXException(e);
 			}

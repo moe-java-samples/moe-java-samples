@@ -1,7 +1,7 @@
 package com.intel.inde.moe.samples.snake.common;
 
+import java.security.SecureRandom;
 import java.util.ArrayList;
-import java.util.Random;
 
 
 public class Snake extends Tile{
@@ -24,7 +24,7 @@ public class Snake extends Tile{
     private ArrayList<Coordinate> mSnakeTrail = new ArrayList<Coordinate>();
     private ArrayList<Coordinate> mAppleList = new ArrayList<Coordinate>();
 
-    private static final Random RNG = new Random();
+    private static final SecureRandom RNG = new SecureRandom();
 
     public void initNewGame() {
         mSnakeTrail.clear();
@@ -53,12 +53,14 @@ public class Snake extends Tile{
     public void moveSelf()
     {
         boolean withWall = false;
-        boolean withSelf = false;
         Coordinate head = mSnakeTrail.get(0);
-        Coordinate newHead = null;
+        Coordinate newHead;
         eDirection newDirection = null;
 
         newHead = getNewHead(head, mDirection);
+
+        if (newHead == null)
+            return;
 
         // Look for apples
         int applecount = mAppleList.size();
@@ -84,8 +86,10 @@ public class Snake extends Tile{
             } else {
                 newDirection = mDirection;
             }
-        }
 
+            if (newHead == null)
+                return;
+        }
 
         if ((newHead.x < 1) || (newHead.y < 1) || (newHead.x > mXTileCount - 2)
                 || (newHead.y > mYTileCount - 2)) {
@@ -101,6 +105,9 @@ public class Snake extends Tile{
             }
             withWall = true;
         }
+
+        if (newHead == null)
+            return;
 
         // Look for collisions with itself
         int snakelength = mSnakeTrail.size();
@@ -362,6 +369,9 @@ public class Snake extends Tile{
                 break;
             }
         }
+
+        if (newHead == null)
+            return;
 
         // Collision detection
         // For now we have a 1-square wall around the entire arena

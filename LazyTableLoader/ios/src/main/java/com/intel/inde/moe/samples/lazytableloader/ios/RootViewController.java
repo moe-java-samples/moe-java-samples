@@ -100,7 +100,7 @@ public class RootViewController extends UITableViewController {
 
     public  MyTableViewCell tableViewCellForRowAtIndexPath(UITableView var1, NSIndexPath var2)
     {
-        MyTableViewCell cell = null;
+        MyTableViewCell cell;
         long nodeCount = 0;
         if(entries != null) nodeCount = entries.size();
 
@@ -189,8 +189,14 @@ public class RootViewController extends UITableViewController {
         File file = new File(imageName);
         file.delete();
 
+        FileOutputStream fos;
         try {
-            FileOutputStream fos = new FileOutputStream(imageName);
+            fos = new FileOutputStream(imageName);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+            return null;
+        }
+        try {
             fos.write(appRecord.getAppIcon().getImage());
             fos.close();
         } catch (FileNotFoundException e) {
@@ -198,6 +204,11 @@ public class RootViewController extends UITableViewController {
             return null;
         } catch (IOException e) {
             e.printStackTrace();
+            try {
+                fos.close();
+            } catch (IOException e1) {
+                e1.printStackTrace();
+            }
             return null;
         }
 

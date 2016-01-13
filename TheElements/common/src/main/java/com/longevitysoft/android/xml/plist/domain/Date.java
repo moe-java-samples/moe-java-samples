@@ -88,6 +88,7 @@ public class Date extends PListObject implements
 			try {
 				this.date = iso8601Format.parse(val);
 			} catch (ParseException e) {
+				e.printStackTrace();
 //				Log.e(TAG, new StringBuilder("#setValue - error parsing val=")
 //						.append(val).toString(), e);
 			}

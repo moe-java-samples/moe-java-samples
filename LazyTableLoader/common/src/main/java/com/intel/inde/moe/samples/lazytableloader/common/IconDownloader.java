@@ -42,15 +42,10 @@ public class IconDownloader {
 
     public void downloadImage() {
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
-        URL url = null;
-        try {
-            url = new URL(appRecord.getImageURLString());
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
-        }
 
         InputStream is = null;
         try {
+            URL url = new URL(appRecord.getImageURLString());
             is = url.openStream ();
             byte[] byteChunk = new byte[4096]; // Or whatever size you want to read in at a time.
             int n;
@@ -58,9 +53,10 @@ public class IconDownloader {
             while ( (n = is.read(byteChunk)) > 0 ) {
                 baos.write(byteChunk, 0, n);
             }
-        }
-        catch (IOException e) {
-            System.err.printf ("Failed while reading bytes from %s: %s", url.toExternalForm(), e.getMessage());
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            System.err.printf ("Failed while reading bytes from %s: %s", appRecord.getImageURLString(), e.getMessage());
             e.printStackTrace ();
             // Perform any other exception handling that's appropriate.
         }

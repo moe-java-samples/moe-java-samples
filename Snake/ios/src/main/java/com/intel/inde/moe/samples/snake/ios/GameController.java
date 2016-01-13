@@ -185,7 +185,7 @@ public class GameController extends UIViewController {
 
         reDrawSnakeTails();
 
-         // RenderSubView();
+         // renderSubView();
     }
 
     @Selector("onDown:")
@@ -211,7 +211,7 @@ public class GameController extends UIViewController {
         }
 
         snake.initNewGame();
-        RenderSubView();
+        renderSubView();
 
 
             timer = NSTimer.scheduledTimerWithTimeIntervalTargetSelectorUserInfoRepeats(0.25,
@@ -223,7 +223,7 @@ public class GameController extends UIViewController {
 
     }
 
-    private void RenderSubView() {
+    private void renderSubView() {
         if(gameView != null) gameView.removeFromSuperview();
         tailUp.removeFromSuperview();
         tailDown.removeFromSuperview();
@@ -250,17 +250,17 @@ public class GameController extends UIViewController {
 
     private  UIView draw()
     {
-        uiImageGrid = new UIImageView[snake.GetXTileCount()][snake.GetYTileCount()];
-        lastTileState = new eTileTypes[snake.GetXTileCount()][snake.GetYTileCount()];
-        //CGRect drawBounds = CoreGraphics.CGRectMake(0, 0, snake.GetTileSize()*snake.GetXTileCount(), snake.GetTileSize()*snake.GetYTileCount());
+        uiImageGrid = new UIImageView[snake.getXTileCount()][snake.getYTileCount()];
+        lastTileState = new eTileTypes[snake.getXTileCount()][snake.getYTileCount()];
+        //CGRect drawBounds = CoreGraphics.CGRectMake(0, 0, snake.getTileSize()*snake.getXTileCount(), snake.getTileSize()*snake.getYTileCount());
         UIView view = UIView.alloc().initWithFrame(gameBounds);
         //view.setBounds(gameBounds);
         view.removeFromSuperview();
 
-        eTileTypes[][] grid = snake.GetTileGrid();
-        int size = snake.GetTileSize();
-        int numOfXTiles = snake.GetXTileCount();
-        int numOfYTiles = snake.GetYTileCount();
+        eTileTypes[][] grid = snake.getTileGrid();
+        int size = snake.getTileSize();
+        int numOfXTiles = snake.getXTileCount();
+        int numOfYTiles = snake.getYTileCount();
 
         for(int i=0; i < numOfXTiles; i++){
             for(int j=0; j < numOfYTiles; j++){
@@ -277,10 +277,10 @@ public class GameController extends UIViewController {
 
     private  void reDrawSnakeTails()
     {
-        eTileTypes[][] grid = snake.GetTileGrid();
-        UIImageView currentView = null;
-        int numOfXTiles = snake.GetXTileCount();
-        int numOfYTiles = snake.GetYTileCount();
+        eTileTypes[][] grid = snake.getTileGrid();
+        UIImageView currentView;
+        int numOfXTiles = snake.getXTileCount();
+        int numOfYTiles = snake.getYTileCount();
         for(int i=0; i<numOfXTiles; i++){
             for(int j=0; j<numOfYTiles; j++){
                 if(lastTileState[i][j] == grid[i][j] ) continue;
@@ -320,9 +320,10 @@ public class GameController extends UIViewController {
         return false;
     }
 
-    public boolean shouldAutorotateToInterfaceOrientation(UIInterfaceOrientation toInterfaceOrientation)
+
+    public boolean shouldAutorotateToInterfaceOrientation(long toInterfaceOrientation)
     {
-        if (toInterfaceOrientation.equals(UIInterfaceOrientation.Portrait)){
+        if (toInterfaceOrientation == UIInterfaceOrientation.Portrait){
             return true;
         }
 

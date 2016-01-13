@@ -67,7 +67,7 @@ public class PListXMLParser extends BaseXMLParser {
 			pListHandler.setPlist(null);
 			return;
 		}
-		Stringer xml = null;
+		Stringer xml;
 		try {
 			xml = Stringer.convert(is);
 		} catch (IOException e) {

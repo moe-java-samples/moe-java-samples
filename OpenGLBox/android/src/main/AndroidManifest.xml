@@ -8,8 +8,8 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".OpenGLBoxActivity"
-            android:configChanges="orientation|keyboardHidden"
+            android:name="com.intel.moe.samples.openglbox.android.OpenGLBoxActivity"
+            android:configChanges="orientation|screenSize"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>

@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">SQLite3Demo</string>
+    <string name="action_newRecord">Add</string>
+</resources>

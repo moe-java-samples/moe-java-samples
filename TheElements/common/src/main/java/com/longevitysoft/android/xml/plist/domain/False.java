@@ -34,7 +34,7 @@ public class False extends PListObject implements IPListSimpleObject<Boolean> {
 	 */
 	@Override
 	public Boolean getValue() {
-		return new Boolean(false);
+		return false;
 	}
 
 	/*

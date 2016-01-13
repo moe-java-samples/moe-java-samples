@@ -31,6 +31,7 @@ package com.intel.inde.moe.samples.currencyconverter.common;
 
 import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
@@ -50,11 +51,16 @@ public class Currency {
 
     public static double getCurrentRate(String currencyIdentifierFrom, String currencyIdentifierTo) {
         String rate;
+
+        if (currencyIdentifierFrom.equals(currencyIdentifierTo)) {
+            return 1.0;
+        }
+
         try {
             String sUrl = "http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20yahoo.finance.xchange%20where%20pair%20in%20(%22" +
                     currencyIdentifierFrom + currencyIdentifierTo + "%22)&env=store://datatables.org/alltableswithkeys";
             rate = getRateFromURL(sUrl);
-            if (rate == "N/A") {
+            if (rate.equals("N/A")) {
                 return 0.0;
             }
             return Double.parseDouble(rate);
@@ -68,6 +74,7 @@ public class Currency {
         System.out.println("Requeted URL:" + myURL);
         StringBuilder sb = new StringBuilder();
         InputStreamReader in = null;
+        InputStream inputStream = null;
         try {
             URL url = new URL(myURL);
             URLConnection urlConn = url.openConnection();
@@ -75,19 +82,20 @@ public class Currency {
                 urlConn.setReadTimeout(2000);
                 //urlConn.setConnectTimeout(5000);
             }
-            if (urlConn != null && urlConn.getInputStream() != null) {
-                in = new InputStreamReader(urlConn.getInputStream(),
-                        Charset.defaultCharset());
-                BufferedReader bufferedReader = new BufferedReader(in);
-                if (bufferedReader != null) {
+            if (urlConn != null) {
+                inputStream = urlConn.getInputStream();
+                if (inputStream != null) {
+                    in = new InputStreamReader(inputStream,
+                            Charset.defaultCharset());
+                    BufferedReader bufferedReader = new BufferedReader(in);
                     int cp;
                     while ((cp = bufferedReader.read()) != -1) {
                         sb.append((char) cp);
                     }
                     bufferedReader.close();
+                    in.close();
                 }
             }
-            in.close();
         } catch (Exception e) {
             //throw new RuntimeException("Exception while calling URL:"+ myURL, e);
             //Kill bufferedReader by timeout
@@ -100,6 +108,13 @@ public class Currency {
             }
         }
 
+        if (inputStream != null) {
+            try {
+                inputStream.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
 
         String rate = sb.toString();
         int startIndex = rate.indexOf("<Rate>");
@@ -115,7 +130,7 @@ public class Currency {
 
     public static double[] convert(double number, String currencyIdentifierFrom, String currencyIdentifierTo) {
         double rate = getCurrentRate(currencyIdentifierFrom, currencyIdentifierTo);
-        if (rate == 0.0)
+        if (Math.abs(rate) < 0.000001)
             return new double[]{0.0, 0.0};
         return new double[]{rate, number * rate};
     }

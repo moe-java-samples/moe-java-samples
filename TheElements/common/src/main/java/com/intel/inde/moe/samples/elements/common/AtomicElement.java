@@ -29,7 +29,9 @@
 
 package com.intel.inde.moe.samples.elements.common;
 
-import com.longevitysoft.android.xml.plist.domain.Dict;
+import com.longevitysoft.android.xml.plist.domain.*;
+
+import java.lang.String;
 
 public class AtomicElement {
 
@@ -60,17 +62,51 @@ public class AtomicElement {
     }
 
     public AtomicElement(Dict cat) {
-        this.atomicNumber = cat.getConfigurationInteger("atomicNumber").getValue();
-        this.atomicWeight = cat.getConfiguration("atomicWeight").getValue();
-        this.discoveryYear = cat.getConfiguration("discoveryYear").getValue();
-        this.group = cat.getConfigurationInteger("group").getValue();
-        this.horizPos = cat.getConfigurationInteger("horizPos").getValue();
-        this.vertPos = cat.getConfigurationInteger("vertPos").getValue();
-        this.name = cat.getConfiguration("name").getValue();
-        this.period = cat.getConfigurationInteger("period").getValue();
-        this.radioactive = cat.getConfiguration("radioactive").getValue().equals("True");
-        this.state = cat.getConfiguration("state").getValue();
-        this.symbol = cat.getConfiguration("symbol").getValue();
+        com.longevitysoft.android.xml.plist.domain.Integer integerValue;
+        com.longevitysoft.android.xml.plist.domain.String stringValue;
+        integerValue = cat.getConfigurationInteger("atomicNumber");
+        if (integerValue != null)
+            this.atomicNumber = integerValue.getValue();
+
+        stringValue = cat.getConfiguration("atomicWeight");
+        if (stringValue != null)
+            this.atomicWeight = stringValue.getValue();
+
+        stringValue = cat.getConfiguration("discoveryYear");
+        if (stringValue != null)
+            this.discoveryYear = stringValue.getValue();
+
+        integerValue = cat.getConfigurationInteger("group");
+        if (integerValue != null)
+            this.group = integerValue.getValue();
+
+        integerValue = cat.getConfigurationInteger("horizPos");
+        if (integerValue != null)
+            this.horizPos = integerValue.getValue();
+
+        integerValue = cat.getConfigurationInteger("vertPos");
+        if (integerValue != null)
+            this.vertPos = integerValue.getValue();
+
+        stringValue = cat.getConfiguration("name");
+        if (stringValue != null)
+            this.name = stringValue.getValue();
+
+        integerValue = cat.getConfigurationInteger("period");
+        if (integerValue != null)
+            this.period = integerValue.getValue();
+
+        stringValue = cat.getConfiguration("radioactive");
+        if (stringValue != null)
+            this.radioactive = stringValue.getValue().equals("True");
+
+        stringValue = cat.getConfiguration("state");
+        if (stringValue != null)
+            this.state = stringValue.getValue();
+
+        stringValue = cat.getConfiguration("symbol");
+        if (stringValue != null)
+            this.symbol = stringValue.getValue();
     }
 
     public int getAtomicNumber() {

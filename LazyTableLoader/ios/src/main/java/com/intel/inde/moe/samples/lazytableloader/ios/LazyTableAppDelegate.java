@@ -82,12 +82,10 @@ public class LazyTableAppDelegate extends UIResponder implements UIApplicationDe
                 @Override
                 public void run() {
 
-                    final TopAppParser topAppParser;
-                    try {
-                        topAppParser = new TopAppParser(Bookmarks.TopPaidAppsFeed);
-                    } catch (Exception e) {
+                    final TopAppParser topAppParser = new TopAppParser(Bookmarks.TopPaidAppsFeed);
+                    if (!topAppParser.getLastErrorMessage().isEmpty()) {
                         UIApplication.sharedApplication().setNetworkActivityIndicatorVisible(false);
-                        handleError(e.getLocalizedMessage());
+                        handleError(topAppParser.getLastErrorMessage());
                         return;
                     }
 

@@ -74,7 +74,7 @@ public class RSSReaderController extends CustomCellTableController {
 	private static final long textViewDrawingOptions;
 	private static final NSDictionary textViewAttributes;
 
-	private Thread loaderThread;
+	private Thread loaderThread = null;
 
 	static {
 		// Some consts
@@ -140,7 +140,7 @@ public class RSSReaderController extends CustomCellTableController {
 		tableView().registerNibForCellReuseIdentifier(nib, CELL_IDENTIFIER);
 	}
 
-	private synchronized void loadURL(final String url) {
+	private void loadURL(final String url) {
 		if (loaderThread != null) {
 			return;
 		}
@@ -150,11 +150,9 @@ public class RSSReaderController extends CustomCellTableController {
 			@Override
 			public void run() {
 
-				final RSSFeed feed;
-				try {
-					feed = new RSSFeed(url);
-				} catch (Exception e) {
-					handleError(e.getLocalizedMessage());
+				final RSSFeed feed = new RSSFeed(url);
+				if (!feed.getLastErrorMessage().isEmpty()) {
+					handleError(feed.getLastErrorMessage());
 					return;
 				}
 

@@ -8,6 +8,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/webAddress"
+        android:singleLine="true"
+        android:imeOptions="actionSearch"
         android:layout_gravity="center_horizontal" />
 
     <WebView

@@ -40,13 +40,14 @@ import ios.NSObject;
 import ios.foundation.NSIndexPath;
 import ios.uikit.UIStoryboardSegue;
 import ios.uikit.UITableViewController;
+import ios.uikit.protocol.UITableViewDataSource;
 
 @com.intel.inde.moe.natj.general.ann.Runtime(ObjCRuntime.class)
 @ObjCClassName("ElementsTableViewController")
 @RegisterOnStartup
 public class ElementsTableViewController extends UITableViewController {
 
-    private NSObject dataSource;
+    private UITableViewDataSource dataSource;
 
     @Selector("alloc")
     public static native ElementsTableViewController alloc();
@@ -58,7 +59,7 @@ public class ElementsTableViewController extends UITableViewController {
         super(peer);
     }
 
-    public void setDataSource(NSObject dataSource) {
+    public void setDataSource(UITableViewDataSource dataSource) {
         // Retain the data source
         this.dataSource = dataSource;
 
@@ -92,7 +93,7 @@ public class ElementsTableViewController extends UITableViewController {
 
     @Override
     public void prepareForSegueSender(UIStoryboardSegue segue, Object sender) {
-        if (segue.identifier().toString().equals("showDetail")) {
+        if (segue.identifier().equals("showDetail")) {
             NSIndexPath selectedIndexPath = tableView().indexPathForSelectedRow();
 
             // Find the right view controller

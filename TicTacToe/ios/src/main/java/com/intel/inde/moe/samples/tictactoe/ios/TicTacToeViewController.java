@@ -144,12 +144,12 @@ public class TicTacToeViewController extends UIViewController {
     public native UIButton getGameButton8();
 
     @Selector("BtnPressedCancel_newGameButton:")
-    public void BtnPressedCancel_newGameButton(NSObject sender){
+    public void btnPressedCancel_newGameButton(NSObject sender){
         startNewGame();
     }
 
     @Selector("BtnPressedCancel_gameButton0:")
-    public void BtnPressedCancel_gameButton0(NSObject sender) {
+    public void btnPressedCancel_gameButton0(NSObject sender) {
         makeMove(0, "X");
         ticTacToeGame.newTurn(0, TicTacToe.playerX);
         ticTacToeGame.minimax(0, TicTacToe.player0);
@@ -159,7 +159,7 @@ public class TicTacToeViewController extends UIViewController {
     }
 
     @Selector("BtnPressedCancel_gameButton1:")
-    public void BtnPressedCancel_gameButton1(NSObject sender){
+    public void btnPressedCancel_gameButton1(NSObject sender){
         makeMove(1, "X");
         ticTacToeGame.newTurn(1, TicTacToe.playerX);
         ticTacToeGame.minimax(0, TicTacToe.player0);
@@ -169,7 +169,7 @@ public class TicTacToeViewController extends UIViewController {
     }
 
     @Selector("BtnPressedCancel_gameButton2:")
-    public void BtnPressedCancel_gameButton2(NSObject sender){
+    public void btnPressedCancel_gameButton2(NSObject sender){
         makeMove(2, "X");
         ticTacToeGame.newTurn(2, TicTacToe.playerX);
         ticTacToeGame.minimax(0, TicTacToe.player0);
@@ -179,7 +179,7 @@ public class TicTacToeViewController extends UIViewController {
     }
 
     @Selector("BtnPressedCancel_gameButton3:")
-    public void BtnPressedCancel_gameButton3(NSObject sender){
+    public void btnPressedCancel_gameButton3(NSObject sender){
         makeMove(3, "X");
         ticTacToeGame.newTurn(3, TicTacToe.playerX);
         ticTacToeGame.minimax(0, TicTacToe.player0);
@@ -189,7 +189,7 @@ public class TicTacToeViewController extends UIViewController {
     }
 
     @Selector("BtnPressedCancel_gameButton4:")
-    public void BtnPressedCancel_gameButton4(NSObject sender){
+    public void btnPressedCancel_gameButton4(NSObject sender){
         makeMove(4, "X");
         ticTacToeGame.newTurn(4, TicTacToe.playerX);
         ticTacToeGame.minimax(0, TicTacToe.player0);
@@ -199,7 +199,7 @@ public class TicTacToeViewController extends UIViewController {
     }
 
     @Selector("BtnPressedCancel_gameButton5:")
-    public void BtnPressedCancel_gameButton5(NSObject sender){
+    public void btnPressedCancel_gameButton5(NSObject sender){
         makeMove(5, "X");
         ticTacToeGame.newTurn(5, TicTacToe.playerX);
         ticTacToeGame.minimax(0, TicTacToe.player0);
@@ -209,7 +209,7 @@ public class TicTacToeViewController extends UIViewController {
     }
 
     @Selector("BtnPressedCancel_gameButton6:")
-    public void BtnPressedCancel_gameButton6(NSObject sender){
+    public void btnPressedCancel_gameButton6(NSObject sender){
         makeMove(6, "X");
         ticTacToeGame.newTurn(6, TicTacToe.playerX);
         ticTacToeGame.minimax(0, TicTacToe.player0);
@@ -219,7 +219,7 @@ public class TicTacToeViewController extends UIViewController {
     }
 
     @Selector("BtnPressedCancel_gameButton7:")
-    public void BtnPressedCancel_gameButton7(NSObject sender){
+    public void btnPressedCancel_gameButton7(NSObject sender){
         makeMove(7, "X");
         ticTacToeGame.newTurn(7, TicTacToe.playerX);
         ticTacToeGame.minimax(0, TicTacToe.player0);
@@ -229,7 +229,7 @@ public class TicTacToeViewController extends UIViewController {
     }
 
     @Selector("BtnPressedCancel_gameButton8:")
-    public void BtnPressedCancel_gameButton8(NSObject sender){
+    public void btnPressedCancel_gameButton8(NSObject sender){
         makeMove(8, "X");
         ticTacToeGame.newTurn(8, TicTacToe.playerX);
         ticTacToeGame.minimax(0, TicTacToe.player0);

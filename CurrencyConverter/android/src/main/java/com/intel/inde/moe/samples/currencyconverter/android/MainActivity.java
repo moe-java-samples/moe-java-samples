@@ -32,6 +32,8 @@ package com.intel.inde.moe.samples.currencyconverter.android;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.InputFilter;
+import android.text.Spanned;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -59,8 +61,31 @@ public class MainActivity extends AppCompatActivity {
         Spinner spinnerFrom = (Spinner)findViewById(R.id.spinnerFrom);
         Spinner spinnerTo = (Spinner)findViewById(R.id.spinnerTo);
 
-        EditText numberSrt = (EditText)findViewById(R.id.edtNum);
+        final EditText numberSrt = (EditText)findViewById(R.id.edtNum);
         numberSrt.setHint(Names.hintEditText);
+        numberSrt.setFilters(new InputFilter[]{
+                new InputFilter() {
+                    public CharSequence filter(CharSequence src, int start,
+                                               int end, Spanned dst, int dstart, int dend) {
+                        if (src.equals("0") && numberSrt.getText().toString().equals("0")) { // for backspace
+                            return "";
+                        }
+                        if (src.equals(".") && numberSrt.getText().toString().isEmpty()) { // for backspace
+                            return "";
+                        }
+                        if (src.toString().matches("[0-9]+") && numberSrt.getText().toString().equals("0")) {
+                            numberSrt.setText("");
+                            numberSrt.setText(src);
+                            numberSrt.setSelection(1);
+                        }
+
+                        if (src.toString().matches("[0-9.]+"))
+                            return src;
+
+                        return "";
+                    }
+                }
+        });
 
         Locale.setDefault(Locale.UK);
         arraySpinner = new String[Names.currencyNameSymbols.size()];

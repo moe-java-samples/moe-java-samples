@@ -31,55 +31,46 @@ package com.intel.inde.moe.samples.calculator.common;
 
 public class CalcOperations {
 
-    public CalcOperations(){
-
-    }
-
     private static double sum(double a, double b){
-        double res = 0.0;
         try{
-            res = a+b;
+            return a+b;
         }
-        catch(Exception ex){
-
+        catch(Exception ex) {
+            ex.printStackTrace();
+            return 0.0;
         }
-        return res;
     }
 
-    private static double difference(double a, double b){
-        double res = 0.0;
+    private static double difference(double a, double b) {
         try{
-            res = a-b;
+            return a-b;
         }
         catch(Exception ex){
-
+            ex.printStackTrace();
+            return 0.0;
         }
-        return res;
     }
 
     private static double multiply(double a, double b){
-        double res = 0.0;
-        try{
-            res = a*b;
+        try {
+            return a*b;
         }
-        catch(Exception ex){
-
+        catch(Exception ex) {
+            ex.printStackTrace();
+            return 0.0;
         }
-        return res;
     }
 
-    private static double divide(double a, double b){
-        double res = 0.0;
-        try{
-            res = a/b;
+    private static double divide(double a, double b) {
+        try {
+            return a/b;
+        } catch(Exception ex){
+            ex.printStackTrace();
+            return 0.0;
         }
-        catch(Exception ex){
-
-        }
-        return res;
     }
 
-    public static double Calculate(double a, double b, CalcOpsTypes operation){
+    public static double calculate(double a, double b, CalcOpsTypes operation){
 
         double ret = 0;
         try{

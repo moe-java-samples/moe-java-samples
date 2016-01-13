@@ -11,6 +11,7 @@
 		5B6B93B0A3AE5A77CC7C0CC0 /* MOE.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 689EE507152684BF97518DEA /* MOE.framework */; };
 		79D59B8F7EA84EE88E2C4DFC /* MOE.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 689EE507152684BF97518DEA /* MOE.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AA039173C9AD89A4A348102C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1DE7CF87F2F4F5C384BF2D4B /* main.cpp */; };
+		CE20F3231BFFB176008C9957 /* application.jar in Resources */ = {isa = PBXBuildFile; fileRef = CE20F3221BFFB176008C9957 /* application.jar */; };
 		DD6933BF973C5CBD953F8C61 /* preregister.txt in Resources */ = {isa = PBXBuildFile; fileRef = 84DED1575968A3B6AD02A97B /* preregister.txt */; };
 		F58DF9BF0D050EEFD46F68D0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71F45BDF49502EAC66C04D05 /* LaunchScreen.xib */; };
 /* End PBXBuildFile section */
@@ -37,6 +38,7 @@
 		71F45BDF49502EAC66C04D05 /* LaunchScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = LaunchScreen.xib; path = ../src/main/resources/LaunchScreen.xib; sourceTree = "<group>"; };
 		84DED1575968A3B6AD02A97B /* preregister.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = preregister.txt; sourceTree = "<group>"; };
 		CD55CA0E6169C4931BA941A9 /* intel_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = intel_logo.png; path = ../src/main/resources/intel_logo.png; sourceTree = "<group>"; };
+		CE20F3221BFFB176008C9957 /* application.jar */ = {isa = PBXFileReference; lastKnownFileType = archive.jar; name = application.jar; path = ../build/application.jar; sourceTree = "<group>"; };
 		D52C861F737D49440E8119D6 /* build.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = build.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -91,6 +93,7 @@
 		CB5DC4D85C02D403E6F6EA89 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CE20F3221BFFB176008C9957 /* application.jar */,
 				4272FECBCC5A27C153A62DD5 /* WebBrowser.app */,
 				CD55CA0E6169C4931BA941A9 /* intel_logo.png */,
 				71F45BDF49502EAC66C04D05 /* LaunchScreen.xib */,
@@ -149,6 +152,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE20F3231BFFB176008C9957 /* application.jar in Resources */,
 				DD6933BF973C5CBD953F8C61 /* preregister.txt in Resources */,
 				31DD864A918E4AB51B22DBCE /* intel_logo.png in Resources */,
 				F58DF9BF0D050EEFD46F68D0 /* LaunchScreen.xib in Resources */,
@@ -170,7 +174,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/bash;
-			shellScript = "cd ../\n\nexport JAVA_HOME=$(/usr/libexec/java_home -v 1.8)\njava -version\n\nfunction gradlePath {\n\tCD=\"$PWD\"\n\twhile [ \"$CD\" != \"\" ]; do\n\t\tif [ -x \"$CD/gradlew\" ]; then\n\t\t\tGRADLE_PATH=$CD/gradlew\n\t\t\treturn 0\n\t\tfi\n\t\tCD=\"${CD%/*}\"\n\tdone\n\n\tGRADLE_PATH=$(which 'gradle')\n\n\tif [ \"$GRADLE_PATH\" = \"\" ]; then\n\t\tGRADLE_PATH=/usr/local/bin/gradle\n\tfi\n}\ngradlePath\n\nif [ \"$XRT_SKIP_DEX\" == \"Yes\" ]; then\n\techo \"Compiling ART only...\"\n\t\"$GRADLE_PATH\" --daemon buildArtOat -Pxrt.archs=${arch}\n\texit\nfi\n\n\"$GRADLE_PATH\" --daemon compileJava proguard buildRetro buildDex buildArtOat buildPreregister -Pxrt.archs=\"${ARCHS}\"\n";
+			shellScript = "cd ../\n\nexport JAVA_HOME=$(/usr/libexec/java_home -v 1.8)\njava -version\n\nfunction gradlePath {\n\tCD=\"$PWD\"\n\twhile [ \"$CD\" != \"\" ]; do\n\t\tif [ -x \"$CD/gradlew\" ]; then\n\t\t\tGRADLE_PATH=$CD/gradlew\n\t\t\treturn 0\n\t\tfi\n\t\tCD=\"${CD%/*}\"\n\tdone\n\n\tGRADLE_PATH=$(which 'gradle')\n\n\tif [ \"$GRADLE_PATH\" = \"\" ]; then\n\t\tGRADLE_PATH=/usr/local/bin/gradle\n\tfi\n}\ngradlePath\n\nif [ \"$XRT_SKIP_DEX\" == \"Yes\" ]; then\n\techo \"Compiling ART only...\"\n\t\"$GRADLE_PATH\" --daemon buildArtOat -Pxrt.archs=${arch}\n\texit\nfi\n\n\"$GRADLE_PATH\" --daemon compileJava proguard resPack buildRetro buildDex buildArtOat buildPreregister -Pxrt.archs=\"${ARCHS}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

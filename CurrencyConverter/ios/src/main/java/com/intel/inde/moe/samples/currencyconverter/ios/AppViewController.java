@@ -61,13 +61,14 @@ import ios.uikit.UIViewController;
 import ios.uikit.enums.UIBarButtonItemStyle;
 import ios.uikit.enums.UIBarButtonSystemItem;
 import ios.uikit.enums.UIBarStyle;
+import ios.uikit.protocol.UIPickerViewDataSource;
 import ios.uikit.protocol.UIPickerViewDelegate;
 import ios.uikit.protocol.UITextFieldDelegate;
 
 @com.intel.inde.moe.natj.general.ann.Runtime(ObjCRuntime.class)
 @ObjCClassName("AppViewController")
 @RegisterOnStartup
-public class AppViewController extends UIViewController implements UIPickerViewDelegate, UITextFieldDelegate {
+public class AppViewController extends UIViewController implements UIPickerViewDelegate, UITextFieldDelegate, UIPickerViewDataSource {
 
     @Owned
     @Selector("alloc")
@@ -116,7 +117,7 @@ public class AppViewController extends UIViewController implements UIPickerViewD
     }
 
     @Selector("BtnPressedCancel_convertButton:")
-    public void BtnPressedCancel_convertButton(NSObject sender) {
+    public void btnPressedCancel_convertButton(NSObject sender) {
         String convertFromStr = "";
         String convertToStr = "";
         for (String key : Names.currencyNameSymbols.keySet()) {
@@ -126,7 +127,7 @@ public class AppViewController extends UIViewController implements UIPickerViewD
             if (Names.currencyNameSymbols.get(key).equals(arraySpinner[1][currentIndexes[1]])) {
                 convertToStr = key;
             }
-            if (!convertFromStr.equals("") && !convertToStr.equals(""))
+            if (!convertFromStr.isEmpty() && !convertToStr.isEmpty())
                 break;
         }
         asyncGetCurrencyRate(textNumber.text(), convertFromStr, convertToStr);
@@ -145,7 +146,7 @@ public class AppViewController extends UIViewController implements UIPickerViewD
 
                 final String resultString;
 
-                if (convertResult[0] == 0.0) {
+                if (Math.abs(convertResult[0]) < 0.00000001) {
                     resultString = "Error: Cannot get currency rate!";
                 } else {
                     BigDecimal x = new BigDecimal(convertResult[1]);
@@ -170,6 +171,14 @@ public class AppViewController extends UIViewController implements UIPickerViewD
     public boolean textFieldShouldChangeCharactersInRangeReplacementString(UITextField textField, @ByValue NSRange range, String string) {
         if (string.length() == 0)
             return true;
+
+        if (textNumber.text().equals("0") && string.equals("0"))
+            return false;
+
+        if (string.matches("[0-9]+") && textNumber.text().equals("0")) {
+            textNumber.setText("");
+            return true;
+        }
 
         if (string.equals(".") && !textNumber.text().contains(".") && !textNumber.text().isEmpty())
             return true;

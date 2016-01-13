@@ -29,6 +29,8 @@
 
 package com.intel.inde.moe.samples.planets.common;
 
+import java.security.NoSuchAlgorithmException;
+import java.security.SecureRandom;
 
 public class Planet {
 
@@ -36,8 +38,6 @@ public class Planet {
 	public static final Vector2 MAX_LOCATION = new Vector2();
 	public static final double MIN_RADIUS = 1.0f;
 	public static final double MAX_RADIUS = 10.0f;
-	public static final double MIN_SPEED = 0.0f;
-	public static final double MAX_SPEED = 0.0f;
 
 	private final double radius = newRandomFloat(MIN_RADIUS, MAX_RADIUS);
 
@@ -46,9 +46,23 @@ public class Planet {
 	private final Vector2 location = newRandomVector2(MIN_LOCATION,
 			MAX_LOCATION);
 
+	private static SecureRandom secureRandomGenerator = null;
+
+
 	private static double newRandomFloat(double min, double max) {
+		if (secureRandomGenerator == null) {
+			try {
+				secureRandomGenerator = SecureRandom.getInstance("SHA1PRNG");
+			} catch (NoSuchAlgorithmException e) {
+				e.printStackTrace();
+			}
+		}
+
+		double randomNumber = 0;
+		if (secureRandomGenerator != null)
+			randomNumber = secureRandomGenerator.nextDouble();
 		return min + (max - min)
-				* ((double) (Math.random() * 16385) / 16384.0);
+				* ((randomNumber * 16385) / 16384.0);
 	}
 
 	private static Vector2 newRandomVector2(Vector2 min, Vector2 max) {

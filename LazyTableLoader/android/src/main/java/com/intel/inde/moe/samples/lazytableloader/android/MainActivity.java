@@ -102,16 +102,11 @@ public class MainActivity extends AppCompatActivity {
 
     private class LoadTask extends AsyncTask<String, Void, Void> {
         private TopAppParser parser;
-        private String errorMessage;
 
         @Override
         protected Void doInBackground(String... params) {
             String url = params[0];
-            try {
-                parser = new TopAppParser(url);
-            } catch (Exception e) {
-                errorMessage = e.getLocalizedMessage();
-            }
+            parser = new TopAppParser(url);
             return null;
         }
 
@@ -119,10 +114,10 @@ public class MainActivity extends AppCompatActivity {
         protected void onPostExecute(Void aVoid) {
             super.onPostExecute(aVoid);
 
-            if (parser != null) {
+            if (parser.getLastErrorMessage().isEmpty()) {
                 updateListView(parser.getItems());
             } else
-                handleError(errorMessage);
+                handleError(parser.getLastErrorMessage());
         }
     }
 

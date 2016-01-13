@@ -13,6 +13,7 @@
 		7ACD3640E93CE41FB72AB2DD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22E4AAE1F8991CA9C88233F0 /* LaunchScreen.xib */; };
 		AC2F72530FACAB577C2BA06D /* MOE.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 298BB9A377003EE9A44DEBE7 /* MOE.framework */; };
 		C702D88F0AEFB1B52A5A017B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32713E2E81EAEF05282E9E71 /* main.cpp */; };
+		CE20F30F1BFFB016008C9957 /* application.jar in Resources */ = {isa = PBXBuildFile; fileRef = CE20F30E1BFFB016008C9957 /* application.jar */; };
 		D97FDD2DDB2209A964F4279F /* intel_logo_square.png in Resources */ = {isa = PBXBuildFile; fileRef = 512A2B7260E8232B87A83464 /* intel_logo_square.png */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +40,7 @@
 		512A2B7260E8232B87A83464 /* intel_logo_square.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = intel_logo_square.png; path = ../src/main/resources/intel_logo_square.png; sourceTree = "<group>"; };
 		84453B3851BD9621AE48FF79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D432EB44916D1FD17932C12 /* build.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = build.xcconfig; sourceTree = "<group>"; };
+		CE20F30E1BFFB016008C9957 /* application.jar */ = {isa = PBXFileReference; lastKnownFileType = archive.jar; name = application.jar; path = ../build/application.jar; sourceTree = "<group>"; };
 		D1014FCFDBDD7D2DBB77CF80 /* intel_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = intel_logo.png; path = ../src/main/resources/intel_logo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,6 +95,7 @@
 		F9499365BB681A6257E2E8B0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CE20F30E1BFFB016008C9957 /* application.jar */,
 				1CB55704E95A4AB91B3C4568 /* OpenGLBox.app */,
 				D1014FCFDBDD7D2DBB77CF80 /* intel_logo.png */,
 				512A2B7260E8232B87A83464 /* intel_logo_square.png */,
@@ -152,6 +155,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE20F30F1BFFB016008C9957 /* application.jar in Resources */,
 				40AB35FB4EA810E2EC5E5C66 /* preregister.txt in Resources */,
 				2093CEA3BBE16077856CB3E9 /* intel_logo.png in Resources */,
 				D97FDD2DDB2209A964F4279F /* intel_logo_square.png in Resources */,
@@ -174,7 +178,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/bash;
-			shellScript = "cd ../\n\nexport JAVA_HOME=$(/usr/libexec/java_home -v 1.8)\njava -version\n\nfunction gradlePath {\n\tCD=\"$PWD\"\n\twhile [ \"$CD\" != \"\" ]; do\n\t\tif [ -x \"$CD/gradlew\" ]; then\n\t\t\tGRADLE_PATH=$CD/gradlew\n\t\t\treturn 0\n\t\tfi\n\t\tCD=\"${CD%/*}\"\n\tdone\n\n\tGRADLE_PATH=$(which 'gradle')\n\n\tif [ \"$GRADLE_PATH\" = \"\" ]; then\n\t\tGRADLE_PATH=/usr/local/bin/gradle\n\tfi\n}\ngradlePath\n\nif [ \"$XRT_SKIP_DEX\" == \"Yes\" ]; then\n\techo \"Compiling ART only...\"\n\t\"$GRADLE_PATH\" --daemon buildArtOat -Pxrt.archs=${arch}\n\texit\nfi\n\n\"$GRADLE_PATH\" --daemon compileJava proguard buildRetro buildDex buildArtOat buildPreregister -Pxrt.archs=\"${ARCHS}\"\n";
+			shellScript = "cd ../\n\nexport JAVA_HOME=$(/usr/libexec/java_home -v 1.8)\njava -version\n\nfunction gradlePath {\n\tCD=\"$PWD\"\n\twhile [ \"$CD\" != \"\" ]; do\n\t\tif [ -x \"$CD/gradlew\" ]; then\n\t\t\tGRADLE_PATH=$CD/gradlew\n\t\t\treturn 0\n\t\tfi\n\t\tCD=\"${CD%/*}\"\n\tdone\n\n\tGRADLE_PATH=$(which 'gradle')\n\n\tif [ \"$GRADLE_PATH\" = \"\" ]; then\n\t\tGRADLE_PATH=/usr/local/bin/gradle\n\tfi\n}\ngradlePath\n\nif [ \"$XRT_SKIP_DEX\" == \"Yes\" ]; then\n\techo \"Compiling ART only...\"\n\t\"$GRADLE_PATH\" --daemon buildArtOat -Pxrt.archs=${arch}\n\texit\nfi\n\n\"$GRADLE_PATH\" --daemon compileJava proguard resPack buildRetro buildDex buildArtOat buildPreregister -Pxrt.archs=\"${ARCHS}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

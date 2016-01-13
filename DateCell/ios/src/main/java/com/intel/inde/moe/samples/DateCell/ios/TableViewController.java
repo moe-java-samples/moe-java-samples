@@ -195,7 +195,7 @@ public class TableViewController extends UITableViewController {
     @Override
     public UITableViewCell tableViewCellForRowAtIndexPath(UITableView tableView, NSIndexPath indexPath)
     {
-        UITableViewCell cell = null;
+        UITableViewCell cell;
 
         String cellID = OTHER_CELL;
         if (indexPathHasPicker(indexPath)) {
@@ -223,12 +223,12 @@ public class TableViewController extends UITableViewController {
         Map<String, Object> itemData = dataArray[modelRow];
 
         // Proceed to configure our cell
-        if (cellID == DATE_CELL_ID) {
+        if (cellID.equals(DATE_CELL_ID)) {
             // We have either start or end date cells, populate their date field
             cell.textLabel().setText((String) itemData.get(TITLE_KEY));
             String dateString = dateFormatter.stringFromDate((NSDate) itemData.get(DATA_KEY));
             cell.detailTextLabel().setText(dateString);
-        } else if (cellID == OTHER_CELL) {
+        } else if (cellID.equals(OTHER_CELL)) {
             // This cell is a non-date cell, just assign it's text label
             cell.textLabel().setText((String) itemData.get(TITLE_KEY));
         }
@@ -333,7 +333,7 @@ public class TableViewController extends UITableViewController {
 
     private boolean hasPickerForIndexPath(NSIndexPath indexPath)
     {
-        boolean hasDatePicker = false;
+        boolean hasDatePicker;
 
         int targetedRow = (int) indexPath.row();
         targetedRow++;
@@ -353,7 +353,7 @@ public class TableViewController extends UITableViewController {
     @Selector("dateAction:")
     public void dateAction(UIDatePicker sender)
     {
-        NSIndexPath targetedCellIndexPath = null;
+        NSIndexPath targetedCellIndexPath;
 
         if (hasInlineDatePicker()) {
             // Inline date picker: update the cell's date "above" the date picker cell

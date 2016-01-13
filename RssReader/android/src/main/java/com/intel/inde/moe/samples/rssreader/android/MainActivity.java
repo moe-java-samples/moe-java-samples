@@ -128,28 +128,24 @@ public class MainActivity extends AppCompatActivity {
 
     private class LoadTask extends AsyncTask<String, Void, Void> {
         private RSSFeed feed = null;
-        private String errorMessage;
 
 
         @Override
         protected Void doInBackground(String... params) {
             String url = params[0];
 
-            try {
-                feed = new RSSFeed(url);
-            } catch (Exception e) {
-                errorMessage = e.getLocalizedMessage();
-            }
+            feed = new RSSFeed(url);
+
             return null;
         }
 
         @Override
         protected void onPostExecute(Void aVoid) {
             super.onPostExecute(aVoid);
-            if (feed != null) {
+            if (feed.getLastErrorMessage().isEmpty()) {
                 updateListView(feed.getItems());
             } else
-                handleError(errorMessage);
+                handleError(feed.getLastErrorMessage());
         }
     }
 

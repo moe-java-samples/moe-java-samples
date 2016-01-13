@@ -43,6 +43,7 @@ import ios.uikit.UITabBarController;
 import ios.uikit.UIWindow;
 import ios.uikit.c.UIKit;
 import ios.uikit.protocol.UIApplicationDelegate;
+import ios.uikit.protocol.UITableViewDataSource;
 
 public class Main extends NSObject implements UIApplicationDelegate {
 
@@ -63,7 +64,7 @@ public class Main extends NSObject implements UIApplicationDelegate {
     public boolean applicationDidFinishLaunchingWithOptions(UIApplication application, NSDictionary launchOptions) {
         UITabBarController tabBarController = (UITabBarController) window().rootViewController();
 
-        NSObject dataSource;
+        UITableViewDataSource dataSource;
 
         UIStoryboard storyboard = UIStoryboard.storyboardWithNameBundle("MainUI", null);
 

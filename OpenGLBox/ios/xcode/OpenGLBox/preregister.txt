@@ -1,1 +1,1 @@
-com/intel/inde/moe/samples/openglbox/ios/Main
+com/intel/moe/samples/openglbox/ios/Main

@@ -23,7 +23,7 @@
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>Intel.MOE.Main.Class</key>
-	<string>com.intel.inde.moe.samples.openglbox.ios.Main</string>
+	<string>com.intel.moe.samples.openglbox.ios.Main</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UILaunchStoryboardName</key>

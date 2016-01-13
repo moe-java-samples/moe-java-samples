@@ -10,6 +10,7 @@
 		73D2F42AB8AAC60678127D88 /* ../src/main/resources/MainUI.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76C5E8148B77A3F9DC3D29FA /* ../src/main/resources/MainUI.storyboard */; };
 		758CE441FFA3ED786B2C58B9 /* preregister.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4985CDDAE07A717228BCC093 /* preregister.txt */; };
 		85410945969FCDE62D986EDA /* MOE.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8692DBF67FC36C939E2B672D /* MOE.framework */; };
+		CE9574371BFFADEA003F56FC /* application.jar in Resources */ = {isa = PBXBuildFile; fileRef = CE9574361BFFADEA003F56FC /* application.jar */; };
 		CEBA07211B57D313007C8454 /* Background.png in Resources */ = {isa = PBXBuildFile; fileRef = CEBA07201B57D313007C8454 /* Background.png */; };
 		CECD66411B57F2DC00563993 /* intel_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = CECD663F1B57F2DC00563993 /* intel_logo.png */; };
 		CECD66421B57F2DC00563993 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CECD66401B57F2DC00563993 /* LaunchScreen.xib */; };
@@ -37,6 +38,7 @@
 		5823632941443B765B36CA22 /* build.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = build.xcconfig; sourceTree = "<group>"; };
 		76C5E8148B77A3F9DC3D29FA /* ../src/main/resources/MainUI.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ../src/main/resources/MainUI.storyboard; sourceTree = "<group>"; };
 		8692DBF67FC36C939E2B672D /* MOE.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MOE.framework; sourceTree = XRT_FRAMEWORK_PATH; };
+		CE9574361BFFADEA003F56FC /* application.jar */ = {isa = PBXFileReference; lastKnownFileType = archive.jar; name = application.jar; path = ../build/application.jar; sourceTree = "<group>"; };
 		CEBA07201B57D313007C8454 /* Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Background.png; path = ../src/main/resources/Background.png; sourceTree = "<group>"; };
 		CECD663F1B57F2DC00563993 /* intel_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = intel_logo.png; path = ../src/main/resources/intel_logo.png; sourceTree = "<group>"; };
 		CECD66401B57F2DC00563993 /* LaunchScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = LaunchScreen.xib; path = ../src/main/resources/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 		2AB01A263E84718924B50BC1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CE9574361BFFADEA003F56FC /* application.jar */,
 				CECD663F1B57F2DC00563993 /* intel_logo.png */,
 				CECD66401B57F2DC00563993 /* LaunchScreen.xib */,
 				CEBA07201B57D313007C8454 /* Background.png */,
@@ -156,6 +159,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE9574371BFFADEA003F56FC /* application.jar in Resources */,
 				CECD66411B57F2DC00563993 /* intel_logo.png in Resources */,
 				CECD66421B57F2DC00563993 /* LaunchScreen.xib in Resources */,
 				CEBA07211B57D313007C8454 /* Background.png in Resources */,
@@ -179,7 +183,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/bash;
-			shellScript = "cd ../\n\nexport JAVA_HOME=$(/usr/libexec/java_home -v 1.8)\njava -version\n\nfunction gradlePath {\n\tCD=\"$PWD\"\n\twhile [ \"$CD\" != \"\" ]; do\n\t\tif [ -x \"$CD/gradlew\" ]; then\n\t\t\tGRADLE_PATH=$CD/gradlew\n\t\t\treturn 0\n\t\tfi\n\t\tCD=\"${CD%/*}\"\n\tdone\n\n\tGRADLE_PATH=$(which 'gradle')\n\n\tif [ \"$GRADLE_PATH\" = \"\" ]; then\n\t\tGRADLE_PATH=/usr/local/bin/gradle\n\tfi\n}\ngradlePath\n\nif [ \"$XRT_SKIP_DEX\" == \"Yes\" ]; then\n\techo \"Compiling ART only...\"\n\t\"$GRADLE_PATH\" --daemon buildArtOat -Pxrt.archs=${arch}\n\texit\nfi\n\n\"$GRADLE_PATH\" --daemon compileJava proguard buildPreregister buildRetro buildDex buildArtOat -Pxrt.archs=\"${ARCHS}\"\n";
+			shellScript = "cd ../\n\nexport JAVA_HOME=$(/usr/libexec/java_home -v 1.8)\njava -version\n\nfunction gradlePath {\n\tCD=\"$PWD\"\n\twhile [ \"$CD\" != \"\" ]; do\n\t\tif [ -x \"$CD/gradlew\" ]; then\n\t\t\tGRADLE_PATH=$CD/gradlew\n\t\t\treturn 0\n\t\tfi\n\t\tCD=\"${CD%/*}\"\n\tdone\n\n\tGRADLE_PATH=$(which 'gradle')\n\n\tif [ \"$GRADLE_PATH\" = \"\" ]; then\n\t\tGRADLE_PATH=/usr/local/bin/gradle\n\tfi\n}\ngradlePath\n\nif [ \"$XRT_SKIP_DEX\" == \"Yes\" ]; then\n\techo \"Compiling ART only...\"\n\t\"$GRADLE_PATH\" --daemon buildArtOat -Pxrt.archs=${arch}\n\texit\nfi\n\n\"$GRADLE_PATH\" --daemon compileJava proguard resPack buildPreregister buildRetro buildDex buildArtOat -Pxrt.archs=\"${ARCHS}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

@@ -30,11 +30,14 @@
 package com.intel.inde.moe.samples.elements.ios;
 
 import com.intel.inde.moe.natj.general.Pointer;
+import com.intel.inde.moe.natj.general.ann.ByValue;
+import com.intel.inde.moe.natj.general.ann.Mapped;
 import com.intel.inde.moe.natj.general.ann.RegisterOnStartup;
 import com.intel.inde.moe.natj.general.ptr.VoidPtr;
 import com.intel.inde.moe.natj.objc.ObjCRuntime;
 import com.intel.inde.moe.natj.objc.ann.ObjCClassName;
 import com.intel.inde.moe.natj.objc.ann.Selector;
+import com.intel.inde.moe.natj.objc.map.ObjCObjectMapper;
 import com.intel.inde.moe.samples.elements.common.AtomicElement;
 
 import ios.coregraphics.c.CoreGraphics;
@@ -144,6 +147,26 @@ public class AtomicElementViewController extends UIViewController {
         flipButtonBarItem = UIBarButtonItem.alloc().initWithCustomView(this.flipIndicatorButton);
         flipIndicatorButton.addTargetActionForControlEvents(this, Foundation.NSSelectorFromString("flipCurrentView"), UIControlEvents.TouchDown);
         this.navigationItem().setRightBarButtonItemAnimated(flipButtonBarItem, true);
+    }
+
+    private CGRect getRectForSubViews(CGSize superviewSize) {
+        CGSize preferredViewSize = AtomicElementView.preferredViewSize();
+
+        CGRect viewRect = CoreGraphics.CGRectMake(
+                (superviewSize.width() - preferredViewSize.width()) / 2,
+                (superviewSize.height() - preferredViewSize.height()) / 2,
+                preferredViewSize.width(),
+                preferredViewSize.height()
+        );
+
+        return viewRect;
+    }
+
+    @Override
+    public void viewWillTransitionToSizeWithTransitionCoordinator(@ByValue CGSize size, @Mapped(ObjCObjectMapper.class) Object coordinator) {
+        CGRect viewRect = getRectForSubViews(size);
+        atomicElementView.setFrame(viewRect);
+        atomicElementFlippedView.setFrame(viewRect);
     }
 
     public void setElement(AtomicElement element) {

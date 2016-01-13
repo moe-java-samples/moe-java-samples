@@ -32,46 +32,46 @@ package com.intel.inde.moe.samples.snake.common;
 public class Tile {
 	
     protected static int mTileSize;
-    public int GetTileSize(){
+    public int getTileSize(){
     	return mTileSize;
     }
-    public void SetTileSize(int TileSize) {
+    public void setTileSize(int TileSize) {
         mTileSize = TileSize;
     }
 
     protected static int mXTileCount;
-    public int GetXTileCount(){
+    public int getXTileCount(){
     	return mXTileCount;
     }
-    public void SetXTileCount(int XTileCount) {
+    public void setXTileCount(int XTileCount) {
         mXTileCount = XTileCount;
     }
     
     protected static int mYTileCount;
-    public int GetYTileCount(){
+    public int getYTileCount(){
     	return mYTileCount;
     }
-    public void SetYTileCount(int YTileCount) {
+    public void setYTileCount(int YTileCount) {
         mYTileCount = YTileCount;
     }
 
     private static int mXOffset;
-    public int GetXOffset(){
+    public int getXOffset(){
     	return mXOffset;
     }
-    public void SetXOffset(int XOffset) {
+    public void setXOffset(int XOffset) {
         mXOffset = XOffset;
     }
     private static int mYOffset;
-    public int GetYOffset(){
+    public int getYOffset(){
     	return mYOffset;
     }
-    public void SetYOffset(int YOffset) {
+    public void setYOffset(int YOffset) {
         mYOffset = YOffset;
     }
 
     private eTileTypes[][] mTileGrid;
-    public eTileTypes[][] GetTileGrid(){
+    public eTileTypes[][] getTileGrid(){
     	return mTileGrid;
     }
 

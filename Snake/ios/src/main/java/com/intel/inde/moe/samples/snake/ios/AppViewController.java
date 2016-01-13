@@ -90,7 +90,7 @@ public class AppViewController extends UIViewController {
     public native UIButton getAIPlayer();
 
     @Selector("BtnOnePlayerPressed:")
-    public void BtnOnePlayerPressed(NSObject sender) {
+    public void btnOnePlayerPressed(NSObject sender) {
         Main.isAIGame = false;
     }
 

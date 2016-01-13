@@ -61,396 +61,396 @@ public class CalcViewController extends UIViewController {
 
     private CalculatorAdapter myCalculatorAdapter;
 
-    public UILabel calc_num = null;
-    public UIButton calc_btn_c = null;
-    public UIButton calc_btn_pm = null;
-    public UIButton calc_btn_proc = null;
-    public UIButton calc_btn_devide = null;
+    public UILabel calcNum = null;
+    public UIButton calcBtnC = null;
+    public UIButton calcBtnPm = null;
+    public UIButton calcBtnProc = null;
+    public UIButton calcBtnDevide = null;
 
-    public UIButton calc_btn_7 = null;
-    public UIButton calc_btn_8 = null;
-    public UIButton calc_btn_9 = null;
-    public UIButton calc_btn_umn = null;
+    public UIButton calcBtn7 = null;
+    public UIButton calcBtn8 = null;
+    public UIButton calcBtn9 = null;
+    public UIButton calcBtnUmn = null;
 
-    public UIButton calc_btn_4 = null;
-    public UIButton calc_btn_5 = null;
-    public UIButton calc_btn_6 = null;
-    public UIButton calc_btn_min = null;
+    public UIButton calcBtn4 = null;
+    public UIButton calcBtn5 = null;
+    public UIButton calcBtn6 = null;
+    public UIButton calcBtnMin = null;
 
-    public UIButton calc_btn_1 = null;
-    public UIButton calc_btn_2 = null;
-    public UIButton calc_btn_3 = null;
-    public UIButton calc_btn_plus = null;
+    public UIButton calcBtn1 = null;
+    public UIButton calcBtn2 = null;
+    public UIButton calcBtn3 = null;
+    public UIButton calcBtnPlus = null;
 
-    public UIButton calc_btn_0 = null;
-    public UIButton calc_btn_0_fake = null;
-    public UIButton calc_btn_dote = null;
-    public UIButton calc_btn_equel = null;
+    public UIButton calcBtn0 = null;
+    public UIButton calcBtn0Fake = null;
+    public UIButton calcBtnDote = null;
+    public UIButton calcBtnEquel = null;
 
     @Override
     public void viewDidLoad(){
         myCalculatorAdapter = new CalculatorAdapter();
-        calc_num = getCalc_num();
-        calc_btn_c = getCalc_btn_c();
-        calc_btn_pm = getCalc_btn_pm();
-        calc_btn_proc = getCalc_btn_proc();
-        calc_btn_devide = getCalc_btn_devide();
+        calcNum = getCalcNum();
+        calcBtnC = getCalcBtnC();
+        calcBtnPm = getCalcBtnPm();
+        calcBtnProc = getCalcBtnProc();
+        calcBtnDevide = getCalcBtnDevide();
 
-        calc_btn_7 = getCalc_btn_7();
-        calc_btn_8 = getCalc_btn_8();
-        calc_btn_9 = getCalc_btn_9();
-        calc_btn_umn = getCalc_btn_umn();
+        calcBtn7 = getCalcBtn7();
+        calcBtn8 = getCalcBtn8();
+        calcBtn9 = getCalcBtn9();
+        calcBtnUmn = getCalcBtnUmn();
 
-        calc_btn_4 = getCalc_btn_4();
-        calc_btn_5 = getCalc_btn_5();
-        calc_btn_6 = getCalc_btn_6();
-        calc_btn_min = getCalc_btn_min();
+        calcBtn4 = getCalcBtn4();
+        calcBtn5 = getCalcBtn5();
+        calcBtn6 = getCalcBtn6();
+        calcBtnMin = getCalcBtnMin();
 
-        calc_btn_1 = getCalc_btn_1();
-        calc_btn_2 = getCalc_btn_2();
-        calc_btn_3 = getCalc_btn_3();
-        calc_btn_plus = getCalc_btn_plus();
+        calcBtn1 = getCalcBtn1();
+        calcBtn2 = getCalcBtn2();
+        calcBtn3 = getCalcBtn3();
+        calcBtnPlus = getCalcBtnPlus();
 
-        calc_btn_0 = getCalc_btn_0();
-        calc_btn_0_fake = getCalc_btn_0_fake();
-        calc_btn_dote = getCalc_btn_dote();
-        calc_btn_equel = getCalc_btn_equel();
+        calcBtn0 = getCalcBtn0();
+        calcBtn0Fake = getCalcBtn0Fake();
+        calcBtnDote = getCalcBtnDote();
+        calcBtnEquel = getCalcBtnEquel();
 
-        calc_num.setText("0");
-        calc_btn_c.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float) 0.0, (float) (0x71 / 255.0), (float) (0xba / 255.0), (float) 1.0));
-        calc_btn_pm.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float)0.0, (float)(0x71/255.0), (float)(0xba/255.0), (float)1.0));
-        calc_btn_proc.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float)0.0, (float)(0x71/255.0), (float)(0xba/255.0), (float)1.0));
-        calc_btn_devide.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float)0.0, (float)(0x4b/255.0), (float)(0x8d/255.0), (float)1.0));
-        calc_btn_7.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float)0.0, (float)(0x71/255.0), (float)(0xba/255.0), (float)1.0));
-        calc_btn_8.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float)0.0, (float)(0x71/255.0), (float)(0xba/255.0), (float)1.0));
-        calc_btn_9.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float)0.0, (float)(0x71/255.0), (float)(0xba/255.0), (float)1.0));
-        calc_btn_umn.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float)0.0, (float)(0x4b/255.0), (float)(0x8d/255.0), (float)1.0));
-        calc_btn_4.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float)0.0, (float)(0x71/255.0), (float)(0xba/255.0), (float)1.0));
-        calc_btn_5.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float)0.0, (float)(0x71/255.0), (float)(0xba/255.0), (float)1.0));
-        calc_btn_6.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float)0.0, (float)(0x71/255.0), (float)(0xba/255.0), (float)1.0));
-        calc_btn_min.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float)0.0, (float)(0x4b/255.0), (float)(0x8d/255.0), (float)1.0));
-        calc_btn_1.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float)0.0, (float)(0x71/255.0), (float)(0xba/255.0), (float)1.0));
-        calc_btn_2.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float)0.0, (float)(0x71/255.0), (float)(0xba/255.0), (float)1.0));
-        calc_btn_3.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float)0.0, (float)(0x71/255.0), (float)(0xba/255.0), (float)1.0));
-        calc_btn_plus.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float)0.0, (float)(0x4b/255.0), (float)(0x8d/255.0), (float)1.0));
-        calc_btn_0.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float)0.0, (float)(0x71/255.0), (float)(0xba/255.0), (float)1.0));
-        calc_btn_0_fake.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float)0.0, (float)(0x71/255.0), (float)(0xba/255.0), (float)1.0));
-        calc_btn_dote.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float)0.0, (float)(0x71/255.0), (float)(0xba/255.0), (float)1.0));
-        calc_btn_equel.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float)0.0, (float)(0x4b/255.0), (float)(0x8d/255.0), (float)1.0));
+        calcNum.setText("0");
+        calcBtnC.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float) 0.0, (float) (0x71 / 255.0), (float) (0xba / 255.0), (float) 1.0));
+        calcBtnPm.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float) 0.0, (float) (0x71 / 255.0), (float) (0xba / 255.0), (float) 1.0));
+        calcBtnProc.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float) 0.0, (float) (0x71 / 255.0), (float) (0xba / 255.0), (float) 1.0));
+        calcBtnDevide.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float) 0.0, (float) (0x4b / 255.0), (float) (0x8d / 255.0), (float) 1.0));
+        calcBtn7.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float) 0.0, (float) (0x71 / 255.0), (float) (0xba / 255.0), (float) 1.0));
+        calcBtn8.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float) 0.0, (float) (0x71 / 255.0), (float) (0xba / 255.0), (float) 1.0));
+        calcBtn9.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float) 0.0, (float) (0x71 / 255.0), (float) (0xba / 255.0), (float) 1.0));
+        calcBtnUmn.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float) 0.0, (float) (0x4b / 255.0), (float) (0x8d / 255.0), (float) 1.0));
+        calcBtn4.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float) 0.0, (float) (0x71 / 255.0), (float) (0xba / 255.0), (float) 1.0));
+        calcBtn5.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float) 0.0, (float) (0x71 / 255.0), (float) (0xba / 255.0), (float) 1.0));
+        calcBtn6.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float) 0.0, (float) (0x71 / 255.0), (float) (0xba / 255.0), (float) 1.0));
+        calcBtnMin.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float) 0.0, (float) (0x4b / 255.0), (float) (0x8d / 255.0), (float) 1.0));
+        calcBtn1.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float) 0.0, (float) (0x71 / 255.0), (float) (0xba / 255.0), (float) 1.0));
+        calcBtn2.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float) 0.0, (float) (0x71 / 255.0), (float) (0xba / 255.0), (float) 1.0));
+        calcBtn3.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float) 0.0, (float) (0x71 / 255.0), (float) (0xba / 255.0), (float) 1.0));
+        calcBtnPlus.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float) 0.0, (float) (0x4b / 255.0), (float) (0x8d / 255.0), (float) 1.0));
+        calcBtn0.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float) 0.0, (float) (0x71 / 255.0), (float) (0xba / 255.0), (float) 1.0));
+        calcBtn0Fake.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float) 0.0, (float) (0x71 / 255.0), (float) (0xba / 255.0), (float) 1.0));
+        calcBtnDote.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float) 0.0, (float) (0x71 / 255.0), (float) (0xba / 255.0), (float) 1.0));
+        calcBtnEquel.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float) 0.0, (float) (0x4b / 255.0), (float) (0x8d / 255.0), (float) 1.0));
 
     }
 
     @Selector("calc_num")
     @Property
-    public native UILabel getCalc_num();
+    public native UILabel getCalcNum();
 
     @Selector("calc_btn_c")
     @Property
-    public native UIButton getCalc_btn_c();
+    public native UIButton getCalcBtnC();
 
     @Selector("calc_btn_pm")
     @Property
-    public native UIButton getCalc_btn_pm();
+    public native UIButton getCalcBtnPm();
 
     @Selector("calc_btn_proc")
     @Property
-    public native UIButton getCalc_btn_proc();
+    public native UIButton getCalcBtnProc();
 
     @Selector("calc_btn_devide")
     @Property
-    public native UIButton getCalc_btn_devide();
+    public native UIButton getCalcBtnDevide();
 
     @Selector("calc_btn_7")
     @Property
-    public native UIButton getCalc_btn_7();
+    public native UIButton getCalcBtn7();
 
     @Selector("calc_btn_8")
     @Property
-    public native UIButton getCalc_btn_8();
+    public native UIButton getCalcBtn8();
 
     @Selector("calc_btn_9")
     @Property
-    public native UIButton getCalc_btn_9();
+    public native UIButton getCalcBtn9();
 
     @Selector("calc_btn_umn")
     @Property
-    public native UIButton getCalc_btn_umn();
+    public native UIButton getCalcBtnUmn();
 
     @Selector("calc_btn_4")
     @Property
-    public native UIButton getCalc_btn_4();
+    public native UIButton getCalcBtn4();
 
     @Selector("calc_btn_5")
     @Property
-    public native UIButton getCalc_btn_5();
+    public native UIButton getCalcBtn5();
 
     @Selector("calc_btn_6")
     @Property
-    public native UIButton getCalc_btn_6();
+    public native UIButton getCalcBtn6();
 
     @Selector("calc_btn_min")
     @Property
-    public native UIButton getCalc_btn_min();
+    public native UIButton getCalcBtnMin();
 
     @Selector("calc_btn_1")
     @Property
-    public native UIButton getCalc_btn_1();
+    public native UIButton getCalcBtn1();
 
     @Selector("calc_btn_2")
     @Property
-    public native UIButton getCalc_btn_2();
+    public native UIButton getCalcBtn2();
 
     @Selector("calc_btn_3")
     @Property
-    public native UIButton getCalc_btn_3();
+    public native UIButton getCalcBtn3();
 
     @Selector("calc_btn_plus")
     @Property
-    public native UIButton getCalc_btn_plus();
+    public native UIButton getCalcBtnPlus();
 
     @Selector("calc_btn_0")
     @Property
-    public native UIButton getCalc_btn_0();
+    public native UIButton getCalcBtn0();
 
     @Selector("calc_btn_0_fake")
     @Property
-    public native UIButton getCalc_btn_0_fake();
+    public native UIButton getCalcBtn0Fake();
 
     @Selector("calc_btn_dote")
     @Property
-    public native UIButton getCalc_btn_dote();
+    public native UIButton getCalcBtnDote();
 
     @Selector("calc_btn_equel")
     @Property
-    public native UIButton getCalc_btn_equel();
+    public native UIButton getCalcBtnEquel();
 
     @Selector("BtnPressed_c:")
-    public void BtnPressed_c(NSObject sender){
-        calc_btn_c.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float)(0xfd/255.0), (float)(0xb8/255.0), (float)(0x13/255.0), (float)1.0));
+    public void btnPressedC(NSObject sender){
+        calcBtnC.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float) (0xfd / 255.0), (float) (0xb8 / 255.0), (float) (0x13 / 255.0), (float) 1.0));
 
     }
 
     @Selector("BtnPressedCancel_c:")
-    public void BtnPressedCancel_c(NSObject sender){
-        calc_btn_c.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float)0.0, (float)(0x71/255.0), (float)(0xba/255.0), (float)1.0));
+    public void btnPressedCancelC(NSObject sender){
+        calcBtnC.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float) 0.0, (float) (0x71 / 255.0), (float) (0xba / 255.0), (float) 1.0));
         String str = myCalculatorAdapter.sendNewSymbol("C");
-        calc_num.setText(str);
+        calcNum.setText(str);
     }
 
     @Selector("BtnPressed_pm:")
-    public void BtnPressed_pm(NSObject sender){
-        calc_btn_pm.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float)(0xfd/255.0), (float)(0xb8/255.0), (float)(0x13/255.0), (float)1.0));
+    public void btnPressedPm(NSObject sender){
+        calcBtnPm.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float) (0xfd / 255.0), (float) (0xb8 / 255.0), (float) (0x13 / 255.0), (float) 1.0));
     }
     @Selector("BtnPressedCancel_pm:")
-    public void BtnPressedCancel_pm(NSObject sender){
-        calc_btn_pm.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float)0.0, (float)(0x71/255.0), (float)(0xba/255.0), (float)1.0));
-        String str = myCalculatorAdapter.sendNewSymbol("C");
-        calc_num.setText(str);
+    public void btnPressedCancelPm(NSObject sender){
+        calcBtnPm.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float) 0.0, (float) (0x71 / 255.0), (float) (0xba / 255.0), (float) 1.0));
+        String str = myCalculatorAdapter.sendNewSymbol("INVERT");
+        calcNum.setText(str);
     }
 
     @Selector("BtnPressed_proc:")
-    public void BtnPressed_proc(NSObject sender){
-        calc_btn_proc.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float)(0xfd/255.0), (float)(0xb8/255.0), (float)(0x13/255.0), (float)1.0));
+    public void btnPressedProc(NSObject sender){
+        calcBtnProc.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float) (0xfd / 255.0), (float) (0xb8 / 255.0), (float) (0x13 / 255.0), (float) 1.0));
     }
 
     @Selector("BtnPressedCancel_proc:")
-    public void BtnPressedCancel_proc(NSObject sender){
-        calc_btn_proc.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float)0.0, (float)(0x71/255.0), (float)(0xba/255.0), (float)1.0));
+    public void btnPressedCancelProc(NSObject sender){
+        calcBtnProc.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float) 0.0, (float) (0x71 / 255.0), (float) (0xba / 255.0), (float) 1.0));
         String str = myCalculatorAdapter.sendNewSymbol("C");
-        calc_num.setText(str);
+        calcNum.setText(str);
     }
 
     @Selector("BtnPressed_devide:")
-    public void BtnPressed_devide(NSObject sender){
-        calc_btn_devide.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float)(0xfd/255.0), (float)(0xb8/255.0), (float)(0x13/255.0), (float)1.0));
+    public void btnPressedDevide(NSObject sender){
+        calcBtnDevide.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float) (0xfd / 255.0), (float) (0xb8 / 255.0), (float) (0x13 / 255.0), (float) 1.0));
     }
 
     @Selector("BtnPressedCancel_devide:")
-    public void BtnPressedCancel_devide(NSObject sender){
-        calc_btn_devide.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float)0.0, (float)(0x4b/255.0), (float)(0x8d/255.0), (float)1.0));
+    public void btnPressedCancelDevide(NSObject sender){
+        calcBtnDevide.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float) 0.0, (float) (0x4b / 255.0), (float) (0x8d / 255.0), (float) 1.0));
         String str = myCalculatorAdapter.sendNewSymbol("/");
-        calc_num.setText(str);
+        calcNum.setText(str);
     }
 
     @Selector("BtnPressed_7:")
-    public void BtnPressed_7(NSObject sender){
-        calc_btn_7.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float)(0xfd/255.0), (float)(0xb8/255.0), (float)(0x13/255.0), (float)1.0));
+    public void btnPressed7(NSObject sender){
+        calcBtn7.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float) (0xfd / 255.0), (float) (0xb8 / 255.0), (float) (0x13 / 255.0), (float) 1.0));
     }
 
     @Selector("BtnPressedCancel_7:")
-    public void BtnPressedCancel_7(NSObject sender){
-        calc_btn_7.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float)0.0, (float)(0x71/255.0), (float)(0xba/255.0), (float)1.0));
+    public void btnPressedCancel7(NSObject sender){
+        calcBtn7.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float) 0.0, (float) (0x71 / 255.0), (float) (0xba / 255.0), (float) 1.0));
         String str = myCalculatorAdapter.sendNewSymbol("7");
-        calc_num.setText(str);
+        calcNum.setText(str);
     }
 
     @Selector("BtnPressed_8:")
-    public void BtnPressed_8(NSObject sender){
-        calc_btn_8.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float)(0xfd/255.0), (float)(0xb8/255.0), (float)(0x13/255.0), (float)1.0));
+    public void btnPressed8(NSObject sender){
+        calcBtn8.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float) (0xfd / 255.0), (float) (0xb8 / 255.0), (float) (0x13 / 255.0), (float) 1.0));
     }
 
     @Selector("BtnPressedCancel_8:")
-    public void BtnPressedCancel_8(NSObject sender){
-        calc_btn_8.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float)0.0, (float)(0x71/255.0), (float)(0xba/255.0), (float)1.0));
+    public void btnPressedCancel8(NSObject sender){
+        calcBtn8.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float) 0.0, (float) (0x71 / 255.0), (float) (0xba / 255.0), (float) 1.0));
         String str = myCalculatorAdapter.sendNewSymbol("8");
-        calc_num.setText(str);
+        calcNum.setText(str);
     }
 
     @Selector("BtnPressed_9:")
-    public void BtnPressed_9(NSObject sender){
-        calc_btn_9.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float)(0xfd/255.0), (float)(0xb8/255.0), (float)(0x13/255.0), (float)1.0));
+    public void btnPressed9(NSObject sender){
+        calcBtn9.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float) (0xfd / 255.0), (float) (0xb8 / 255.0), (float) (0x13 / 255.0), (float) 1.0));
     }
 
     @Selector("BtnPressedCancel_9:")
-    public void BtnPressedCancel_9(NSObject sender){
-        calc_btn_9.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float)0.0, (float)(0x71/255.0), (float)(0xba/255.0), (float)1.0));
+    public void btnPressedCancel9(NSObject sender){
+        calcBtn9.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float) 0.0, (float) (0x71 / 255.0), (float) (0xba / 255.0), (float) 1.0));
         String str = myCalculatorAdapter.sendNewSymbol("9");
-        calc_num.setText(str);
+        calcNum.setText(str);
     }
 
     @Selector("BtnPressed_umn:")
-    public void BtnPressed_umn(NSObject sender){
-        calc_btn_umn.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float)(0xfd/255.0), (float)(0xb8/255.0), (float)(0x13/255.0), (float)1.0));
+    public void btnPressedUmn(NSObject sender){
+        calcBtnUmn.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float) (0xfd / 255.0), (float) (0xb8 / 255.0), (float) (0x13 / 255.0), (float) 1.0));
     }
 
     @Selector("BtnPressedCancel_umn:")
-    public void BtnPressedCancel_umn(NSObject sender){
-        calc_btn_umn.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float)0.0, (float)(0x4b/255.0), (float)(0x8d/255.0), (float)1.0));
+    public void btnPressedCancelUmn(NSObject sender){
+        calcBtnUmn.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float) 0.0, (float) (0x4b / 255.0), (float) (0x8d / 255.0), (float) 1.0));
         String str = myCalculatorAdapter.sendNewSymbol("*");
-        calc_num.setText(str);
+        calcNum.setText(str);
     }
 
     @Selector("BtnPressed_4:")
-    public void BtnPressed_4(NSObject sender){
-        calc_btn_4.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float)(0xfd/255.0), (float)(0xb8/255.0), (float)(0x13/255.0), (float)1.0));
+    public void btnPressed4(NSObject sender){
+        calcBtn4.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float) (0xfd / 255.0), (float) (0xb8 / 255.0), (float) (0x13 / 255.0), (float) 1.0));
     }
 
     @Selector("BtnPressedCancel_4:")
-    public void BtnPressedCancel_4(NSObject sender){
-        calc_btn_4.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float)0.0, (float)(0x71/255.0), (float)(0xba/255.0), (float)1.0));
+    public void btnPressedCancel4(NSObject sender){
+        calcBtn4.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float) 0.0, (float) (0x71 / 255.0), (float) (0xba / 255.0), (float) 1.0));
         String str = myCalculatorAdapter.sendNewSymbol("4");
-        calc_num.setText(str);
+        calcNum.setText(str);
     }
 
     @Selector("BtnPressed_5:")
-    public void BtnPressed_5(NSObject sender){
-        calc_btn_5.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float)(0xfd/255.0), (float)(0xb8/255.0), (float)(0x13/255.0), (float)1.0));
+    public void btnPressed5(NSObject sender){
+        calcBtn5.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float) (0xfd / 255.0), (float) (0xb8 / 255.0), (float) (0x13 / 255.0), (float) 1.0));
     }
 
     @Selector("BtnPressedCancel_5:")
-    public void BtnPressedCancel_5(NSObject sender){
-        calc_btn_5.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float)0.0, (float)(0x71/255.0), (float)(0xba/255.0), (float)1.0));
+    public void btnPressedCancel5(NSObject sender){
+        calcBtn5.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float) 0.0, (float) (0x71 / 255.0), (float) (0xba / 255.0), (float) 1.0));
         String str = myCalculatorAdapter.sendNewSymbol("5");
-        calc_num.setText(str);
+        calcNum.setText(str);
     }
 
     @Selector("BtnPressed_6:")
-    public void BtnPressed_6(NSObject sender){
-        calc_btn_6.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float)(0xfd/255.0), (float)(0xb8/255.0), (float)(0x13/255.0), (float)1.0));
+    public void btnPressed6(NSObject sender){
+        calcBtn6.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float) (0xfd / 255.0), (float) (0xb8 / 255.0), (float) (0x13 / 255.0), (float) 1.0));
     }
 
     @Selector("BtnPressedCancel_6:")
-    public void BtnPressedCancel_6(NSObject sender){
-        calc_btn_6.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float)0.0, (float)(0x71/255.0), (float)(0xba/255.0), (float)1.0));
+    public void btnPressedCancel6(NSObject sender){
+        calcBtn6.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float) 0.0, (float) (0x71 / 255.0), (float) (0xba / 255.0), (float) 1.0));
         String str = myCalculatorAdapter.sendNewSymbol("6");
-        calc_num.setText(str);
+        calcNum.setText(str);
     }
 
     @Selector("BtnPressed_min:")
-    public void BtnPressed_min(NSObject sender){
-        calc_btn_min.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float)(0xfd/255.0), (float)(0xb8/255.0), (float)(0x13/255.0), (float)1.0));
+    public void btnPressedMin(NSObject sender){
+        calcBtnMin.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float) (0xfd / 255.0), (float) (0xb8 / 255.0), (float) (0x13 / 255.0), (float) 1.0));
     }
 
     @Selector("BtnPressedCancel_min:")
-    public void BtnPressedCancel_min(NSObject sender){
-        calc_btn_min.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float)0.0, (float)(0x4b/255.0), (float)(0x8d/255.0), (float)1.0));
+    public void btnPressedCancelMin(NSObject sender){
+        calcBtnMin.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float) 0.0, (float) (0x4b / 255.0), (float) (0x8d / 255.0), (float) 1.0));
         String str = myCalculatorAdapter.sendNewSymbol("-");
-        calc_num.setText(str);
+        calcNum.setText(str);
     }
 
     @Selector("BtnPressed_1:")
-    public void BtnPressed_1(NSObject sender){
-        calc_btn_1.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float)(0xfd/255.0), (float)(0xb8/255.0), (float)(0x13/255.0), (float)1.0));
+    public void btnPressed1(NSObject sender){
+        calcBtn1.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float) (0xfd / 255.0), (float) (0xb8 / 255.0), (float) (0x13 / 255.0), (float) 1.0));
     }
 
     @Selector("BtnPressedCancel_1:")
-    public void BtnPressedCancel_1(NSObject sender){
-        calc_btn_1.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float)0.0, (float)(0x71/255.0), (float)(0xba/255.0), (float)1.0));
+    public void btnPressedCancel1(NSObject sender){
+        calcBtn1.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float) 0.0, (float) (0x71 / 255.0), (float) (0xba / 255.0), (float) 1.0));
         String str = myCalculatorAdapter.sendNewSymbol("1");
-        calc_num.setText(str);
+        calcNum.setText(str);
     }
 
     @Selector("BtnPressed_2:")
-    public void BtnPressed_2(NSObject sender){
-        calc_btn_2.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float)(0xfd/255.0), (float)(0xb8/255.0), (float)(0x13/255.0), (float)1.0));
+    public void btnPressed2(NSObject sender){
+        calcBtn2.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float) (0xfd / 255.0), (float) (0xb8 / 255.0), (float) (0x13 / 255.0), (float) 1.0));
     }
 
     @Selector("BtnPressedCancel_2:")
-    public void BtnPressedCancel_2(NSObject sender){
-        calc_btn_2.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float)0.0, (float)(0x71/255.0), (float)(0xba/255.0), (float)1.0));
+    public void btnPressedCancel2(NSObject sender){
+        calcBtn2.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float) 0.0, (float) (0x71 / 255.0), (float) (0xba / 255.0), (float) 1.0));
         String str = myCalculatorAdapter.sendNewSymbol("2");
-        calc_num.setText(str);
+        calcNum.setText(str);
     }
 
     @Selector("BtnPressed_3:")
-    public void BtnPressed_3(NSObject sender){
-        calc_btn_3.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float)(0xfd/255.0), (float)(0xb8/255.0), (float)(0x13/255.0), (float)1.0));
+    public void btnPressed3(NSObject sender){
+        calcBtn3.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float) (0xfd / 255.0), (float) (0xb8 / 255.0), (float) (0x13 / 255.0), (float) 1.0));
     }
 
     @Selector("BtnPressedCancel_3:")
-    public void BtnPressedCancel_3(NSObject sender){
-        calc_btn_3.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float)0.0, (float)(0x71/255.0), (float)(0xba/255.0), (float)1.0));
+    public void btnPressedCancel3(NSObject sender){
+        calcBtn3.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float) 0.0, (float) (0x71 / 255.0), (float) (0xba / 255.0), (float) 1.0));
         String str = myCalculatorAdapter.sendNewSymbol("3");
-        calc_num.setText(str);
+        calcNum.setText(str);
     }
 
     @Selector("BtnPressed_plus:")
-    public void BtnPressed_plus(NSObject sender){
-        calc_btn_plus.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float)(0xfd/255.0), (float)(0xb8/255.0), (float)(0x13/255.0), (float)1.0));
+    public void btnPressedPlus(NSObject sender){
+        calcBtnPlus.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float) (0xfd / 255.0), (float) (0xb8 / 255.0), (float) (0x13 / 255.0), (float) 1.0));
     }
 
     @Selector("BtnPressedCancel_plus:")
-    public void BtnPressedCancel_plus(NSObject sender){
-        calc_btn_plus.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float)0.0, (float)(0x4b/255.0), (float)(0x8d/255.0), (float)1.0));
+    public void btnPressedCancelPlus(NSObject sender){
+        calcBtnPlus.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float) 0.0, (float) (0x4b / 255.0), (float) (0x8d / 255.0), (float) 1.0));
         String str = myCalculatorAdapter.sendNewSymbol("+");
-        calc_num.setText(str);
+        calcNum.setText(str);
     }
 
     @Selector("BtnPressed_0:")
-    public void BtnPressed_0(NSObject sender){
-        calc_btn_0.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float)(0xfd/255.0), (float)(0xb8/255.0), (float)(0x13/255.0), (float)1.0));
-        calc_btn_0_fake.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float)(0xfd/255.0), (float)(0xb8/255.0), (float)(0x13/255.0), (float)1.0));
+    public void btnPressed0(NSObject sender){
+        calcBtn0.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float) (0xfd / 255.0), (float) (0xb8 / 255.0), (float) (0x13 / 255.0), (float) 1.0));
+        calcBtn0Fake.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float) (0xfd / 255.0), (float) (0xb8 / 255.0), (float) (0x13 / 255.0), (float) 1.0));
     }
 
     @Selector("BtnPressedCancel_0:")
-    public void BtnPressedCancel_0(NSObject sender){
-        calc_btn_0.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float)0.0, (float)(0x71/255.0), (float)(0xba/255.0), (float)1.0));
-        calc_btn_0_fake.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float)0.0, (float)(0x71/255.0), (float)(0xba/255.0), (float)1.0));
+    public void btnPressedCancel0(NSObject sender){
+        calcBtn0.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float) 0.0, (float) (0x71 / 255.0), (float) (0xba / 255.0), (float) 1.0));
+        calcBtn0Fake.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float) 0.0, (float) (0x71 / 255.0), (float) (0xba / 255.0), (float) 1.0));
         String str = myCalculatorAdapter.sendNewSymbol("0");
-        calc_num.setText(str);
+        calcNum.setText(str);
     }
 
     @Selector("BtnPressed_dote:")
-    public void BtnPressed_dote(NSObject sender){
-        calc_btn_dote.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float)(0xfd/255.0), (float)(0xb8/255.0), (float)(0x13/255.0), (float)1.0));
+    public void btnPressedDote(NSObject sender){
+        calcBtnDote.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float) (0xfd / 255.0), (float) (0xb8 / 255.0), (float) (0x13 / 255.0), (float) 1.0));
     }
 
     @Selector("BtnPressedCancel_dote:")
-    public void BtnPressedCancel_dote(NSObject sender){
-        calc_btn_dote.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float)0.0, (float)(0x71/255.0), (float)(0xba/255.0), (float)1.0));
+    public void btnPressedCancelDote(NSObject sender){
+        calcBtnDote.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float) 0.0, (float) (0x71 / 255.0), (float) (0xba / 255.0), (float) 1.0));
         String str = myCalculatorAdapter.sendNewSymbol(".");
-        calc_num.setText(str);
+        calcNum.setText(str);
     }
 
     @Selector("BtnPressed_equel:")
-    public void BtnPressed_equel(NSObject sender){
-        calc_btn_equel.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float)(0xfd/255.0), (float)(0xb8/255.0), (float)(0x13/255.0), (float)1.0));
+    public void btnPressedEquel(NSObject sender){
+        calcBtnEquel.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float) (0xfd / 255.0), (float) (0xb8 / 255.0), (float) (0x13 / 255.0), (float) 1.0));
     }
 
     @Selector("BtnPressedCancel_equel:")
-    public void BtnPressedCancel_equel(NSObject sender){
-        calc_btn_equel.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float)0.0, (float)(0x4b/255.0), (float)(0x8d/255.0), (float)1.0));
+    public void btnPressedCancelEquel(NSObject sender){
+        calcBtnEquel.setBackgroundColor(UIColor.colorWithRedGreenBlueAlpha((float) 0.0, (float) (0x4b / 255.0), (float) (0x8d / 255.0), (float) 1.0));
         String str = myCalculatorAdapter.sendNewSymbol("=");
-        calc_num.setText(str);
+        calcNum.setText(str);
     }
 }

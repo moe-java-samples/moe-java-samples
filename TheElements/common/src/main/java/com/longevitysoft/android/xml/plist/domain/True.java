@@ -22,7 +22,7 @@ public class True extends PListObject implements IPListSimpleObject<Boolean> {
 	 */
 	@Override
 	public Boolean getValue() {
-		return new Boolean(true);
+		return true;
 	}
 
 	/*
