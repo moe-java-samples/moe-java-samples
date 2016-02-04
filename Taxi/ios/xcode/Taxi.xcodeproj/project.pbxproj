@@ -1,0 +1,457 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0F9D1EE5EFDED10DD3DED49A /* marker.png in Resources */ = {isa = PBXBuildFile; fileRef = A68FCED9571A63C8717243D0 /* marker.png */; };
+		4C83DFEE14ED5EFF58750B72 /* MOE.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B7CFE33192479FA25F5CF763 /* MOE.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7DCEAFECFB315FE7D5ADF376 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C97445BE72A3171B9498E7 /* main.cpp */; };
+		CE0F5E4E1BC666C000EEF5C9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE0F5E4D1BC666BF00EEF5C9 /* QuartzCore.framework */; };
+		CE0F5E501BC6681B00EEF5C9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE0F5E4F1BC6681B00EEF5C9 /* CoreGraphics.framework */; };
+		CE0F5E521BC668CC00EEF5C9 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE0F5E511BC668CC00EEF5C9 /* CoreText.framework */; };
+		CE0F5E541BC669A100EEF5C9 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE0F5E531BC669A100EEF5C9 /* CoreFoundation.framework */; };
+		CE0F5E561BC671C700EEF5C9 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE0F5E551BC671C700EEF5C9 /* CoreBluetooth.framework */; };
+		CE0F5E581BC67B2B00EEF5C9 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE0F5E571BC67B2B00EEF5C9 /* CoreLocation.framework */; };
+		CE0F5E5A1BC67BA100EEF5C9 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE0F5E591BC67BA100EEF5C9 /* ImageIO.framework */; };
+		CE0F5E5E1BC67C8E00EEF5C9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE0F5E5D1BC67C8E00EEF5C9 /* Foundation.framework */; };
+		CE0F5E601BC67CDE00EEF5C9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE0F5E5F1BC67CDE00EEF5C9 /* UIKit.framework */; };
+		CE0F5E621BC67D3000EEF5C9 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE0F5E611BC67D3000EEF5C9 /* CoreData.framework */; };
+		CE0F5E641BC67D7D00EEF5C9 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE0F5E631BC67D7D00EEF5C9 /* SystemConfiguration.framework */; };
+		CE0F5E661BC67DD900EEF5C9 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE0F5E651BC67DD900EEF5C9 /* OpenGLES.framework */; };
+		CE0F5E671BC67E1400EEF5C9 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE0F5E5B1BC67BE700EEF5C9 /* GLKit.framework */; };
+		CE0F5E6D1BC67F4100EEF5C9 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE0F5E6C1BC67F4100EEF5C9 /* Accelerate.framework */; };
+		CE0F5E711BC6893E00EEF5C9 /* libz.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE0F5E6F1BC6810400EEF5C9 /* libz.1.dylib */; };
+		CE5A54F81C634137001897FF /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE5A54F71C634137001897FF /* GoogleMaps.framework */; };
+		CE5A54FA1C634150001897FF /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CE5A54F91C634150001897FF /* GoogleMaps.bundle */; };
+		CE77B22C1C19DE6400794B5A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE77B22B1C19DE6400794B5A /* Images.xcassets */; };
+		CEADF5D91BD7AC87003DC6E0 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE0F5E681BC67E8400EEF5C9 /* Security.framework */; };
+		CEBE00C61BB98A38001AA8BB /* MainUI.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEBE00C51BB98A38001AA8BB /* MainUI.storyboard */; };
+		D241468BC37AC21CC30E4617 /* MOE.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7CFE33192479FA25F5CF763 /* MOE.framework */; };
+		E1FC3316B6A51DD307A75C6B /* preregister.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3EA7675175F5F88D6DAEEFC8 /* preregister.txt */; };
+		E65DE1A61BB288C30042C6E1 /* intel_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = E65DE1A41BB288C30042C6E1 /* intel_logo.png */; };
+		E65DE1A71BB288C30042C6E1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E65DE1A51BB288C30042C6E1 /* LaunchScreen.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		27A444C7E5DC22CA1AE513B7 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4C83DFEE14ED5EFF58750B72 /* MOE.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0366CB524541A7BD2BE73E8D /* build.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = build.xcconfig; sourceTree = "<group>"; };
+		3EA7675175F5F88D6DAEEFC8 /* preregister.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = preregister.txt; sourceTree = "<group>"; };
+		5A88B4FAFCEE1E474D14999D /* Taxi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = Taxi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		84C97445BE72A3171B9498E7 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		A68FCED9571A63C8717243D0 /* marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = marker.png; path = ../src/main/resources/marker.png; sourceTree = "<group>"; };
+		B7CFE33192479FA25F5CF763 /* MOE.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MOE.framework; sourceTree = XRT_FRAMEWORK_PATH; };
+		CE0F5E4D1BC666BF00EEF5C9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		CE0F5E4F1BC6681B00EEF5C9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		CE0F5E511BC668CC00EEF5C9 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		CE0F5E531BC669A100EEF5C9 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		CE0F5E551BC671C700EEF5C9 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		CE0F5E571BC67B2B00EEF5C9 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		CE0F5E591BC67BA100EEF5C9 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		CE0F5E5B1BC67BE700EEF5C9 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		CE0F5E5D1BC67C8E00EEF5C9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		CE0F5E5F1BC67CDE00EEF5C9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		CE0F5E611BC67D3000EEF5C9 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		CE0F5E631BC67D7D00EEF5C9 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		CE0F5E651BC67DD900EEF5C9 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		CE0F5E681BC67E8400EEF5C9 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		CE0F5E6A1BC67EE800EEF5C9 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		CE0F5E6C1BC67F4100EEF5C9 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		CE0F5E6F1BC6810400EEF5C9 /* libz.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.dylib; path = ../../../../../../../../usr/lib/libz.1.dylib; sourceTree = "<group>"; };
+		CE5A54F71C634137001897FF /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = ../lib/GoogleMaps.framework; sourceTree = "<group>"; };
+		CE5A54F91C634150001897FF /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = ../lib/GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
+		CE77B22B1C19DE6400794B5A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Taxi/Images.xcassets; sourceTree = "<group>"; };
+		CEBE00C51BB98A38001AA8BB /* MainUI.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = MainUI.storyboard; path = ../src/main/resources/MainUI.storyboard; sourceTree = "<group>"; };
+		E65DE1A41BB288C30042C6E1 /* intel_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = intel_logo.png; path = ../src/main/resources/intel_logo.png; sourceTree = "<group>"; };
+		E65DE1A51BB288C30042C6E1 /* LaunchScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = LaunchScreen.xib; path = ../src/main/resources/LaunchScreen.xib; sourceTree = "<group>"; };
+		EEDA81A2E94F194BC4B3E70A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9A19FEFC207ED5CA29209700 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE5A54F81C634137001897FF /* GoogleMaps.framework in Frameworks */,
+				CE0F5E711BC6893E00EEF5C9 /* libz.1.dylib in Frameworks */,
+				CE0F5E6D1BC67F4100EEF5C9 /* Accelerate.framework in Frameworks */,
+				CE0F5E561BC671C700EEF5C9 /* CoreBluetooth.framework in Frameworks */,
+				CE0F5E621BC67D3000EEF5C9 /* CoreData.framework in Frameworks */,
+				CE0F5E541BC669A100EEF5C9 /* CoreFoundation.framework in Frameworks */,
+				CE0F5E501BC6681B00EEF5C9 /* CoreGraphics.framework in Frameworks */,
+				CE0F5E581BC67B2B00EEF5C9 /* CoreLocation.framework in Frameworks */,
+				CE0F5E521BC668CC00EEF5C9 /* CoreText.framework in Frameworks */,
+				CE0F5E5E1BC67C8E00EEF5C9 /* Foundation.framework in Frameworks */,
+				CE0F5E671BC67E1400EEF5C9 /* GLKit.framework in Frameworks */,
+				CE0F5E5A1BC67BA100EEF5C9 /* ImageIO.framework in Frameworks */,
+				CE0F5E661BC67DD900EEF5C9 /* OpenGLES.framework in Frameworks */,
+				CE0F5E4E1BC666C000EEF5C9 /* QuartzCore.framework in Frameworks */,
+				CEADF5D91BD7AC87003DC6E0 /* Security.framework in Frameworks */,
+				CE0F5E641BC67D7D00EEF5C9 /* SystemConfiguration.framework in Frameworks */,
+				CE0F5E601BC67CDE00EEF5C9 /* UIKit.framework in Frameworks */,
+				D241468BC37AC21CC30E4617 /* MOE.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B46C7E3DCAAF5EC1D806EDDA = {
+			isa = PBXGroup;
+			children = (
+				FBDC58D56B04305DFC935A11 /* Taxi */,
+				E32CCEDF2F93127426C9F78A /* Frameworks */,
+				F0718A336B371F840C384249 /* Resources */,
+			);
+			sourceTree = "<group>";
+		};
+		E32CCEDF2F93127426C9F78A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CE5A54F71C634137001897FF /* GoogleMaps.framework */,
+				CE0F5E6F1BC6810400EEF5C9 /* libz.1.dylib */,
+				CE0F5E6C1BC67F4100EEF5C9 /* Accelerate.framework */,
+				CE0F5E6A1BC67EE800EEF5C9 /* libz.tbd */,
+				CE0F5E681BC67E8400EEF5C9 /* Security.framework */,
+				CE0F5E651BC67DD900EEF5C9 /* OpenGLES.framework */,
+				CE0F5E631BC67D7D00EEF5C9 /* SystemConfiguration.framework */,
+				CE0F5E611BC67D3000EEF5C9 /* CoreData.framework */,
+				CE0F5E5F1BC67CDE00EEF5C9 /* UIKit.framework */,
+				CE0F5E5D1BC67C8E00EEF5C9 /* Foundation.framework */,
+				CE0F5E5B1BC67BE700EEF5C9 /* GLKit.framework */,
+				CE0F5E591BC67BA100EEF5C9 /* ImageIO.framework */,
+				CE0F5E571BC67B2B00EEF5C9 /* CoreLocation.framework */,
+				CE0F5E551BC671C700EEF5C9 /* CoreBluetooth.framework */,
+				CE0F5E531BC669A100EEF5C9 /* CoreFoundation.framework */,
+				CE0F5E511BC668CC00EEF5C9 /* CoreText.framework */,
+				CE0F5E4F1BC6681B00EEF5C9 /* CoreGraphics.framework */,
+				CE0F5E4D1BC666BF00EEF5C9 /* QuartzCore.framework */,
+				B7CFE33192479FA25F5CF763 /* MOE.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F0718A336B371F840C384249 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CE5A54F91C634150001897FF /* GoogleMaps.bundle */,
+				CE77B22B1C19DE6400794B5A /* Images.xcassets */,
+				CEBE00C51BB98A38001AA8BB /* MainUI.storyboard */,
+				E65DE1A41BB288C30042C6E1 /* intel_logo.png */,
+				E65DE1A51BB288C30042C6E1 /* LaunchScreen.xib */,
+				5A88B4FAFCEE1E474D14999D /* Taxi.app */,
+				A68FCED9571A63C8717243D0 /* marker.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		F3540FADD0036F133D71686D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0366CB524541A7BD2BE73E8D /* build.xcconfig */,
+				84C97445BE72A3171B9498E7 /* main.cpp */,
+				EEDA81A2E94F194BC4B3E70A /* Info.plist */,
+				3EA7675175F5F88D6DAEEFC8 /* preregister.txt */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FBDC58D56B04305DFC935A11 /* Taxi */ = {
+			isa = PBXGroup;
+			children = (
+				F3540FADD0036F133D71686D /* Supporting Files */,
+			);
+			path = Taxi;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7C4011C076B8323EB9820E9E /* Taxi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 42B9A61A2D168A5C2DE28952 /* Build configuration list for PBXNativeTarget "Taxi" */;
+			buildPhases = (
+				49AA605530A7D95E17B0A3EB /* Compile Java Sources */,
+				9A19FEFC207ED5CA29209700 /* Frameworks */,
+				0FA3E795563E4769546F7F64 /* Resources */,
+				241BB904724D247D2A5A2842 /* Sources */,
+				27A444C7E5DC22CA1AE513B7 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			name = Taxi;
+			productName = Taxi;
+			productReference = 5A88B4FAFCEE1E474D14999D /* Taxi.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		42A49B8ECB7BADB74CF03A8C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = intel;
+				TargetAttributes = {
+					7C4011C076B8323EB9820E9E = {
+						DevelopmentTeam = J2898VA2FA;
+					};
+				};
+			};
+			buildConfigurationList = 79EDF3FDAA88E13B08C91F41 /* Build configuration list for PBXProject "Taxi" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B46C7E3DCAAF5EC1D806EDDA;
+			productRefGroup = F0718A336B371F840C384249 /* Resources */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7C4011C076B8323EB9820E9E /* Taxi */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0FA3E795563E4769546F7F64 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE5A54FA1C634150001897FF /* GoogleMaps.bundle in Resources */,
+				CEBE00C61BB98A38001AA8BB /* MainUI.storyboard in Resources */,
+				CE77B22C1C19DE6400794B5A /* Images.xcassets in Resources */,
+				E65DE1A71BB288C30042C6E1 /* LaunchScreen.xib in Resources */,
+				E65DE1A61BB288C30042C6E1 /* intel_logo.png in Resources */,
+				E1FC3316B6A51DD307A75C6B /* preregister.txt in Resources */,
+				0F9D1EE5EFDED10DD3DED49A /* marker.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		49AA605530A7D95E17B0A3EB /* Compile Java Sources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Compile Java Sources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "cd ../\n\nexport JAVA_HOME=$(/usr/libexec/java_home -v 1.8)\njava -version\n\nfunction gradlePath {\n\tCD=\"$PWD\"\n\twhile [ \"$CD\" != \"\" ]; do\n\t\tif [ -x \"$CD/gradlew\" ]; then\n\t\t\tGRADLE_PATH=$CD/gradlew\n\t\t\treturn 0\n\t\tfi\n\t\tCD=\"${CD%/*}\"\n\tdone\n\n\tGRADLE_PATH=$(which 'gradle')\n\n\tif [ \"$GRADLE_PATH\" = \"\" ]; then\n\t\tGRADLE_PATH=/usr/local/bin/gradle\n\tfi\n}\ngradlePath\n\nif [ \"$XRT_SKIP_DEX\" == \"Yes\" ]; then\n\techo \"Compiling ART only...\"\n\t\"$GRADLE_PATH\" --daemon buildArtOat -Pxrt.archs=${arch}\n\texit\nfi\n\n\"$GRADLE_PATH\" --daemon compileJava proguard buildRetro buildDex buildArtOat buildPreregister -Pxrt.archs=\"${ARCHS}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		241BB904724D247D2A5A2842 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7DCEAFECFB315FE7D5ADF376 /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		6A07993CD295A38C1EAA9362 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0366CB524541A7BD2BE73E8D /* build.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"${XRT_FRAMEWORK_PATH}",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) ${XRT_FRAMEWORK_PATH}";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				SDKROOT = iphoneos;
+				SYMROOT = ../build/xcode;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7531C01B87C30D5DC697A625 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0366CB524541A7BD2BE73E8D /* build.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEAD_CODE_STRIPPING = NO;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/../lib",
+					"$(PROJECT_DIR)/Frameworks",
+					"$(PROJECT_DIR)/lib",
+				);
+				INFOPLIST_FILE = Taxi/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"${XRT_OTHER_LDFLAGS}",
+					"-ObjC",
+				);
+				PRODUCT_NAME = Taxi;
+				PROVISIONING_PROFILE = "";
+				STRIP_STYLE = "non-global";
+				VALID_ARCHS = "armv7 arm64 i386 x86_64";
+			};
+			name = Debug;
+		};
+		9526BA012B90097437EFCD2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0366CB524541A7BD2BE73E8D /* build.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEAD_CODE_STRIPPING = NO;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/../lib",
+					"$(PROJECT_DIR)/Frameworks",
+					"$(PROJECT_DIR)/lib",
+				);
+				INFOPLIST_FILE = Taxi/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"${XRT_OTHER_LDFLAGS}",
+					"-ObjC",
+				);
+				PRODUCT_NAME = Taxi;
+				PROVISIONING_PROFILE = "";
+				STRIP_STYLE = "non-global";
+				VALID_ARCHS = "armv7 arm64 i386 x86_64";
+			};
+			name = Release;
+		};
+		BF81763622111F71A9ADF200 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0366CB524541A7BD2BE73E8D /* build.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"${XRT_FRAMEWORK_PATH}",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) ${XRT_FRAMEWORK_PATH}";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				SDKROOT = iphoneos;
+				SYMROOT = ../build/xcode;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		42B9A61A2D168A5C2DE28952 /* Build configuration list for PBXNativeTarget "Taxi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7531C01B87C30D5DC697A625 /* Debug */,
+				9526BA012B90097437EFCD2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		79EDF3FDAA88E13B08C91F41 /* Build configuration list for PBXProject "Taxi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6A07993CD295A38C1EAA9362 /* Debug */,
+				BF81763622111F71A9ADF200 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 42A49B8ECB7BADB74CF03A8C /* Project object */;
+}

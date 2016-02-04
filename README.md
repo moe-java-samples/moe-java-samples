@@ -57,6 +57,7 @@ The following samples are available for the Intel Multi-OS Engine:
 - **Snake** is a port of android snake sample. Demonstrates simple game creation technique without sprites. Using UIImageView.
 - **SQLite3Demo_java_sql** shows how to make persistent storage as SQLite database using java.sql package 
 - **SQLite3Demo_android_database_sqlite** shows how to make persistent storage as SQLite database using android.database.sqlite package 
+- **Taxi** is a template for taxi app that allows to select an address on Google Map
 - **TheElements** demonstrates reading content from XML file. Works with UITableView, adding cells, using scrolling. Example of Master-Detail view, loading images from assets, reacting to taps in views, flipping view content from front to back
 - **TicTacToe** demonstrates a simple game creation technique without sprites. Using buttons and performing actions.
 - **WebBrowser** is a simple browser that uses WebView

@@ -1,0 +1,4 @@
+com/intel/moe/samples/taxi/ios/Main
+com/intel/moe/samples/taxi/ios/MapsViewController
+com/intel/moe/samples/taxi/ios/NavigationController
+com/intel/moe/samples/taxi/ios/TableViewController

@@ -1,0 +1,13 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.intel.moe.samples.taxi.android.MapsActivity">
+
+    <item
+        android:id="@+id/action_search"
+        app:actionViewClass="android.support.v7.widget.SearchView"
+        android:menuCategory="secondary"
+        app:showAsAction="always"
+        android:title="Search"/>
+
+</menu>

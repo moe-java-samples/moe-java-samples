@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:weightSum="1">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:fitsSystemWindows="true"
+        app:navigationIcon="@drawable/abc_ic_ab_back_mtrl_am_alpha"
+        android:elevation="4dp"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+    <android.support.percent.PercentRelativeLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.0">
+
+        <fragment
+            android:id="@+id/map"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:name="com.intel.moe.samples.taxi.android.MapFragment"/>
+
+        <ImageView
+            android:src="@drawable/marker"
+            android:contentDescription="Marker"
+            android:layout_width="44px"
+            android:layout_height="72px"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            app:layout_marginBottomPercent="50%"/>
+
+    </android.support.percent.PercentRelativeLayout>
+
+    <LinearLayout style="?android:attr/buttonBarStyle"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1.0">
+
+        <Button style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Where I am?"
+            android:id="@+id/locationButton"
+            android:layout_weight="0"/>
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <Button style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Done"
+            android:id="@+id/doneButton"
+            android:layout_weight="0"/>
+
+    </LinearLayout>
+
+</LinearLayout>
