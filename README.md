@@ -49,6 +49,7 @@ The following samples are available for the Intel Multi-OS Engine:
 - **MuseumMap** sample is based on SimpleMap sample. This application demonstrates work with SQL DB
 - **NoteSqlite** shows how to make persistent storage with SQLlite library using generated bindings for iOS part
 - **NoteTaking** shows how to make persistent storage with file system
+- **NoteTaking_Android** is Android-only version of the NoteTaking sample
 - **OpenGLBox** demonstrates 3D graphics programming using OpenGL
 - **Planets** demonstrates working with UI Kit graphics
 - **RssReader** demonstrates use of HTTP and HTTPS using Java* API
