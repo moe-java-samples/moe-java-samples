@@ -61,6 +61,7 @@ import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.intel.moe.samples.taxi.common.Parameters;
 
 import java.util.Date;
 
@@ -140,13 +141,13 @@ public class MapsActivity extends AppCompatActivity implements ConnectionCallbac
             actionBar.setTitle(actionBarTitle);
         }
 
-        toolbar.setNavigationOnClickListener(buttonBackOnClickListener);
+        toolbar.setNavigationOnClickListener(backOnClickListener);
 
         Button locationButton = (Button) this.findViewById(R.id.locationButton);
-        locationButton.setOnClickListener(buttonLocationOnClickListener);
+        locationButton.setOnClickListener(locationOnClickListener);
 
         Button doneButton = (Button) this.findViewById(R.id.doneButton);
-        doneButton.setOnClickListener(buttonDoneOnClickListener);
+        doneButton.setOnClickListener(doneOnClickListener);
 
         googleApiClient = new GoogleApiClient.Builder(this)
                 .addConnectionCallbacks(this)
@@ -201,19 +202,19 @@ public class MapsActivity extends AppCompatActivity implements ConnectionCallbac
     private CameraUpdate getCameraUpdate(LatLng coordinate) {
         CameraPosition camera = new CameraPosition.Builder()
                 .target(coordinate)
-                .zoom(17)
+                .zoom(Parameters.defaultZoom)
                 .build();
         return CameraUpdateFactory.newCameraPosition(camera);
     }
 
-    View.OnClickListener buttonBackOnClickListener = new View.OnClickListener() {
+    View.OnClickListener backOnClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
             finish();
         }
     };
 
-    View.OnClickListener buttonLocationOnClickListener = new View.OnClickListener() {
+    View.OnClickListener locationOnClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
             if (currentLocation != null) {
@@ -224,7 +225,7 @@ public class MapsActivity extends AppCompatActivity implements ConnectionCallbac
         }
     };
 
-    View.OnClickListener buttonDoneOnClickListener = new View.OnClickListener() {
+    View.OnClickListener doneOnClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
             Bundle bundle = new Bundle();

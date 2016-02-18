@@ -30,6 +30,9 @@
 package com.intel.moe.samples.taxi.android;
 
 import android.content.Intent;
+import android.support.design.widget.CoordinatorLayout;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -40,6 +43,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.google.android.gms.maps.model.LatLng;
+import com.intel.moe.samples.taxi.common.TaxiRequest;
+import com.intel.moe.samples.taxi.common.TaxiService;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -48,8 +53,11 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     private List<OrderParameter> parameters = null;
 
-    static final int DEPARTURE_PARAMETER = 0;
-    static final int DESTINATION_PARAMETER = 1;
+    static final int DEPARTURE = 0;
+    static final int DESTINATION = 1;
+    static final int SCHEDULE = 2;
+    static final int PHONE_NUMBER = 3;
+    static final int COMMENT = 4;
 
     // This is the Adapter being used to display the list's data
     private ArrayAdapter<OrderParameter> adapter;
@@ -59,6 +67,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     static final int DEPARTURE_LOCATION_REQUEST = 0;
     static final int DESTINATION_LOCATION_REQUEST = 1;
+
+    private CoordinatorLayout coordinatorLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,17 +80,46 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         adapter = new OrderParametersAdapter(this, R.layout.row, parameters);
 
+        coordinatorLayout = (CoordinatorLayout) findViewById(R.id.coordinatorLayout);
+
         ListView listView = (ListView) findViewById(R.id.elements_list);
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(this);
+
+        FloatingActionButton sendButton = (FloatingActionButton) findViewById(R.id.send_button);
+        sendButton.setColorFilter(getResources().getColor(R.color.white));
+        sendButton.setOnClickListener(sendOnClickListener);
     }
 
+    View.OnClickListener sendOnClickListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            TaxiRequest request = new TaxiRequest(
+                    parameters.get(DEPARTURE).getDetail(),
+                    parameters.get(DESTINATION).getDetail(),
+                    parameters.get(SCHEDULE).getDetail(),
+                    parameters.get(PHONE_NUMBER).getDetail(),
+                    parameters.get(COMMENT).getDetail()
+            );
+            if (TaxiService.instance().sendRequest(request)) {
+                Snackbar snackbar = Snackbar
+                        .make(coordinatorLayout, "Your car is coming to you!", Snackbar.LENGTH_LONG)
+                        .setAction("OK", new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                            }
+                        });
+                snackbar.show();
+            }
+        }
+    };
+
     private void setInitialOrderParameters(List<OrderParameter> parameters) {
-        parameters.add(new OrderParameter(R.drawable.ic_place_black_48dp, "Pickup location", "Current location"));
-        parameters.add(new OrderParameter(R.drawable.ic_map_black_48dp, "Destination", "Specify"));
-        parameters.add(new OrderParameter(R.drawable.ic_schedule_black_48dp, "Time", "17:00"));
-        parameters.add(new OrderParameter(R.drawable.ic_phone_black_48dp, "Phone number", "+7 (955) 555-55-55"));
-        parameters.add(new OrderParameter(R.drawable.ic_comment_black_48dp, "Comment", "Non-smoking driver"));
+        parameters.add(new OrderParameter("Departure", "Current location", R.drawable.ic_place_black_48dp));
+        parameters.add(new OrderParameter("Destination", "Specify", R.drawable.ic_map_black_48dp));
+        parameters.add(new OrderParameter("Schedule", "17:00", R.drawable.ic_schedule_black_48dp));
+        parameters.add(new OrderParameter("Phone number", "+7 (955) 555-55-55", R.drawable.ic_phone_black_48dp));
+        parameters.add(new OrderParameter("Comment", "Non-smoking driver", R.drawable.ic_comment_black_48dp));
     }
 
     @Override
@@ -131,11 +170,11 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         switch (position) {
-            case DEPARTURE_PARAMETER : {
+            case DEPARTURE: {
                 pickDepartureLocation();
                 break;
             }
-            case DESTINATION_PARAMETER : {
+            case DESTINATION: {
                 pickDestinationLocation();
                 break;
             }
@@ -147,9 +186,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         if (resultCode == RESULT_OK) {
             Bundle bundle = data.getExtras();
             departureCoordinate = bundle.getParcelable("selectedCoordinate");
-            String departureAddress = bundle.getString("addressOutput");
-
-            parameters.get(DEPARTURE_PARAMETER).setDetail(departureAddress);
+            String departure = bundle.getString("addressOutput");
+            parameters.get(DEPARTURE).setDetail(departure);
             adapter.notifyDataSetChanged();
         }
     }
@@ -158,9 +196,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         if (resultCode == RESULT_OK) {
             Bundle bundle = data.getExtras();
             destinationCoordinate = bundle.getParcelable("selectedCoordinate");
-            String destinationAddress = bundle.getString("addressOutput");
-
-            parameters.get(DESTINATION_PARAMETER).setDetail(destinationAddress);
+            String destination = bundle.getString("addressOutput");
+            parameters.get(DESTINATION).setDetail(destination);
             adapter.notifyDataSetChanged();
         }
     }

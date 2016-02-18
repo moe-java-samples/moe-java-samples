@@ -59,7 +59,7 @@ public class OrderParametersAdapter extends ArrayAdapter<OrderParameter> {
         OrderParameter parameter = parameters.get(position);
 
         ImageView iconImageView = (ImageView) rowView.findViewById(R.id.icon);
-        iconImageView.setImageResource(parameter.getIcon());
+        iconImageView.setImageResource(parameter.getTag());
         iconImageView.setColorFilter(context.getResources().getColor(R.color.colorPrimary));
 
         TextView titleTextView = (TextView) rowView.findViewById(R.id.title);

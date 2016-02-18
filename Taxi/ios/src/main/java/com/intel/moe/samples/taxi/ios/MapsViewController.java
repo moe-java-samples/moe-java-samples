@@ -42,6 +42,7 @@ import com.intel.googlemaps.GMSCameraPosition;
 import com.intel.googlemaps.GMSMapView;
 import com.intel.googlemaps.GMSMarker;
 import com.intel.googlemaps.protocol.GMSMapViewDelegate;
+import com.intel.moe.samples.taxi.common.Parameters;
 
 import ios.NSObject;
 import ios.corelocation.CLLocation;
@@ -89,7 +90,7 @@ public class MapsViewController extends UIViewController implements GMSMapViewDe
 
     @Override
     public void viewDidLoad() {
-        GMSCameraPosition camera = (GMSCameraPosition) GMSCameraPosition.cameraWithTargetZoom(selectedCoordinate, 16.0f);
+        GMSCameraPosition camera = (GMSCameraPosition) GMSCameraPosition.cameraWithTargetZoom(selectedCoordinate, Parameters.defaultZoom);
 
         getMapView().setCamera(camera);
         getMapView().settings().setCompassButton(true);
@@ -137,9 +138,14 @@ public class MapsViewController extends UIViewController implements GMSMapViewDe
 
     @Selector("handleLocationButton:")
     public void handleLocationButton(NSObject sender) {
-        CLLocationCoordinate2D coordinate = LocationManager.getSharedManager().currentLocation().coordinate();
-        GMSCameraPosition camera = (GMSCameraPosition) GMSCameraPosition.cameraWithTargetZoom(coordinate, 16.0f);
-        getMapView().animateToCameraPosition(camera);
+        CLLocation location = LocationManager.getSharedManager().currentLocation();
+        if (location != null) {
+            CLLocationCoordinate2D coordinate = location.coordinate();
+            GMSCameraPosition camera = (GMSCameraPosition) GMSCameraPosition.cameraWithTargetZoom(coordinate, Parameters.defaultZoom);
+            getMapView().animateToCameraPosition(camera);
+        } else {
+            System.out.println(LocationManager.LOCATION_WARNING);
+        }
     }
 
     @Override

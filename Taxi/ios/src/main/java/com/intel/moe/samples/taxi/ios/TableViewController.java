@@ -35,10 +35,15 @@ import com.intel.inde.moe.natj.objc.ObjCRuntime;
 import com.intel.inde.moe.natj.objc.ann.ObjCClassName;
 import com.intel.inde.moe.natj.objc.ann.Property;
 import com.intel.inde.moe.natj.objc.ann.Selector;
+import com.intel.moe.samples.taxi.common.TaxiRequest;
+import com.intel.moe.samples.taxi.common.TaxiService;
 
+import ios.NSObject;
+import ios.corelocation.CLLocation;
 import ios.corelocation.struct.CLLocationCoordinate2D;
 import ios.uikit.UIAlertAction;
 import ios.uikit.UIAlertController;
+import ios.uikit.UIAlertView;
 import ios.uikit.UILabel;
 import ios.uikit.UIStoryboardSegue;
 import ios.uikit.UITableViewController;
@@ -69,6 +74,20 @@ public class TableViewController extends UITableViewController implements UITabl
     @Property
     public native UILabel getDestinationLabel();
 
+    @Selector("scheduleLabel")
+    @Property
+    public native UILabel getScheduleLabel();
+
+    @Selector("phoneNumberLabel")
+    @Property
+    public native UILabel getPhoneNumberLabel();
+
+    @Selector("commentLabel")
+    @Property
+    public native UILabel getCommentLabel();
+
+
+
     @Override
     public void viewDidLoad() {
         if (!LocationManager.getSharedManager().isLocationServicesAvailable()) {
@@ -81,11 +100,11 @@ public class TableViewController extends UITableViewController implements UITabl
         LocationManager.getSharedManager().startUpdatingLocation();
     }
 
-    CLLocationCoordinate2D departureCoordinate = null;
+    CLLocationCoordinate2D departureCoordinate = new CLLocationCoordinate2D(0.0, 0.0);
     private String departureAddress = "";
     boolean departureObtained = false;
 
-    CLLocationCoordinate2D destinationCoordinate = null;
+    CLLocationCoordinate2D destinationCoordinate = new CLLocationCoordinate2D(0.0, 0.0);
     private String destinationAddress = "";
     boolean destinationObtained = false;
 
@@ -96,7 +115,12 @@ public class TableViewController extends UITableViewController implements UITabl
 
         if (segue.identifier().equals("departureSegue")) {
             if (!departureObtained) {
-                departureCoordinate = LocationManager.getSharedManager().currentLocation().coordinate();
+                CLLocation location = LocationManager.getSharedManager().currentLocation();
+                if (location != null) {
+                    departureCoordinate = location.coordinate();
+                } else {
+                    System.out.println(LocationManager.LOCATION_WARNING);
+                }
             }
             destinationViewController.pickLocation(departureCoordinate, (coordinate, address) -> {
                 departureCoordinate = coordinate;
@@ -110,7 +134,12 @@ public class TableViewController extends UITableViewController implements UITabl
 
         if (segue.identifier().equals("destinationSegue")) {
             if (!destinationObtained) {
-                destinationCoordinate = LocationManager.getSharedManager().currentLocation().coordinate();
+                CLLocation location = LocationManager.getSharedManager().currentLocation();
+                if (location != null) {
+                    destinationCoordinate = location.coordinate();
+                } else {
+                    System.out.println(LocationManager.LOCATION_WARNING);
+                }
             }
             destinationViewController.pickLocation(destinationCoordinate, (coordinate, address) -> {
                 destinationCoordinate = coordinate;
@@ -120,6 +149,23 @@ public class TableViewController extends UITableViewController implements UITabl
                 tableView().reloadData();
             });
             destinationViewController.navigationItem().setTitle("Set destination");
+        }
+    }
+
+    @Selector("sendButtonAction:")
+    public void sendButtonAction(NSObject sender) {
+        TaxiRequest request = new TaxiRequest(
+                getDepartureLabel().text(),
+                getDestinationLabel().text(),
+                getScheduleLabel().text(),
+                getPhoneNumberLabel().text(),
+                getCommentLabel().text()
+        );
+        if (TaxiService.instance().sendRequest(request)) {
+            UIAlertView alert = UIAlertView.alloc().initWithTitleMessageDelegateCancelButtonTitleOtherButtonTitles(
+                    "Taxi", "You car is coming to you!", this, "OK", null
+            );
+            alert.show();
         }
     }
 }

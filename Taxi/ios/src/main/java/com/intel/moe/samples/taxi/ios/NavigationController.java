@@ -63,7 +63,7 @@ public class NavigationController extends UINavigationController {
         // Colours
         UIColor intelBlue = UIColor.alloc().initWithRedGreenBlueAlpha(0.0, 113/255.f, 197/255.f, 1.0);
         UIColor intelDarkBlue = UIColor.alloc().initWithRedGreenBlueAlpha(0.0, 60/255.f, 113/255.f, 1.0);
-        UIColor intelAccent = UIColor.alloc().initWithRedGreenBlueAlpha(0.0, 174/255.f, 239/255.f, 1.0);
+        UIColor intelAccent = UIColor.alloc().initWithRedGreenBlueAlpha(255/255.f, 163/255.f, 0.0, 1.0);
 
         navigationBar().setBarStyle(UIBarStyle.Black);
         navigationBar().setBarTintColor(intelBlue);

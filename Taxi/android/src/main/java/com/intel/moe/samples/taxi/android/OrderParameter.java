@@ -31,14 +31,14 @@ package com.intel.moe.samples.taxi.android;
 
 public class OrderParameter {
 
-    private int icon;
     private String title;
     private String detail;
+    private int tag; // Any other useful information
 
-    public OrderParameter(int icon, String title, String detail) {
-        this.icon = icon;
+    public OrderParameter(String title, String detail, int tag) {
         this.title = title;
         this.detail = detail;
+        this.tag = tag;
     }
 
     public String getTitle() {
@@ -57,7 +57,7 @@ public class OrderParameter {
         this.detail = detail;
     }
 
-    public int getIcon() {
-        return icon;
+    public int getTag() {
+        return tag;
     }
 }

@@ -46,6 +46,8 @@ public class LocationManager implements CLLocationManagerDelegate {
         Unauthorized
     }
 
+    public static final String LOCATION_WARNING = "You should enable Location Service in your Simulator: Debug > Location.";
+
     private static LocationManager sharedManager = null;
 
     private LocationManagerDelegate delegate = null;
