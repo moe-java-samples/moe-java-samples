@@ -43,6 +43,7 @@ The following samples are available for the Intel Multi-OS Engine:
 - **CurrencyConverter** demonstrates how to open an URL and retrieve the content of that URL just using built-in Java* classes
 - **DateCell** demonstrates formatted display of date objects in table cells and use of UIDatePicker to edit those values
 - **FlipView** is an application that illustrates the following techniques: subclassing UIView, reacting to taps in views, open a URL to an external web site using Safari, flipping view content from front to back
+- **InAppPurchase** sample demonstrates how to make purchases in your applications
 - **KeyboardAccessory** shows how to use a keyboard accessory and how to use the keyboard-will-show and keyboard-will-hide notifications to animate resizing a view that is obscured by the keyboard
 - **LazyTableLoader** demonstrates a multi-stage approach to loading and displaying a UITableView
 - **LibGDXMissileCommand** shows how to implement libGDX game

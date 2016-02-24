@@ -1,0 +1,33 @@
+apply plugin: 'java'
+
+compileJava {
+    targetCompatibility = 1.7
+    sourceCompatibility = 1.7
+}
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:1.5.0'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+task copyPlatformClasses(type: Copy, dependsOn: [":framework:framework-common:build", ":framework:framework-android:build", ":framework:framework-ios:build"]) {
+    from 'framework-android/build/intermediates/classes/release/'
+    from 'framework-ios/build/classes/main/'
+    from 'framework-common/build/classes/main/'
+    into 'build/classes/main'
+}
+
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
+
+compileJava.dependsOn copyPlatformClasses

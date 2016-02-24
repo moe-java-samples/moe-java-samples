@@ -1,0 +1,2 @@
+com/intel/inapppurchase/Main
+com/intel/inapppurchase/ui/MasterViewController

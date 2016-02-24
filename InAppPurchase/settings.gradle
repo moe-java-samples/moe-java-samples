@@ -1,0 +1,2 @@
+include ':app', ':common'
+include ':ios', ':framework', ':framework:framework-ios', ':framework:framework-android', ':framework:framework-common'
