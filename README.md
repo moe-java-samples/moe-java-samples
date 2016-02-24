@@ -11,7 +11,8 @@ Getting Started
 
 - Visit [Intel Multi-OS Engine](https://software.intel.com/en-us/multi-os-engine) page to download the Technology Preview version of the product
 - Walk through our [Quick Start Tutorials](https://software.intel.com/en-us/blogs/2015/08/27/tutorials-and-quick-start-guides-for-multi-os-engine) to configure your development environment with Multi-OS Engine
-- Questions? Sure, we got you covered through the [Multi-OS Engine Forum](https://software.intel.com/en-us/forums/multi-os-engine) and [Google group](https://groups.google.com/forum/#!forum/intel-multi-os-engine).
+- Questions? Sure, we got you covered through the [Multi-OS Engine Forum](https://software.intel.com/en-us/forums/multi-os-engine) and [Google group](https://groups.google.com/forum/#!forum/intel-multi-os-engine)
+- Applications created using Multi-OS Engine and posted to GitHub available here: [github.com/moe-applications](https://github.com/moe-applications)
 
 
 System Requirements
