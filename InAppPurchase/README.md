@@ -5,7 +5,7 @@ This sample demonstrates how to make a purchase in your applications. All work w
 This framework is used in the common part of the sample. We call only our common API from android and ios parts.
 
 In order to run this sample you should set next variables:
-- replace <your license key here> with your android base64EncodedPublicKey in com/intel/inapppurchase/android/MainActivity.java:25
+- replace <your license key here> with your android base64EncodedPublicKey in com/intel/inapppurchase/android/MainActivity.java:54
 - create a list with your products ID in com/intel/inapppurchase/common/ProductsStore
 - change application bundle id from com.intel.inapppurchasedemo to your real bundle id for iOS part
 

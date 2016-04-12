@@ -1,0 +1,17 @@
+.DS_Store
+.metadata
+## MacOS files
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+*.pbxuser
+.DS_Store
+xcuserdata/
+project.xcworkspace/
+.idea/
+*.iml
+.gradle/
+build/
+local.properties
+gradle.properties
+build-xcode/

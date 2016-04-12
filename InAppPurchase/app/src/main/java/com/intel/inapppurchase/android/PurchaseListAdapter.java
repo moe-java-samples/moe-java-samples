@@ -30,11 +30,13 @@ package com.intel.inapppurchase.android;
 
 import android.app.Activity;
 import android.content.Context;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.intel.inapppurchase.common.ProductDetails;
@@ -77,19 +79,19 @@ public class PurchaseListAdapter extends BaseAdapter {
         if (convertView == null)
             convertView = inflater.inflate(R.layout.item_layout, null);
 
+        ImageView icon = (ImageView) convertView.findViewById(R.id.icon);
+        int tint = ContextCompat.getColor(activity, R.color.colorPrimary);
+        icon.setColorFilter(tint);
 
-        TextView itemTitle = (TextView) convertView.findViewById(R.id.itemTitle);
-        TextView itemPrice = (TextView) convertView.findViewById(R.id.itemPrice);
+        TextView title = (TextView) convertView.findViewById(R.id.title);
+        TextView price = (TextView) convertView.findViewById(R.id.price);
         final Button buyButton = (Button) convertView.findViewById(R.id.buyButton);
 
-        // getting movie data for the row
         final ProductDetails product = productsStore.getProductAt(position);
 
-        // title
-        itemTitle.setText(product.getTitle());
+        title.setText(product.getTitle());
 
-        // description
-        itemPrice.setText(product.getPrice());
+        price.setText(product.getPrice());
 
         if (productsStore != null) {
             buyButton.setEnabled(!productsStore.isProductPurchased(productsStore.getProductAt(position).getProductID()));

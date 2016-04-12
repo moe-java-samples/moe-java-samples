@@ -53,10 +53,12 @@ public abstract class SocketServerThreadBase extends Thread {
 
         try {
             serverSocket = new ServerSocket(SocketServerPORT);
+            serverSocket.setSoTimeout(60000); // 1 minute timeout
             onInfo("I'm waiting here: " + serverSocket.getLocalPort());
 
             while (true) {
                 socket = serverSocket.accept();
+                socket.setSoTimeout(0);
                 dataInputStream = new DataInputStream(socket.getInputStream());
                 dataOutputStream = new DataOutputStream(socket.getOutputStream());
 

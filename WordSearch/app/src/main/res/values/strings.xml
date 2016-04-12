@@ -1,6 +1,13 @@
 <resources>
     <string name="app_name">WordSearch</string>
 
-    <string name="hello_world">Hello world!</string>
+    <string name="hello_world">
+        Android part of this sample is not yet implemented.\n
+        We apologise for the inconvenience!\n
+        \n
+        Intel’s Multi-OS Engine is a preview technology that enables developers using their Java expertise to develop native mobile applications for iOS and Android on Windows and/or OS X development host machines without compromising the native look, feel and performance.\n
+        \n
+        https://software.intel.com/en-us/multi-os-engine
+    </string>
     <string name="action_settings">Settings</string>
 </resources>

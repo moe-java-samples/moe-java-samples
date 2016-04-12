@@ -1,3 +1,5 @@
-com/intel/ios/Main
-com/intel/ios/ui/DetailViewController
-com/intel/ios/ui/MasterViewController
+com/intel/moe/samples/noteqslite/ios/DetailViewController
+com/intel/moe/samples/noteqslite/ios/Main
+com/intel/moe/samples/noteqslite/ios/MasterViewController
+com/intel/moe/samples/noteqslite/ios/NavigationController
+com/intel/moe/samples/noteqslite/ios/SplitViewController

@@ -10,12 +10,15 @@
 		08CEB5583AB5D83236CB8EB5 /* MOE.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8CBE34FFD7F9576863AED841 /* MOE.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		302581DD34B88DAD829D3051 /* MOE.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CBE34FFD7F9576863AED841 /* MOE.framework */; };
 		38BA81770C36D96562FA70B6 /* preregister.txt in Resources */ = {isa = PBXBuildFile; fileRef = AA1C69F72A3BC6C0FCF44914 /* preregister.txt */; };
+		397AEF2F64B51E9EE4E113F4 /* intel_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A3090B879D8BBF768779327 /* intel_logo.png */; };
 		3B62EF85AF5D373C41E17448 /* hashmap.txt in Resources */ = {isa = PBXBuildFile; fileRef = 701A64E1FD6550B95D6E1CF0 /* hashmap.txt */; };
 		4496C0708587FF95CA5CF7D9 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B92155591AE07713D054F6F /* DetailViewController.m */; };
+		551CE673E8B6679D400174F1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C546C9472CC46B7A29E0787F /* LaunchScreen.xib */; };
 		75F52B69234A2A33E2A69B4E /* ../src/main/resources/MainUI.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B61BFDB261D3F067CCF15A0 /* ../src/main/resources/MainUI.storyboard */; };
 		95968880BCA8AB088AABF8F4 /* DetailViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = 76DB6FE31BCBA592B3E67137 /* DetailViewController.h */; };
 		AA6D8CF9105EFF671D132DF9 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 931C03F72E17FCECFE045902 /* MasterViewController.m */; };
 		CE5110EA1C2AD7180024B477 /* application.jar in Resources */ = {isa = PBXBuildFile; fileRef = CE5110E91C2AD7180024B477 /* application.jar */; };
+		CED98A4F1CB537AF005034C8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CED98A4E1CB537AF005034C8 /* Images.xcassets */; };
 		F0A94CBC32A25E7B3373F1A2 /* MasterViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = 0E9533F39C5A9A9CCC596A64 /* MasterViewController.h */; };
 		F9418F4C543BC4C7168289DB /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 66B926BC96A1AE177C0EA009 /* main.cpp */; };
 /* End PBXBuildFile section */
@@ -37,6 +40,7 @@
 /* Begin PBXFileReference section */
 		0E9533F39C5A9A9CCC596A64 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
 		66B926BC96A1AE177C0EA009 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		6A3090B879D8BBF768779327 /* intel_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = intel_logo.png; path = ../src/main/resources/intel_logo.png; sourceTree = "<group>"; };
 		701A64E1FD6550B95D6E1CF0 /* hashmap.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = hashmap.txt; path = ../src/main/resources/hashmap.txt; sourceTree = "<group>"; };
 		76DB6FE31BCBA592B3E67137 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		81D7B29F3518BDC8DF27DE3A /* hashmap.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = hashmap.txt; path = ../build/resources/main/hashmap.txt; sourceTree = "<group>"; };
@@ -49,7 +53,9 @@
 		9B61BFDB261D3F067CCF15A0 /* ../src/main/resources/MainUI.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ../src/main/resources/MainUI.storyboard; sourceTree = "<group>"; };
 		AA1C69F72A3BC6C0FCF44914 /* preregister.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = preregister.txt; sourceTree = "<group>"; };
 		AADBCA221F17634DA940DE2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C546C9472CC46B7A29E0787F /* LaunchScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = LaunchScreen.xib; path = ../src/main/resources/LaunchScreen.xib; sourceTree = "<group>"; };
 		CE5110E91C2AD7180024B477 /* application.jar */ = {isa = PBXFileReference; lastKnownFileType = archive.jar; name = application.jar; path = ../build/application.jar; sourceTree = "<group>"; };
+		CED98A4E1CB537AF005034C8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ios/Images.xcassets; sourceTree = "<group>"; };
 		D58A6F64CE847DA0D7EE3CE9 /* hashmap.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = hashmap.txt; path = ../src/main/resources/hashmap.txt; sourceTree = "<group>"; };
 		FD10CBC05BB5EE3E71BBC6B7 /* ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -79,6 +85,7 @@
 			children = (
 				CE5110E91C2AD7180024B477 /* application.jar */,
 				FB8C2EDBC3668C04C5909A66 /* ios */,
+				CED98A4E1CB537AF005034C8 /* Images.xcassets */,
 				08296A9FB58ABC3B309D7C80 /* Frameworks */,
 				A6B96E703CB41F7F9DADF887 /* Resources */,
 			);
@@ -94,6 +101,8 @@
 				910C841A9D0A1082BE431B3B /* MainUI.storyboard */,
 				81D7B29F3518BDC8DF27DE3A /* hashmap.txt */,
 				9542DA752D6462C77D645222 /* MainUI.storyboard */,
+				C546C9472CC46B7A29E0787F /* LaunchScreen.xib */,
+				6A3090B879D8BBF768779327 /* intel_logo.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -183,8 +192,11 @@
 			files = (
 				CE5110EA1C2AD7180024B477 /* application.jar in Resources */,
 				38BA81770C36D96562FA70B6 /* preregister.txt in Resources */,
+				CED98A4F1CB537AF005034C8 /* Images.xcassets in Resources */,
 				75F52B69234A2A33E2A69B4E /* ../src/main/resources/MainUI.storyboard in Resources */,
 				3B62EF85AF5D373C41E17448 /* hashmap.txt in Resources */,
+				551CE673E8B6679D400174F1 /* LaunchScreen.xib in Resources */,
+				397AEF2F64B51E9EE4E113F4 /* intel_logo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,6 +247,7 @@
 				INFOPLIST_FILE = ios/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "${XRT_OTHER_LDFLAGS}";
+				PRODUCT_BUNDLE_IDENTIFIER = com.intel.NoteSQLite;
 				PRODUCT_NAME = ios;
 				STRIP_STYLE = "non-global";
 				VALID_ARCHS = "armv7 arm64 i386 x86_64";
@@ -350,6 +363,7 @@
 				INFOPLIST_FILE = ios/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "${XRT_OTHER_LDFLAGS}";
+				PRODUCT_BUNDLE_IDENTIFIER = com.intel.NoteSQLite;
 				PRODUCT_NAME = ios;
 				STRIP_STYLE = "non-global";
 				VALID_ARCHS = "armv7 arm64 i386 x86_64";
