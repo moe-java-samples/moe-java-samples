@@ -38,7 +38,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.intel.inde.moe.samples.simplenetworkstreams.android.R;
+import com.intel.moe.samples.simplenetworkstreams.android.R;
 import com.intel.moe.samples.simplenetworkstreams.common.Networking;
 import com.intel.moe.samples.simplenetworkstreams.common.SocketServerThreadBase;
 

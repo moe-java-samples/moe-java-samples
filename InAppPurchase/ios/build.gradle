@@ -1,22 +1,36 @@
 buildscript {
     repositories {
         mavenCentral()
+        jcenter()
 
         maven {
             url uri(System.getenv("INTEL_MULTI_OS_ENGINE_HOME") + "/gradle")
         }
     }
     dependencies {
-        classpath 'org.intel.gradle:xRTGradlePlugin:1.0'
+        classpath 'com.intel.gradle:moeGradlePlugin:1.1.+'
     }
 }
 
-apply plugin: 'xrt'
+apply plugin: 'moe'
 
 dependencies {
     compile fileTree(dir: 'lib', include: '*.jar')
-    compile project(path: ':common')
+    compile project(':common')
 }
 
-xrt {
+moe {
+    xcode {
+        mainTarget 'InAppPurchase'
+        //organizationName 'intel'
+        companyIdentifier 'com.intel'
+        packageName 'com.intel.inapppurchase'
+        launchScreenFilePath 'src/main/resources/LaunchScreen.xib'
+        appIconsSource 'AppIcon'
+        //infoPlistPath '' // Absolute path to Info.plist file. If this arg is not set new Info.plist will be generated.
+        applicationExitOnSuspend false
+        bundleShortVersionString '1.0'
+        bundleVersion '1'
+        deploymentTarget '9.0'
+    }
 }

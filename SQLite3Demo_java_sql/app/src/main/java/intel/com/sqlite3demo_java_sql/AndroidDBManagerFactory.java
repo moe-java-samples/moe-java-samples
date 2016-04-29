@@ -33,8 +33,8 @@ import android.content.Context;
 import android.os.Environment;
 import android.util.Log;
 
-import com.intel.inde.moe.sqlite.AbstractDBManagerFactory;
-import com.intel.inde.moe.sqlite.DBManager;
+import com.intel.moe.sqlite.AbstractDBManagerFactory;
+import com.intel.moe.sqlite.DBManager;
 
 import java.io.File;
 import java.io.FileOutputStream;

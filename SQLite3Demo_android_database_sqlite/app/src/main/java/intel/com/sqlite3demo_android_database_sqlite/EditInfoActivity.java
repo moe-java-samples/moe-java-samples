@@ -36,7 +36,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.intel.inde.moe.sqlite.DBManager;
+import com.intel.moe.sqlite.DBManager;
 
 import java.util.List;
 

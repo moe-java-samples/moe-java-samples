@@ -29,16 +29,17 @@
 package com.intel.ios.ui;
 
 
-import com.intel.inde.moe.natj.general.NatJ;
-import com.intel.inde.moe.natj.general.Pointer;
-import com.intel.inde.moe.natj.general.ann.ByValue;
-import com.intel.inde.moe.natj.general.ann.Generated;
-import com.intel.inde.moe.natj.general.ann.NInt;
-import com.intel.inde.moe.natj.general.ann.Owned;
-import com.intel.inde.moe.natj.general.ann.RegisterOnStartup;
-import com.intel.inde.moe.natj.objc.ObjCRuntime;
-import com.intel.inde.moe.natj.objc.ann.ObjCClassName;
-import com.intel.inde.moe.natj.objc.ann.Selector;
+import com.intel.moe.natj.general.NatJ;
+import com.intel.moe.natj.general.Pointer;
+import com.intel.moe.natj.general.ann.ByValue;
+import com.intel.moe.natj.general.ann.Generated;
+import com.intel.moe.natj.general.ann.NInt;
+import com.intel.moe.natj.general.ann.Owned;
+import com.intel.moe.natj.general.ann.RegisterOnStartup;
+import com.intel.moe.natj.objc.ObjCRuntime;
+import com.intel.moe.natj.objc.ann.ObjCClassName;
+import com.intel.moe.natj.objc.ann.Property;
+import com.intel.moe.natj.objc.ann.Selector;
 
 import ios.coregraphics.struct.CGRect;
 import ios.foundation.NSCoder;
@@ -46,7 +47,7 @@ import ios.uikit.UILabel;
 import ios.uikit.UITableViewCell;
 
 @Generated
-@com.intel.inde.moe.natj.general.ann.Runtime(ObjCRuntime.class)
+@com.intel.moe.natj.general.ann.Runtime(ObjCRuntime.class)
 @ObjCClassName("TableViewCell")
 @RegisterOnStartup
 public class TableViewCell extends UITableViewCell {
@@ -91,13 +92,13 @@ public class TableViewCell extends UITableViewCell {
 
 	@Generated
 	public void setSubTitleLabel(UILabel value) {
-		com.intel.inde.moe.natj.objc.ObjCObject __old = (com.intel.inde.moe.natj.objc.ObjCObject) subTitleLabel();
+		com.intel.moe.natj.objc.ObjCObject __old = (com.intel.moe.natj.objc.ObjCObject) getSubTitleLabel();
 		if (value != null) {
-			com.intel.inde.moe.natj.objc.ObjCRuntime.associateObjCObject(this, value);
+			com.intel.moe.natj.objc.ObjCRuntime.associateObjCObject(this, value);
 		}
 		setSubTitleLabel_unsafe(value);
 		if (__old != null) {
-			com.intel.inde.moe.natj.objc.ObjCRuntime.dissociateObjCObject(this, __old);
+			com.intel.moe.natj.objc.ObjCRuntime.dissociateObjCObject(this, __old);
 		}
 	}
 
@@ -107,21 +108,23 @@ public class TableViewCell extends UITableViewCell {
 
 	@Generated
 	public void setTitleLabel(UILabel value) {
-		com.intel.inde.moe.natj.objc.ObjCObject __old = (com.intel.inde.moe.natj.objc.ObjCObject) titleLabel();
+		com.intel.moe.natj.objc.ObjCObject __old = (com.intel.moe.natj.objc.ObjCObject) getTitleLabel();
 		if (value != null) {
-			com.intel.inde.moe.natj.objc.ObjCRuntime.associateObjCObject(this, value);
+			com.intel.moe.natj.objc.ObjCRuntime.associateObjCObject(this, value);
 		}
 		setTitleLabel_unsafe(value);
 		if (__old != null) {
-			com.intel.inde.moe.natj.objc.ObjCRuntime.dissociateObjCObject(this, __old);
+			com.intel.moe.natj.objc.ObjCRuntime.dissociateObjCObject(this, __old);
 		}
 	}
 
 	@Generated
 	@Selector("subTitleLabel")
-	public native UILabel subTitleLabel();
+	@Property
+	public native UILabel getSubTitleLabel();
 
 	@Generated
 	@Selector("titleLabel")
-	public native UILabel titleLabel();
+	@Property
+	public native UILabel getTitleLabel();
 }

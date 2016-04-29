@@ -1,5 +1,0 @@
-com/intel/moe/samples/notetaking/ios/DetailViewController
-com/intel/moe/samples/notetaking/ios/Main
-com/intel/moe/samples/notetaking/ios/MasterViewController
-com/intel/moe/samples/notetaking/ios/NavigationController
-com/intel/moe/samples/notetaking/ios/SplitViewController

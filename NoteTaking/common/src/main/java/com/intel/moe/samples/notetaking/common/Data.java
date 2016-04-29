@@ -30,6 +30,9 @@ public class Data {
     }
 
     public void setNoteForCurrentKey(String note){
+        if(allNotes == null){
+            getAllNotes();
+        }
         allNotes.put(key,note);
     }
 

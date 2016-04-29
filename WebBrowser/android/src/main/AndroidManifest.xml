@@ -11,7 +11,7 @@
         android:theme="@style/AppTheme" >
 
         <activity
-            android:name="com.intel.inde.moe.samples.webbrowser.android.MainActivity"
+            android:name="com.intel.moe.samples.webbrowser.android.MainActivity"
             android:label="@string/app_name"
             android:windowSoftInputMode="stateHidden">
             <intent-filter>
@@ -22,12 +22,12 @@
         </activity>
 
         <activity
-            android:name="com.intel.inde.moe.samples.webbrowser.android.BookmarksActivity"
+            android:name="com.intel.moe.samples.webbrowser.android.BookmarksActivity"
             android:label="@string/app_name"
-            android:parentActivityName="com.intel.inde.moe.samples.webbrowser.android.MainActivity" >
+            android:parentActivityName="com.intel.moe.samples.webbrowser.android.MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.intel.inde.moe.samples.webbrowser.android.MainActivity" />
+                android:value="com.intel.moe.samples.webbrowser.android.MainActivity" />
         </activity>
     </application>
 

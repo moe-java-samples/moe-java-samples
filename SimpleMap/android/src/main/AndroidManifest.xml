@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.intel.inde.moe.samples.simplemap.android" >
+    package="com.intel.moe.samples.simplemap.android" >
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -21,7 +21,7 @@
             android:value="API_KEY_HERE" />
 
         <activity
-            android:name="com.intel.inde.moe.samples.simplemap.android.MainActivity"
+            android:name="com.intel.moe.samples.simplemap.android.MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

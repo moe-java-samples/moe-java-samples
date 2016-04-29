@@ -9,7 +9,7 @@ android {
     buildToolsVersion "23"
 
     defaultConfig {
-        applicationId "com.intel.inde.moe.samples.tictactoe.android"
+        applicationId "com.intel.moe.samples.tictactoe.android"
         minSdkVersion 19
         targetSdkVersion 22
         versionCode 1

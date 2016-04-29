@@ -1,2 +1,0 @@
-com/intel/inde/moe/samples/currencyconverter/ios/AppViewController
-com/intel/inde/moe/samples/currencyconverter/ios/Main

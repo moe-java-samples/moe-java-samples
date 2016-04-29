@@ -35,7 +35,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 
-import com.intel.inde.moe.samples.simplenetworkstreams.android.R;
+import com.intel.moe.samples.simplenetworkstreams.android.R;
 
 public class MainActivity extends AppCompatActivity implements ActionBar.TabListener {
 

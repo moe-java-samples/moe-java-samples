@@ -6,11 +6,7 @@ Last year was a great year for taxi apps. Well-known taxi companies all around t
 How to build iOS part
 ---------------
 
-- Go to the official GoogleMaps cocoapods page: [https://cocoapods.org/pods/GoogleMaps](https://cocoapods.org/pods/GoogleMaps)
-- Click on "See Podspec" link below Library on the bottom right corner.
-- At the end of the JSON, find the key "source" and use the url provided to download the SDK.
-- Extract content of *.tar.gz archive.
-- Find GoogleMaps.framework inside. Put it to the Taxi/ios/lib directory.
-- That's all!
-
-See details at [https://software.intel.com/en-us/articles/intel-multi-os-engine-taxi-sample](https://software.intel.com/en-us/articles/intel-multi-os-engine-taxi-sample)
+- Open the project in Android Studio
+- Right click on "ios" folder in Android Studio and select "Multi-OS Engine Actions" -> "Link CocoaPods to Xcode"
+- Enter "GoogleMaps" in "Pod Name" field and press OK
+- Build the sample

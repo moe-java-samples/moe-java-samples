@@ -41,7 +41,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.intel.inde.moe.samples.simplenetworkstreams.android.R;
+import com.intel.moe.samples.simplenetworkstreams.android.R;
 import com.intel.moe.samples.simplenetworkstreams.common.Networking;
 
 public class ClientFragment extends Fragment {

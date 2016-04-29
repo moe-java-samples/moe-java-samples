@@ -5,7 +5,7 @@ android {
     buildToolsVersion "23"
 
     defaultConfig {
-        applicationId "com.intel.inde.moe.samples.snake.android"
+        applicationId "com.intel.moe.samples.snake.android"
         minSdkVersion 19
         targetSdkVersion 22
         versionCode 1

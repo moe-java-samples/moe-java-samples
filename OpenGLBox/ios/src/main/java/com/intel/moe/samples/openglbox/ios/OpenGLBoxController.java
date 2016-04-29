@@ -29,16 +29,16 @@
 
 package com.intel.moe.samples.openglbox.ios;
 
-import com.intel.inde.moe.natj.c.CRuntime;
-import com.intel.inde.moe.natj.general.Pointer;
-import com.intel.inde.moe.natj.general.ann.ByValue;
-import com.intel.inde.moe.natj.general.ann.Mapped;
-import com.intel.inde.moe.natj.general.ptr.BytePtr;
-import com.intel.inde.moe.natj.general.ptr.FloatPtr;
-import com.intel.inde.moe.natj.general.ptr.IntPtr;
-import com.intel.inde.moe.natj.general.ptr.impl.PtrFactory;
-import com.intel.inde.moe.natj.objc.ann.Selector;
-import com.intel.inde.moe.natj.objc.map.ObjCObjectMapper;
+import com.intel.moe.natj.c.CRuntime;
+import com.intel.moe.natj.general.Pointer;
+import com.intel.moe.natj.general.ann.ByValue;
+import com.intel.moe.natj.general.ann.Mapped;
+import com.intel.moe.natj.general.ptr.BytePtr;
+import com.intel.moe.natj.general.ptr.FloatPtr;
+import com.intel.moe.natj.general.ptr.IntPtr;
+import com.intel.moe.natj.general.ptr.impl.PtrFactory;
+import com.intel.moe.natj.objc.ann.Selector;
+import com.intel.moe.natj.objc.map.ObjCObjectMapper;
 import com.intel.moe.samples.openglbox.common.Geometry;
 import com.intel.moe.samples.openglbox.common.Parameters;
 import com.intel.moe.samples.openglbox.common.Shaders;

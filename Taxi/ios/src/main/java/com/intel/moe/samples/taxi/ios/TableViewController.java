@@ -29,12 +29,12 @@
 
 package com.intel.moe.samples.taxi.ios;
 
-import com.intel.inde.moe.natj.general.Pointer;
-import com.intel.inde.moe.natj.general.ann.RegisterOnStartup;
-import com.intel.inde.moe.natj.objc.ObjCRuntime;
-import com.intel.inde.moe.natj.objc.ann.ObjCClassName;
-import com.intel.inde.moe.natj.objc.ann.Property;
-import com.intel.inde.moe.natj.objc.ann.Selector;
+import com.intel.moe.natj.general.Pointer;
+import com.intel.moe.natj.general.ann.RegisterOnStartup;
+import com.intel.moe.natj.objc.ObjCRuntime;
+import com.intel.moe.natj.objc.ann.ObjCClassName;
+import com.intel.moe.natj.objc.ann.Property;
+import com.intel.moe.natj.objc.ann.Selector;
 import com.intel.moe.samples.taxi.common.TaxiRequest;
 import com.intel.moe.samples.taxi.common.TaxiService;
 
@@ -51,7 +51,7 @@ import ios.uikit.enums.UIAlertActionStyle;
 import ios.uikit.enums.UIAlertControllerStyle;
 import ios.uikit.protocol.UITableViewDataSource;
 
-@com.intel.inde.moe.natj.general.ann.Runtime(ObjCRuntime.class)
+@com.intel.moe.natj.general.ann.Runtime(ObjCRuntime.class)
 @ObjCClassName("TableViewController")
 @RegisterOnStartup
 public class TableViewController extends UITableViewController implements UITableViewDataSource {

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.android.sdklib.widgets.iOSViewController xmlns:android="http://schemas.android.com/apk/res/android"
              android:layout_width="match_parent"
-             android:layout_height="match_parent" xmlns:xrt="http://schemas.android.com/apk/res/android" xrt:initialViewController="true" android:orientation="vertical" xrt:viewController="com.intel.inde.moe.samples.currencyconverter.ios.AppViewController">
+             android:layout_height="match_parent" xmlns:xrt="http://schemas.android.com/apk/res/android" xrt:initialViewController="true" android:orientation="vertical" xrt:viewController="com.intel.moe.samples.currencyconverter.ios.AppViewController">
 
 <com.android.sdklib.widgets.iOSToolBar
                             android:layout_width="fill_parent"
@@ -24,31 +24,6 @@
                           android:orientation="vertical"
                           android:background="@drawable/picker_single"
                           android:layout_gravity="left" xrt:iboutlet="currencyPicker">
-                <com.android.sdklib.widgets.iOSTextView
-                        style = "@style/XOSTextView"
-                        android:textColor="#787878"
-                        android:layout_margin="5dp"
-                        android:text="Mountain View"/>
-                <com.android.sdklib.widgets.iOSTextView
-                        style = "@style/XOSTextView"
-                        android:textColor="#787878"
-                        android:layout_margin="5dp"
-                        android:text="Sunnyvale"/>
-                <com.android.sdklib.widgets.iOSTextView
-                        style = "@style/XOSTextView"
-                        android:textColor="#000000"
-                        android:layout_margin="5dp"
-                        android:text="Cupertino"/>
-                <com.android.sdklib.widgets.iOSTextView
-                        style = "@style/XOSTextView"
-                        android:textColor="#787878"
-                        android:layout_margin="5dp"
-                        android:text="Santa Clara"/>
-                <com.android.sdklib.widgets.iOSTextView
-                        style = "@style/XOSTextView"
-                        android:textColor="#787878"
-                        android:layout_margin="5dp"
-                        android:text="San Jose"/>
             </com.android.sdklib.widgets.iOSTextPicker><com.android.sdklib.widgets.iOSButton
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

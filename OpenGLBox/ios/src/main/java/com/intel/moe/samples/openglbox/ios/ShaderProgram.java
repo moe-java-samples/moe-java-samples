@@ -29,9 +29,9 @@
 
 package com.intel.moe.samples.openglbox.ios;
 
-import com.intel.inde.moe.natj.general.ptr.BytePtr;
-import com.intel.inde.moe.natj.general.ptr.IntPtr;
-import com.intel.inde.moe.natj.general.ptr.impl.PtrFactory;
+import com.intel.moe.natj.general.ptr.BytePtr;
+import com.intel.moe.natj.general.ptr.IntPtr;
+import com.intel.moe.natj.general.ptr.impl.PtrFactory;
 import com.intel.moe.samples.openglbox.common.ShaderProgramBase;
 
 import ios.opengles.c.OpenGLES;

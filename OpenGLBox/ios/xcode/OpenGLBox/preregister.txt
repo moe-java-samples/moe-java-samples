@@ -1,1 +1,0 @@
-com/intel/moe/samples/openglbox/ios/Main

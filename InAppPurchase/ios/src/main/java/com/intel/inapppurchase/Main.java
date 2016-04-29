@@ -35,9 +35,9 @@ import ios.uikit.UIWindow;
 import ios.uikit.c.UIKit;
 import ios.uikit.protocol.UIApplicationDelegate;
 
-import com.intel.inde.moe.natj.general.Pointer;
-import com.intel.inde.moe.natj.general.ann.RegisterOnStartup;
-import com.intel.inde.moe.natj.objc.ann.Selector;
+import com.intel.moe.natj.general.Pointer;
+import com.intel.moe.natj.general.ann.RegisterOnStartup;
+import com.intel.moe.natj.objc.ann.Selector;
 
 @RegisterOnStartup
 public class Main extends NSObject implements UIApplicationDelegate {

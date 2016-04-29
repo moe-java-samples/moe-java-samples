@@ -7,21 +7,37 @@ buildscript {
         }
     }
     dependencies {
-        classpath 'org.intel.gradle:xRTGradlePlugin:1.0'
+        classpath 'com.intel.gradle:moeGradlePlugin:1.1.+'
     }
 }
 
-apply plugin: 'xrt'
+apply plugin: 'moe'
 
 dependencies {
     compile fileTree(dir: 'lib', include: '*.jar')
 }
 
-xrt {
+moe {
     sourceSets {
         main {
             java.srcDir 'src'
             java.srcDir '../common/src'
         }
     }
+    xcode {
+        mainTarget 'SQLite3Demo_android_database_sqlite'
+        //organizationName 'intel'
+        companyIdentifier 'com.intel'
+        packageName 'com.intel.ios'
+        //infoPlistPath '' // Absolute path to Info.plist file. If this arg is not set new Info.plist will be generated.
+        applicationExitOnSuspend false
+        bundleShortVersionString '1.0'
+        bundleVersion '1'
+        deploymentTarget '9.0'
+
+        supportedInterfaceOrientations = ['UIInterfaceOrientationPortrait',
+                                        'UIInterfaceOrientationLandscapeLeft',
+                                        'UIInterfaceOrientationLandscapeRight']
+    }
 }
+

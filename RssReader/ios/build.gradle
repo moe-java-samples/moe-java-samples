@@ -1,22 +1,38 @@
 buildscript {
     repositories {
         mavenCentral()
+        jcenter()
 
         maven {
             url uri(System.getenv("INTEL_MULTI_OS_ENGINE_HOME") + "/gradle")
         }
     }
     dependencies {
-        classpath 'org.intel.gradle:xRTGradlePlugin:1.0'
+        classpath 'com.intel.gradle:moeGradlePlugin:1.1.+'
     }
 }
 
-apply plugin: 'xrt'
+apply plugin: 'moe'
 
 dependencies {
     compile fileTree(dir: 'lib', include: '*.jar')
     compile project(':common')
 }
 
-xrt {
+moe {
+    xcode {
+        mainTarget 'RssReader'
+        organizationName 'intel'
+        companyIdentifier 'com'
+        packageName 'com.intel.moe.samples.rssreader.ios'
+        //infoPlistPath '' // Absolute path to Info.plist file. If this arg is not set new Info.plist will be generated.
+        applicationExitOnSuspend false
+        bundleShortVersionString '1.0'
+        bundleVersion '1'
+        deploymentTarget '9.0'
+
+        supportedInterfaceOrientations = ['UIInterfaceOrientationPortrait',
+                                        'UIInterfaceOrientationLandscapeLeft',
+                                        'UIInterfaceOrientationLandscapeRight']
+    }
 }

@@ -32,7 +32,7 @@ package com.intel.moe.samples.openglbox.android;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
-import com.intel.inde.moe.samples.openglbox.android.R;
+import com.intel.moe.samples.openglbox.android.R;
 
 public class OpenGLBoxActivity extends AppCompatActivity {
 

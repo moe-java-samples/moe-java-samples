@@ -29,11 +29,11 @@
 
 package com.intel.wordsearch.ui;
 
-import com.intel.inde.moe.natj.general.Pointer;
-import com.intel.inde.moe.natj.general.ptr.Ptr;
-import com.intel.inde.moe.natj.general.ptr.impl.PtrFactory;
-import com.intel.inde.moe.natj.objc.SEL;
-import com.intel.inde.moe.natj.objc.ann.Selector;
+import com.intel.moe.natj.general.Pointer;
+import com.intel.moe.natj.general.ptr.Ptr;
+import com.intel.moe.natj.general.ptr.impl.PtrFactory;
+import com.intel.moe.natj.objc.SEL;
+import com.intel.moe.natj.objc.ann.Selector;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -213,7 +213,7 @@ public class WordSearchController extends UIViewController implements
 
 		// Setup tableview
 		tableView.registerClassForCellReuseIdentifier(
-				new com.intel.inde.moe.natj.objc.Class("UITableViewCell"),
+				new com.intel.moe.natj.objc.Class("UITableViewCell"),
 				CELL_IDENTIFIER);
 		tableView.setDataSource_unsafe(this);
 

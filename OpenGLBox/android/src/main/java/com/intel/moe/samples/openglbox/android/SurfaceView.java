@@ -37,7 +37,7 @@ import android.opengl.GLSurfaceView;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 
-import com.intel.inde.moe.samples.openglbox.android.R;
+import com.intel.moe.samples.openglbox.android.R;
 
 class SurfaceView extends GLSurfaceView {
 

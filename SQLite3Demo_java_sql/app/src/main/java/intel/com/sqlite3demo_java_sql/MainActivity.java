@@ -41,7 +41,7 @@ import android.view.MenuItem;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
-import com.intel.inde.moe.sqlite.DBManager;
+import com.intel.moe.sqlite.DBManager;
 
 import java.io.IOException;
 import java.io.InputStream;

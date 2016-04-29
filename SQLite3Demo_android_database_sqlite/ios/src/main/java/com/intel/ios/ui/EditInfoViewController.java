@@ -31,17 +31,18 @@ package com.intel.ios.ui;
 
 import android.util.Log;
 
-import com.intel.inde.moe.natj.general.NatJ;
-import com.intel.inde.moe.natj.general.Pointer;
-import com.intel.inde.moe.natj.general.ann.Generated;
-import com.intel.inde.moe.natj.general.ann.Mapped;
-import com.intel.inde.moe.natj.general.ann.Owned;
-import com.intel.inde.moe.natj.general.ann.RegisterOnStartup;
-import com.intel.inde.moe.natj.objc.ObjCRuntime;
-import com.intel.inde.moe.natj.objc.ann.ObjCClassName;
-import com.intel.inde.moe.natj.objc.ann.Selector;
-import com.intel.inde.moe.natj.objc.map.ObjCObjectMapper;
-import com.intel.inde.moe.sqlite.DBManager;
+import com.intel.moe.natj.general.NatJ;
+import com.intel.moe.natj.general.Pointer;
+import com.intel.moe.natj.general.ann.Generated;
+import com.intel.moe.natj.general.ann.Mapped;
+import com.intel.moe.natj.general.ann.Owned;
+import com.intel.moe.natj.general.ann.RegisterOnStartup;
+import com.intel.moe.natj.objc.ObjCRuntime;
+import com.intel.moe.natj.objc.ann.ObjCClassName;
+import com.intel.moe.natj.objc.ann.Property;
+import com.intel.moe.natj.objc.ann.Selector;
+import com.intel.moe.natj.objc.map.ObjCObjectMapper;
+import com.intel.moe.sqlite.DBManager;
 import com.intel.ios.IOSDBManagerFactory;
 
 import java.util.List;
@@ -53,7 +54,7 @@ import ios.uikit.UIViewController;
 import ios.uikit.protocol.UITextFieldDelegate;
 
 @Generated
-@com.intel.inde.moe.natj.general.ann.Runtime(ObjCRuntime.class)
+@com.intel.moe.natj.general.ann.Runtime(ObjCRuntime.class)
 @ObjCClassName("EditInfoViewController")
 @RegisterOnStartup
 public class EditInfoViewController extends UIViewController implements UITextFieldDelegate {
@@ -88,7 +89,8 @@ public class EditInfoViewController extends UIViewController implements UITextFi
 
 	@Generated
 	@Selector("ageField")
-	public native UITextField ageField();
+	@Property
+	public native UITextField getAgeField();
 
 	@Generated
 	@Owned
@@ -97,9 +99,9 @@ public class EditInfoViewController extends UIViewController implements UITextFi
 
 	@Selector("doSave:")
 	public void doSave(@Mapped(ObjCObjectMapper.class) Object sender) {
-		String firstName = firstNameField().text();
-		String lastName = lastNameField().text();
-		String age = ageField().text();
+		String firstName = getFirstNameField().text();
+		String lastName = getLastNameField().text();
+		String age = getAgeField().text();
 
 		String query;
 
@@ -135,7 +137,8 @@ public class EditInfoViewController extends UIViewController implements UITextFi
 
 	@Generated
 	@Selector("firstNameField")
-	public native UITextField firstNameField();
+    @Property
+	public native UITextField getFirstNameField();
 
 	@Generated
 	@Selector("init")
@@ -151,21 +154,22 @@ public class EditInfoViewController extends UIViewController implements UITextFi
 
 	@Generated
 	@Selector("lastNameField")
-	public native UITextField lastNameField();
+    @Property
+	public native UITextField getLastNameField();
 
 	@Generated
-	@Selector("setAgeField:")
+	@Selector("setAgeField")
 	public native void setAgeField_unsafe(UITextField value);
 
 	@Generated
 	public void setAgeField(UITextField value) {
-		com.intel.inde.moe.natj.objc.ObjCObject __old = (com.intel.inde.moe.natj.objc.ObjCObject) ageField();
+		com.intel.moe.natj.objc.ObjCObject __old = (com.intel.moe.natj.objc.ObjCObject) getAgeField();
 		if (value != null) {
-			com.intel.inde.moe.natj.objc.ObjCRuntime.associateObjCObject(this, value);
+			com.intel.moe.natj.objc.ObjCRuntime.associateObjCObject(this, value);
 		}
 		setAgeField_unsafe(value);
 		if (__old != null) {
-			com.intel.inde.moe.natj.objc.ObjCRuntime.dissociateObjCObject(this, __old);
+			com.intel.moe.natj.objc.ObjCRuntime.dissociateObjCObject(this, __old);
 		}
 	}
 
@@ -175,13 +179,13 @@ public class EditInfoViewController extends UIViewController implements UITextFi
 
 	@Generated
 	public void setFirstNameField(UITextField value) {
-		com.intel.inde.moe.natj.objc.ObjCObject __old = (com.intel.inde.moe.natj.objc.ObjCObject) firstNameField();
+		com.intel.moe.natj.objc.ObjCObject __old = (com.intel.moe.natj.objc.ObjCObject) getFirstNameField();
 		if (value != null) {
-			com.intel.inde.moe.natj.objc.ObjCRuntime.associateObjCObject(this, value);
+			com.intel.moe.natj.objc.ObjCRuntime.associateObjCObject(this, value);
 		}
 		setFirstNameField_unsafe(value);
 		if (__old != null) {
-			com.intel.inde.moe.natj.objc.ObjCRuntime.dissociateObjCObject(this, __old);
+			com.intel.moe.natj.objc.ObjCRuntime.dissociateObjCObject(this, __old);
 		}
 	}
 
@@ -191,13 +195,13 @@ public class EditInfoViewController extends UIViewController implements UITextFi
 
 	@Generated
 	public void setLastNameField(UITextField value) {
-		com.intel.inde.moe.natj.objc.ObjCObject __old = (com.intel.inde.moe.natj.objc.ObjCObject) lastNameField();
+		com.intel.moe.natj.objc.ObjCObject __old = (com.intel.moe.natj.objc.ObjCObject) getLastNameField();
 		if (value != null) {
-			com.intel.inde.moe.natj.objc.ObjCRuntime.associateObjCObject(this, value);
+			com.intel.moe.natj.objc.ObjCRuntime.associateObjCObject(this, value);
 		}
 		setLastNameField_unsafe(value);
 		if (__old != null) {
-			com.intel.inde.moe.natj.objc.ObjCRuntime.dissociateObjCObject(this, __old);
+			com.intel.moe.natj.objc.ObjCRuntime.dissociateObjCObject(this, __old);
 		}
 	}
 
@@ -221,9 +225,9 @@ public class EditInfoViewController extends UIViewController implements UITextFi
 			List<List<String>> results = manager.loadDataFromDB(query);
 
 			// Set the loaded data to the textfields.
-			firstNameField().setText(results.get(0).get(manager.getFirstnameIdx()));
-			lastNameField().setText(results.get(0).get(manager.getLastNameIdx()));
-			ageField().setText(results.get(0).get(manager.getAgeIdx()));
+			getFirstNameField().setText(results.get(0).get(manager.getFirstnameIdx()));
+			getLastNameField().setText(results.get(0).get(manager.getLastNameIdx()));
+			getAgeField().setText(results.get(0).get(manager.getAgeIdx()));
 		}
 	}
 

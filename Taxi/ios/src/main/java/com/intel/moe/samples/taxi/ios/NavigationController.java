@@ -29,19 +29,19 @@
 
 package com.intel.moe.samples.taxi.ios;
 
-import com.intel.inde.moe.natj.general.Pointer;
-import com.intel.inde.moe.natj.general.ann.Owned;
-import com.intel.inde.moe.natj.general.ann.RegisterOnStartup;
-import com.intel.inde.moe.natj.objc.ObjCRuntime;
-import com.intel.inde.moe.natj.objc.ann.ObjCClassName;
-import com.intel.inde.moe.natj.objc.ann.Selector;
+import com.intel.moe.natj.general.Pointer;
+import com.intel.moe.natj.general.ann.Owned;
+import com.intel.moe.natj.general.ann.RegisterOnStartup;
+import com.intel.moe.natj.objc.ObjCRuntime;
+import com.intel.moe.natj.objc.ann.ObjCClassName;
+import com.intel.moe.natj.objc.ann.Selector;
 
 import ios.uikit.UIColor;
 import ios.uikit.UIImage;
 import ios.uikit.UINavigationController;
 import ios.uikit.enums.UIBarStyle;
 
-@com.intel.inde.moe.natj.general.ann.Runtime(ObjCRuntime.class)
+@com.intel.moe.natj.general.ann.Runtime(ObjCRuntime.class)
 @ObjCClassName("NavigationController")
 @RegisterOnStartup
 public class NavigationController extends UINavigationController {

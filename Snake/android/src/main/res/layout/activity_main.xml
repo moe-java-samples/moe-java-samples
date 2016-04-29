@@ -12,7 +12,7 @@
     <FrameLayout android:layout_width="match_parent"
                  android:layout_height="match_parent">
 
-        <com.intel.inde.moe.samples.snake.android.SnakeView
+        <com.intel.moe.samples.snake.android.SnakeView
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:background="@color/ios_black"

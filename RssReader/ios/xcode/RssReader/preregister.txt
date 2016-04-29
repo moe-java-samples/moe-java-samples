@@ -1,2 +1,0 @@
-com/intel/inde/moe/samples/rssreader/ios/Main
-com/intel/inde/moe/samples/rssreader/ios/RSSCell

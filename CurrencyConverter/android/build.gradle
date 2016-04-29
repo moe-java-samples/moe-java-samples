@@ -5,7 +5,7 @@ android {
     buildToolsVersion "23"
 
     defaultConfig {
-        applicationId "com.intel.inde.moe.samples.currencyconverter.androidr"
+        applicationId "com.intel.moe.samples.currencyconverter.androidr"
         minSdkVersion 19
         targetSdkVersion 22
         versionCode 1

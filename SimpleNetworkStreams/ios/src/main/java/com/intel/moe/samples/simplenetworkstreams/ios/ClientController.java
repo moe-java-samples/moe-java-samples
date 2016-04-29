@@ -29,13 +29,13 @@
 
 package com.intel.moe.samples.simplenetworkstreams.ios;
 
-import com.intel.inde.moe.natj.general.NatJ;
-import com.intel.inde.moe.natj.general.Pointer;
-import com.intel.inde.moe.natj.general.ann.RegisterOnStartup;
-import com.intel.inde.moe.natj.objc.ObjCRuntime;
-import com.intel.inde.moe.natj.objc.ann.ObjCClassName;
-import com.intel.inde.moe.natj.objc.ann.Property;
-import com.intel.inde.moe.natj.objc.ann.Selector;
+import com.intel.moe.natj.general.NatJ;
+import com.intel.moe.natj.general.Pointer;
+import com.intel.moe.natj.general.ann.RegisterOnStartup;
+import com.intel.moe.natj.objc.ObjCRuntime;
+import com.intel.moe.natj.objc.ann.ObjCClassName;
+import com.intel.moe.natj.objc.ann.Property;
+import com.intel.moe.natj.objc.ann.Selector;
 import com.intel.moe.samples.simplenetworkstreams.common.Networking;
 
 import ios.NSObject;
@@ -47,7 +47,7 @@ import ios.uikit.UITextField;
 import ios.uikit.UITextView;
 import ios.uikit.UIViewController;
 
-@com.intel.inde.moe.natj.general.ann.Runtime(ObjCRuntime.class)
+@com.intel.moe.natj.general.ann.Runtime(ObjCRuntime.class)
 @ObjCClassName("ClientController")
 @RegisterOnStartup
 public class ClientController extends UIViewController {
@@ -56,10 +56,9 @@ public class ClientController extends UIViewController {
         NatJ.register();
     }
 
-    @Selector("alloc")
     public static native ClientController alloc();
 
-    @Selector("init")
+    @Override
     public native ClientController init();
 
     protected ClientController(Pointer peer) {
@@ -88,7 +87,6 @@ public class ClientController extends UIViewController {
     @Property
     public native UILabel getStatusLabel();
 
-    @Selector("viewDidLoad")
     @Override
     public void viewDidLoad() {
         getMessageTextView().layer().setBorderWidth(0.5);

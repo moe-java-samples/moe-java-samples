@@ -1,18 +1,18 @@
 package com.intel.moe.samples.notetaking.ios;
 
+import com.intel.moe.natj.general.NatJ;
+import com.intel.moe.natj.general.Pointer;
+import com.intel.moe.natj.general.ann.Generated;
+import com.intel.moe.natj.general.ann.Mapped;
+import com.intel.moe.natj.general.ann.NInt;
+import com.intel.moe.natj.general.ann.Owned;
+import com.intel.moe.natj.general.ann.RegisterOnStartup;
+import com.intel.moe.natj.objc.ObjCRuntime;
+import com.intel.moe.natj.objc.SEL;
+import com.intel.moe.natj.objc.ann.ObjCClassName;
+import com.intel.moe.natj.objc.ann.Selector;
+import com.intel.moe.natj.objc.map.ObjCObjectMapper;
 import com.intel.moe.samples.notetaking.common.Data;
-import com.intel.inde.moe.natj.general.NatJ;
-import com.intel.inde.moe.natj.general.Pointer;
-import com.intel.inde.moe.natj.general.ann.Generated;
-import com.intel.inde.moe.natj.general.ann.Mapped;
-import com.intel.inde.moe.natj.general.ann.NInt;
-import com.intel.inde.moe.natj.general.ann.Owned;
-import com.intel.inde.moe.natj.general.ann.RegisterOnStartup;
-import com.intel.inde.moe.natj.objc.ObjCRuntime;
-import com.intel.inde.moe.natj.objc.SEL;
-import com.intel.inde.moe.natj.objc.ann.ObjCClassName;
-import com.intel.inde.moe.natj.objc.ann.Selector;
-import com.intel.inde.moe.natj.objc.map.ObjCObjectMapper;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -43,22 +43,24 @@ import ios.uikit.enums.UIUserInterfaceIdiom;
 import ios.uikit.protocol.UIApplicationDelegate;
 
 
-
-@com.intel.inde.moe.natj.general.ann.Runtime(ObjCRuntime.class)
+@com.intel.moe.natj.general.ann.Runtime(ObjCRuntime.class)
 @ObjCClassName("MasterViewController")
 @RegisterOnStartup
-public class MasterViewController extends UITableViewController implements UIApplicationDelegate{
+public class MasterViewController extends UITableViewController implements UIApplicationDelegate {
 
-    private ArrayList<String> objects = new ArrayList<>();
-    public  static Data data;
     private static final String DEFAULT_TEXT = "New Note";
+    public static Data data;
 
     static {
         NatJ.register();
     }
 
-    @Owned
-    @Selector("alloc")
+    private ArrayList<String> objects = new ArrayList<>();
+
+    protected MasterViewController(Pointer peer) {
+        super(peer);
+    }
+
     public static native MasterViewController alloc();
 
     @Override
@@ -71,7 +73,7 @@ public class MasterViewController extends UITableViewController implements UIApp
         }
     }
 
-    @Selector("init")
+    @Override
     public native MasterViewController init();
 
     @Override
@@ -100,7 +102,7 @@ public class MasterViewController extends UITableViewController implements UIApp
             data.removeCurrentNote();
             objects.remove((int) nsIndexPath.row());
 
-            tableView().deleteRowsAtIndexPathsWithRowAnimation((NSArray)NSArray.arrayWithObject(nsIndexPath), UITableViewRowAnimation.Fade);
+            tableView().deleteRowsAtIndexPathsWithRowAnimation((NSArray) NSArray.arrayWithObject(nsIndexPath), UITableViewRowAnimation.Fade);
         } else if (l == UITableViewCellEditingStyle.Insert) {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
         }
@@ -118,26 +120,20 @@ public class MasterViewController extends UITableViewController implements UIApp
         if (uiStoryboardSegue.identifier().equals("showDetail")) {
 
             NSIndexPath indexPath = tableView().indexPathForSelectedRow();
-            if(indexPath==null){
+            if (indexPath == null) {
                 object = objects.get(0);
-            }
-            else {
+            } else {
                 object = objects.get((int) indexPath.row());
             }
             DetailViewController controller = (DetailViewController) ((UINavigationController) uiStoryboardSegue.destinationViewController()).topViewController();
-            controller.setDetailItem(object,data);
+            controller.setDetailItem(object, data);
 
             controller.navigationItem().setLeftBarButtonItem(splitViewController().displayModeButtonItem());
             controller.navigationItem().setLeftItemsSupplementBackButton(true);
         }
     }
 
-    protected MasterViewController(Pointer peer) {
-        super(peer);
-    }
-
     @Override
-    @Selector("viewDidLoad")
     public void viewDidLoad() {
         // Do any additional setup after loading the view, typically from a nib.
         navigationItem().setLeftBarButtonItem(editButtonItem());
@@ -150,55 +146,52 @@ public class MasterViewController extends UITableViewController implements UIApp
 
     }
 
-    @Selector("viewWillAppear:")
-    public void viewWillAppear(boolean animated){
+    @Override
+    public void viewWillAppear(boolean animated) {
         super.viewWillAppear(true);
 
         fillObjectArray();
         tableView().reloadData();
     }
 
-    public void fillObjectArray(){
+    public void fillObjectArray() {
         objects = new ArrayList<String>();
         objects.addAll(data.getAllNotes().keySet());
         Collections.sort(objects, Collections.reverseOrder());
     }
 
-    @Generated
-    @Selector("initWithCoder:")
+    @Override
     public native MasterViewController initWithCoder(NSCoder aDecoder);
 
-    @Generated
-    @Selector("initWithNibName:bundle:")
+    @Override
     public native MasterViewController initWithNibNameBundle(
             String nibNameOrNil, NSBundle nibBundleOrNil);
 
-    @Generated
-    @Selector("initWithStyle:")
+    @Override
     public native MasterViewController initWithStyle(@NInt long style);
 
     @Selector("insertNewObject:")
-    public void insertNewObject(Object sender){
+    public void insertNewObject(Object sender) {
         String date = new SimpleDateFormat("dd-MM-yyyy hh:mm:ss.SSS").format(new Date());
         objects.add(0, date);
         data.setCurrentKey(date);
         data.setNoteForCurrentKey(DEFAULT_TEXT);
 
-        NSIndexPath indexPath = NSIndexPath.indexPathForRowInSection(0,0);
-        tableView().insertRowsAtIndexPathsWithRowAnimation((NSArray)NSArray.arrayWithObject(indexPath), UITableViewRowAnimation.Automatic);
+        NSIndexPath indexPath = NSIndexPath.indexPathForRowInSection(0, 0);
+        tableView().insertRowsAtIndexPathsWithRowAnimation((NSArray) NSArray.arrayWithObject(indexPath), UITableViewRowAnimation.Automatic);
         performSegueWithIdentifierSender("showDetail", this);
     }
 
 
     public String applicationDocumentsDirectory() {
         NSArray urls = NSFileManager.defaultManager().URLsForDirectoryInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask);
-        NSURL url = (NSURL)urls.firstObject();
+        NSURL url = (NSURL) urls.firstObject();
         String path = url.fileSystemRepresentation();
         return path;
     }
 
     @Selector("backgrounding")
-    public void backgrounding(){
+    public void backgrounding() {
         data.saveFile();
     }
 }

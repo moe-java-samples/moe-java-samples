@@ -1,4 +1,0 @@
-com/intel/moe/samples/simplenetworkstreams/ios/ClientController
-com/intel/moe/samples/simplenetworkstreams/ios/Main
-com/intel/moe/samples/simplenetworkstreams/ios/NavigationController
-com/intel/moe/samples/simplenetworkstreams/ios/ServerController

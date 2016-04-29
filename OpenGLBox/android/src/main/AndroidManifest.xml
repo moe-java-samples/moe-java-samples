@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.intel.inde.moe.samples.openglbox.android">
+    package="com.intel.moe.samples.openglbox.android">
 
     <application
         android:allowBackup="true"

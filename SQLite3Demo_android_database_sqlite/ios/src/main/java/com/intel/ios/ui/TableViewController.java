@@ -29,20 +29,20 @@
 package com.intel.ios.ui;
 
 
-import com.intel.inde.moe.natj.general.NatJ;
-import com.intel.inde.moe.natj.general.Pointer;
-import com.intel.inde.moe.natj.general.ann.Generated;
-import com.intel.inde.moe.natj.general.ann.Mapped;
-import com.intel.inde.moe.natj.general.ann.NFloat;
-import com.intel.inde.moe.natj.general.ann.NInt;
-import com.intel.inde.moe.natj.general.ann.Owned;
-import com.intel.inde.moe.natj.general.ann.RegisterOnStartup;
-import com.intel.inde.moe.natj.objc.ObjCRuntime;
-import com.intel.inde.moe.natj.objc.ann.IsOptional;
-import com.intel.inde.moe.natj.objc.ann.ObjCClassName;
-import com.intel.inde.moe.natj.objc.ann.Selector;
-import com.intel.inde.moe.natj.objc.map.ObjCObjectMapper;
-import com.intel.inde.moe.sqlite.DBManager;
+import com.intel.moe.natj.general.NatJ;
+import com.intel.moe.natj.general.Pointer;
+import com.intel.moe.natj.general.ann.Generated;
+import com.intel.moe.natj.general.ann.Mapped;
+import com.intel.moe.natj.general.ann.NFloat;
+import com.intel.moe.natj.general.ann.NInt;
+import com.intel.moe.natj.general.ann.Owned;
+import com.intel.moe.natj.general.ann.RegisterOnStartup;
+import com.intel.moe.natj.objc.ObjCRuntime;
+import com.intel.moe.natj.objc.ann.IsOptional;
+import com.intel.moe.natj.objc.ann.ObjCClassName;
+import com.intel.moe.natj.objc.ann.Selector;
+import com.intel.moe.natj.objc.map.ObjCObjectMapper;
+import com.intel.moe.sqlite.DBManager;
 import com.intel.ios.IOSDBManagerFactory;
 
 import java.util.List;
@@ -59,7 +59,7 @@ import ios.uikit.protocol.UITableViewDataSource;
 import ios.uikit.protocol.UITableViewDelegate;
 
 @Generated
-@com.intel.inde.moe.natj.general.ann.Runtime(ObjCRuntime.class)
+@com.intel.moe.natj.general.ann.Runtime(ObjCRuntime.class)
 @ObjCClassName("TableViewController")
 @RegisterOnStartup
 public class TableViewController extends UITableViewController implements UITableViewDelegate, UITableViewDataSource {
@@ -128,6 +128,7 @@ public class TableViewController extends UITableViewController implements UITabl
 
 	public void loadData() {
 		// Form the query.
+
 		String query = manager.createSelectAllQuery();
 
 		// Get the results.
@@ -151,8 +152,8 @@ public class TableViewController extends UITableViewController implements UITabl
 		String firstName = arrDataRow.get(manager.getFirstnameIdx());
 		String lastName = arrDataRow.get(manager.getLastNameIdx());
 
-		cell.titleLabel().setText(firstName + " " + lastName);
-		cell.subTitleLabel().setText(arrDataRow.get(manager.getAgeIdx()));
+		cell.getTitleLabel().setText(firstName + " " + lastName);
+		cell.getSubTitleLabel().setText(arrDataRow.get(manager.getAgeIdx()));
 
 		return cell;
 	}
