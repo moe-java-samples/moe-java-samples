@@ -10,6 +10,7 @@
 		05B97ABF1BC4F6C300F7713D /* precopy.txt in Resources */ = {isa = PBXBuildFile; fileRef = 05B97ABE1BC4F6C300F7713D /* precopy.txt */; };
 		4C83DFEE14ED5EFF58750B72 /* MOE.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B7CFE33192479FA25F5CF763 /* MOE.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7DCEAFECFB315FE7D5ADF376 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C97445BE72A3171B9498E7 /* main.m */; };
+		CEA392001CDB7C93004E54E1 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA391FF1CDB7C93004E54E1 /* CoreMotion.framework */; };
 		D241468BC37AC21CC30E4617 /* MOE.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7CFE33192479FA25F5CF763 /* MOE.framework */; };
 		E1FC3316B6A51DD307A75C6B /* preregister.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3EA7675175F5F88D6DAEEFC8 /* preregister.txt */; };
 		E65DE1A61BB288C30042C6E1 /* intel_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = E65DE1A41BB288C30042C6E1 /* intel_logo.png */; };
@@ -74,7 +75,8 @@
 		3EA7675175F5F88D6DAEEFC8 /* preregister.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = preregister.txt; sourceTree = "<group>"; };
 		5A88B4FAFCEE1E474D14999D /* LibGDXMissileCommand.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = LibGDXMissileCommand.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84C97445BE72A3171B9498E7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		B7CFE33192479FA25F5CF763 /* MOE.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MOE.framework; sourceTree = XRT_FRAMEWORK_PATH; };
+		B7CFE33192479FA25F5CF763 /* MOE.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MOE.framework; sourceTree = MOE_FRAMEWORK_PATH; };
+		CEA391FF1CDB7C93004E54E1 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		E65DE1A41BB288C30042C6E1 /* intel_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = intel_logo.png; path = ../src/main/resources/intel_logo.png; sourceTree = "<group>"; };
 		E65DE1A51BB288C30042C6E1 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LaunchScreen.xib; path = ../src/main/resources/LaunchScreen.xib; sourceTree = "<group>"; };
 		E6DE0A341C02E57F00E17E81 /* alarm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = alarm.mp3; path = ../../app/src/main/assets/alarm.mp3; sourceTree = "<group>"; };
@@ -114,7 +116,7 @@
 		E6DE0A781C02E5F600E17E81 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		E6DE0A7A1C02E5FE00E17E81 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E6DE0A7C1C02F75C00E17E81 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		E6DE0A7E1C03224D00E17E81 /* application.jar */ = {isa = PBXFileReference; lastKnownFileType = archive.jar; name = application.jar; path = ../build/application.jar; sourceTree = "<group>"; };
+		E6DE0A7E1C03224D00E17E81 /* application.jar */ = {isa = PBXFileReference; lastKnownFileType = archive.jar; name = application.jar; path = ../build/moe/main/application.jar; sourceTree = "<group>"; };
 		EEDA81A2E94F194BC4B3E70A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -123,6 +125,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEA392001CDB7C93004E54E1 /* CoreMotion.framework in Frameworks */,
 				E6DE0A7D1C02F75C00E17E81 /* QuartzCore.framework in Frameworks */,
 				E6DE0A7B1C02E5FE00E17E81 /* Foundation.framework in Frameworks */,
 				E6DE0A791C02E5F600E17E81 /* CoreGraphics.framework in Frameworks */,
@@ -151,6 +154,7 @@
 		E32CCEDF2F93127426C9F78A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CEA391FF1CDB7C93004E54E1 /* CoreMotion.framework */,
 				E6DE0A7C1C02F75C00E17E81 /* QuartzCore.framework */,
 				E6DE0A7A1C02E5FE00E17E81 /* Foundation.framework */,
 				E6DE0A781C02E5F600E17E81 /* CoreGraphics.framework */,
@@ -341,7 +345,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/bash;
-			shellScript = "cd ../\n\nexport JAVA_HOME=$(/usr/libexec/java_home -v 1.8)\njava -version\n\nfunction gradlePath {\n    CD=\"$PWD\"\n    while [ \"$CD\" != \"\" ]; do\n    if [ -x \"$CD/gradlew\" ]; then\n    GRADLE_PATH=$CD/gradlew\n    return 0\n    fi\n    CD=\"${CD%/*}\"\n    done\n    \n    GRADLE_PATH=$(which 'gradle')\n    \n    if [ \"$GRADLE_PATH\" = \"\" ]; then\n    GRADLE_PATH=/usr/local/bin/gradle\n    fi\n}\ngradlePath\n\nif [ \"$XRT_SKIP_DEX\" == \"Yes\" ]; then\necho \"Compiling ART only...\"\n\"$GRADLE_PATH\" --daemon buildArtOat -Pxrt.archs=${arch}\nexit\nfi\n\n\"$GRADLE_PATH\" --daemon compileJava proguard resPack buildRetro buildDex buildArtOat buildPreregister -Pxrt.archs=\"${ARCHS}\"\n";
+			shellScript = "cd \"${SRCROOT}/..\"\n\nexport JAVA_HOME=$(/usr/libexec/java_home -v 1.8)\njava -version\n\n########################\n# Find Gradle\n########################\nfunction findGradle {\n    CD=\"$PWD\"\n    while [ \"$CD\" != \"\" ]; do\n    echo \"Looking for gradlew in $CD\"\n    if [ -x \"$CD/gradlew\" ]; then\n    GRADLE_EXEC=$CD/gradlew\n    return 0\n    fi\n    CD=\"${CD%/*}\"\n    done\n    \n    DEFAULT_PATH=$(echo $PATH)\n    source ~/.bash_profile\n    export PATH=$PATH:DEFAULT_PATH\n    \n    echo \"Checking with 'which'\"\n    GRADLE_EXEC=$(which 'gradle')\n    \n    if [ \"$GRADLE_EXEC\" = \"\" ]; then\n    echo \"Falling back to '/usr/local/bin/gradle'\"\n    GRADLE_EXEC=/usr/local/bin/gradle\n    fi\n}\n########################\n# Execute Gradle build\n########################\nif [ -z \"$MOE_GRADLE_EXTERNAL_BUILD\" ]; then\nfindGradle\n\n\"$GRADLE_EXEC\" --daemon moeXcodeInternal\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -381,7 +385,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"${XRT_FRAMEWORK_PATH}",
+					"${MOE_FRAMEWORK_PATH}",
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = YES;
@@ -398,7 +402,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) ${XRT_FRAMEWORK_PATH}";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) ${MOE_FRAMEWORK_PATH}";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
@@ -420,7 +424,7 @@
 				INFOPLIST_FILE = LibGDXMissileCommand/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
-					"${XRT_OTHER_LDFLAGS}",
+					"${MOE_OTHER_LDFLAGS}",
 					"-force_load",
 					"\"$(SRCROOT)/native/ios/libObjectAL.a\"",
 					"-force_load",
@@ -445,7 +449,7 @@
 				INFOPLIST_FILE = LibGDXMissileCommand/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
-					"${XRT_OTHER_LDFLAGS}",
+					"${MOE_OTHER_LDFLAGS}",
 					"-force_load",
 					"\"$(SRCROOT)/native/ios/libObjectAL.a\"",
 					"-force_load",
@@ -480,7 +484,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"${XRT_FRAMEWORK_PATH}",
+					"${MOE_FRAMEWORK_PATH}",
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = YES;
@@ -497,7 +501,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) ${XRT_FRAMEWORK_PATH}";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) ${MOE_FRAMEWORK_PATH}";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;

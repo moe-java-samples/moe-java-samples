@@ -29,57 +29,21 @@
 
 package com.intel.libgdxmissilecommand.ios;
 
-import ios.NSObject;
-import ios.foundation.NSDictionary;
-import ios.uikit.UIApplication;
-import ios.uikit.c.UIKit;
-import ios.uikit.protocol.UIApplicationDelegate;
-
-import com.badlogic.gdx.backends.intel.moe.IOSApplication;
-import com.badlogic.gdx.backends.intel.moe.IOSApplicationConfiguration;
-import com.intel.inde.moe.natj.general.Pointer;
-import com.intel.inde.moe.natj.objc.ann.IsOptional;
-import com.intel.inde.moe.natj.objc.ann.ObjCClassName;
-import com.intel.inde.moe.natj.objc.ann.Selector;
+import com.badlogic.gdx.backends.iosmoe.IOSApplication;
+import com.badlogic.gdx.backends.iosmoe.IOSApplicationConfiguration;
 import com.intel.libgdxmissilecommand.common.MissileCommand;
+import com.intel.moe.natj.general.Pointer;
+import com.intel.moe.natj.objc.ann.ObjCClassName;
+import com.intel.moe.natj.objc.ann.Selector;
+
+import ios.uikit.c.UIKit;
+
 
 @ObjCClassName("Main")
-public class Main extends NSObject implements UIApplicationDelegate {
-
-    private IOSApplication app;
+public class Main extends IOSApplication.Delegate {
 
     protected Main(Pointer peer) {
         super(peer);
-    }
-
-    @Override
-    @Selector("application:didFinishLaunchingWithOptions:")
-    public boolean applicationDidFinishLaunchingWithOptions(
-            UIApplication application, NSDictionary launchOptions) {
-        IOSApplicationConfiguration config = new IOSApplicationConfiguration();
-        this.app = new IOSApplication(new MissileCommand(), config);
-        return app.didFinishLaunching(application, launchOptions);
-    }
-
-    @Override
-    @IsOptional
-    @Selector("applicationDidBecomeActive:")
-    public void applicationDidBecomeActive(UIApplication application) {
-        app.didBecomeActive(application);
-    }
-
-    @Override
-    @IsOptional
-    @Selector("applicationWillResignActive:")
-    public void applicationWillResignActive(UIApplication application) {
-        app.willResignActive(application);
-    }
-
-    @Override
-    @IsOptional
-    @Selector("applicationWillTerminate:")
-    public void applicationWillTerminate(UIApplication application) {
-        app.willTerminate(application);
     }
 
     @Selector("alloc")
@@ -87,5 +51,11 @@ public class Main extends NSObject implements UIApplicationDelegate {
 
     public static void main(String[] args) {
         UIKit.UIApplicationMain(0, null, null, Main.class.getSimpleName());
+    }
+
+    @Override
+    protected IOSApplication createApplication() {
+        IOSApplicationConfiguration config = new IOSApplicationConfiguration();
+        return new IOSApplication(new MissileCommand(), config);
     }
 }

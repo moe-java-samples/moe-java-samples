@@ -1,9 +1,32 @@
-XRT_APPLICATION_OAT = -sectcreate __OATDATA __oatdata "${SRCROOT}/../build/art/${arch}/application.oat"
-XRT_APPLICATION_ART = -sectcreate __ARTDATA __artdata "${SRCROOT}/../build/art/${arch}/image.art"
-XRT_APPLICATION_PROTECTION_FLAGS[sdk=iphoneos*] = -segprot __OATDATA rx rx -segprot __ARTDATA rw rw
-XRT_APPLICATION_PROTECTION_FLAGS[sdk=iphonesimulator*] = -segprot __OATDATA rwx rx -segprot __ARTDATA rwx rw -pagezero_size 1000
-XRT_APPLICATION_PROTECTION_FLAGS[sdk=macosx*] = -segprot __OATDATA rwx rx -segprot __ARTDATA rw rw
-XRT_ART_FLAGS = ${XRT_APPLICATION_OAT} ${XRT_APPLICATION_ART} ${XRT_APPLICATION_PROTECTION_FLAGS}
-XRT_OTHER_LDFLAGS = ${XRT_ART_FLAGS} -lstdc++
-XRT_FRAMEWORK_PATH[sdk=iphonesimulator*] = ${INTEL_MULTI_OS_ENGINE_HOME}/sdk/iphonesimulator
-XRT_FRAMEWORK_PATH[sdk=iphoneos*] = ${INTEL_MULTI_OS_ENGINE_HOME}/sdk/iphoneos
+// Create sections from the art and oat files.
+MOE_SECT_OAT = -sectcreate __OATDATA __oatdata "${SRCROOT}/../build/moe/main/xcode/${CONFIGURATION}${EFFECTIVE_PLATFORM_NAME}/${arch}.oat"
+MOE_SECT_ART = -sectcreate __ARTDATA __artdata "${SRCROOT}/../build/moe/main/xcode/${CONFIGURATION}${EFFECTIVE_PLATFORM_NAME}/${arch}.art"
+
+// Set the maximum and initial virtual memory protection for the segments.
+
+MOE_SEGPROT[sdk=iphoneos*] = -segprot __OATDATA rx rx -segprot __ARTDATA rw rw
+MOE_SEGPROT[sdk=iphonesimulator*] = -segprot __OATDATA rwx rx -segprot __ARTDATA rwx rw
+MOE_SEGPROT[sdk=appletvos*] = -segprot __OATDATA rx rx -segprot __ARTDATA rw rw
+MOE_SEGPROT[sdk=appletvsimulator*] = -segprot __OATDATA rwx rx -segprot __ARTDATA rwx rw
+
+// Set the __PAGEZERO segment size.
+MOE_PAGEZERO[sdk=iphoneos*] =
+MOE_PAGEZERO[sdk=iphonesimulator*] = -pagezero_size 4096
+MOE_PAGEZERO[sdk=appletvos*] =
+MOE_PAGEZERO[sdk=appletvsimulator*] = -pagezero_size 4096
+
+// Set frameworks paths.
+MOE_FRAMEWORK_PATH = ${INTEL_MULTI_OS_ENGINE_HOME}/sdk/${PLATFORM_NAME}
+
+MOE_CUSTOM_FRAMEWORKS_PATHS[arch=i386*] =
+MOE_CUSTOM_FRAMEWORKS_PATHS[arch=armv7*] =
+MOE_CUSTOM_FRAMEWORKS_PATHS[arch=arm64*] =
+MOE_CUSTOM_FRAMEWORKS_PATHS[arch=x86_64*] =
+
+// Collect all MOE linker flags.
+MOE_CUSTOM_OTHER_LDFLAGS =
+
+MOE_OTHER_LDFLAGS = ${MOE_SECT_OAT} ${MOE_SECT_ART} ${MOE_SEGPROT} ${MOE_PAGEZERO} ${MOE_CUSTOM_OTHER_LDFLAGS} -lstdc++
+
+// Disable BitCode.
+ENABLE_BITCODE = NO
