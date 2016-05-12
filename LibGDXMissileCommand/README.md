@@ -6,9 +6,9 @@ Environment setup for LibGDX
 
 - Install Ant and Maven
 - Install Multi-OS Engne version 1.0.648 or later
-- Clone libGDX "moe" branch from github repository:
+- Clone libGDX master branch from github repository:
 ``` sh
-git clone -b moe https://github.com/libgdx/libgdx.git
+git clone https://github.com/libgdx/libgdx.git
 ```
 - Build libGDX libraries using the following commands:
 ``` sh
