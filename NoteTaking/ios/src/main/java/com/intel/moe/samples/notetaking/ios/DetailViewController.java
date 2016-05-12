@@ -64,16 +64,6 @@ public class DetailViewController extends UIViewController {
 
     }
 
-    public void viewWillDisappear(boolean animated) {
-        if(data != null) {
-            if (!dataText.text().isEmpty()) {
-                data.setNoteForCurrentKey(dataText.text());
-            } else {
-                data.removeCurrentNote();
-            }
-        }
-    }
-
     public void setDetailItem(String newDetailItem, Data d) {
         if (!detailItem.equals(newDetailItem)) {
             detailItem = newDetailItem;
@@ -113,6 +103,17 @@ public class DetailViewController extends UIViewController {
         if (__old != null) {
             com.intel.moe.natj.objc.ObjCRuntime.dissociateObjCObject(this,
                     __old);
+        }
+    }
+
+    @Selector("doSaveNote:")
+    public void doSaveNote( Object sender){
+        if(data != null) {
+            if (!dataText.text().isEmpty()) {
+                data.setNoteForCurrentKey(dataText.text());
+            } else {
+                data.removeCurrentNote();
+            }
         }
     }
 }
