@@ -1,2 +1,2 @@
-include ':android', ':lib'
+include ':app', ':lib'
 include ':ios'

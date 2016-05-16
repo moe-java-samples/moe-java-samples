@@ -4,9 +4,9 @@ package com.example.database;
 //import com.intel.carhunt.common.Utils;
 //import com.intel.carhunt.model.entities.PlateEntity;
 
-import com.intel.inde.moe.natj.general.ptr.Ptr;
-import com.intel.inde.moe.natj.general.ptr.VoidPtr;
-import com.intel.inde.moe.natj.general.ptr.impl.PtrFactory;
+import com.intel.moe.natj.general.ptr.Ptr;
+import com.intel.moe.natj.general.ptr.VoidPtr;
+import com.intel.moe.natj.general.ptr.impl.PtrFactory;
 
 import java.io.File;
 import java.io.IOException;

@@ -1,7 +1,7 @@
 package com.example.database;
 
 import com.example.Note;
-import com.intel.inde.moe.natj.general.ptr.VoidPtr;
+import com.intel.moe.natj.general.ptr.VoidPtr;
 
 import java.util.Collections;
 import java.util.PriorityQueue;
