@@ -22,17 +22,10 @@ moe {
     xcode {
 //        generateProject = false
         mainTarget 'Taxi'
-        organizationName 'intel'
-        companyIdentifier 'com.intel'
+        bundleID 'com.intel.Taxi'
         packageName 'com.intel.moe.samples.taxi.ios'
-        //infoPlistPath '' // Absolute path to Info.plist file. If this arg is not set new Info.plist will be generated.
-        applicationExitOnSuspend false
-        bundleShortVersionString '1.0'
-        bundleVersion '1'
-        deploymentTarget '9.0'
-
-        supportedInterfaceOrientations = ['UIInterfaceOrientationPortrait',
-                                          'UIInterfaceOrientationLandscapeLeft',
-                                          'UIInterfaceOrientationLandscapeRight']
+        appIconsSource 'AppIcon'
+        launchScreenFilePath 'src/main/resources/LaunchScreen.xib'
+        locationWhenInUseUsageDescription 'We do our best to preserve your battery life'
     }
 }

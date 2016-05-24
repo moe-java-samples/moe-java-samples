@@ -6,6 +6,7 @@ Last year was a great year for taxi apps. Well-known taxi companies all around t
 How to build iOS part
 ---------------
 
+- Install pod package manager (run "sudo gem install cocoapods")
 - Open the project in Android Studio
 - Right click on "ios" folder in Android Studio and select "Multi-OS Engine Actions" -> "Link CocoaPods to Xcode"
 - Enter "GoogleMaps" in "Pod Name" field and press OK
